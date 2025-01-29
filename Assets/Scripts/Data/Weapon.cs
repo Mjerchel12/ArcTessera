@@ -1,4 +1,4 @@
-using Unity.Engine;
+using System.Collections.Generic;
 
 public class Weapon : Item{
     internal char BDscaling;

@@ -1,0 +1,83 @@
+# --- Unity ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset meta files
+/[Aa]ssets/**/*.meta
+
+# Auto-generated VS/VSCode project files
+ExportedObj/
+.consulo/
+/*.csproj
+/*.unityproj
+/*.sln
+/*.suo
+/*.tmp
+/*.user
+/*.userprefs
+/*.pidb
+/*.booproj
+/*.svd
+/[Pp]rojectSettings/EditorBuildSettings.asset
+/[Pp]rojectSettings/EditorSettings.asset
+
+# Unity-specific
+/[Aa]ssets/StreamingAssets/
+/[Uu]serSettings/
+/[Uu]serSettings/**
+/HopHavenGame/UserSettings/Layouts/default-6000.dwlt
+
+# --- OS and Editor-specific ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- JetBrains Rider ---
+.idea/
+*.iml
+*.iws
+out/
+
+# --- Visual Studio Code ---
+.vscode/
+*.code-workspace
+
+# --- Logs and Crashes ---
+*.log
+crashlytics/
+
+# --- Android/iOS ---
+*.apk
+*.aab
+*.ipa
+
+# --- Misc ---
+*.pidb
+*.pidb.meta
+/DerivedData/
+
+# --- Packages ---
+/[Pp]ackages/manifest.json.meta
+/[Pp]ackages/packages-lock.json.meta
+
+# --- Additional settings for Unity 2022 ---
+/UnityPackageManager/
+CodeCoverage/
+csc.rsp
+mcs.rsp
+/UnityShaderCache/
+
+# --- Exclude builds ---
+/[Bb]uild/
+/[Bb]uilds/
+/[Bb]uildResults/
+
+# --- Exclude Play Mode Test Results ---
+/Assets/Editor/PlayModeTestRunnerResults.xml
+
+

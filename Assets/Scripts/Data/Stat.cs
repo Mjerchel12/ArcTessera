@@ -1,6 +1,4 @@
-using Unity.Engine;
-
-public class Stat : ScriptableObject{
+public class Stat{
     internal string statName;
     internal string desc;
     internal byte value;

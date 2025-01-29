@@ -1,6 +1,5 @@
-using Unity.Engine;
 
-public class Damage : ScriptableObject{
+public class Damage{
     internal byte baseDmg;
     internal byte bonus;
     internal byte dmg;
