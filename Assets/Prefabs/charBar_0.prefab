@@ -166,7 +166,7 @@ RectTransform:
   m_GameObject: {fileID: 5991709455813594591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 631.5, y: 631.5, z: 631.5}
+  m_LocalScale: {x: 491.95114, y: 491.95114, z: 491.95114}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5158540041345007720}
@@ -217,7 +217,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2442188674649214102}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
