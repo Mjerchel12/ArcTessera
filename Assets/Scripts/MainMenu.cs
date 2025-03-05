@@ -3,6 +3,10 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public SheetManager sheetManager;
+
+    public GameObject charPrefab;
+    public Transform parentObject;
+    public Repository repo;
     public GameObject menu;
     public GameObject creator;
     public GameObject step1;
@@ -12,6 +16,25 @@ public class MainMenu : MonoBehaviour
     public GameObject step5;
     public GameObject sheet;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Start()
+    {
+        Debug.Log("wesz³o w start");
+        int x = 0;
+        int y = 0;
+        foreach (Character c in repo.allCharacters)
+        {
+            Debug.Log("wesz³o w foreach");
+            var guy = Instantiate(charPrefab, new Vector2(-180f + (90f * x), 55f - (30f * y)), Quaternion.identity, parentObject);
+            var guyChar = guy.GetComponent<Character>();
+            guyChar = c;
+            x++;
+            if (x == 5)
+            {
+                x = 0;
+                y++;
+            }
+        }
+    }
     public void Close()
     {
         Application.Quit();
@@ -53,10 +76,12 @@ public class MainMenu : MonoBehaviour
         step4.SetActive(false);
         step5.SetActive(true);
     }
-    public void Created()
+    public void ShowSheet(Character character)
     {
+        menu.SetActive(false);
         step5.SetActive(false);
         creator.SetActive(false);
         sheet.SetActive(true);
+        sheetManager.ShowSheet(character);
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class Character : ScriptableObject{
-    public SheetManager sm;
+public class Character : MonoBehaviour{
+    internal MainMenu mm;
 
     [Header("Character Options")]
     internal CharacterOptions co;
@@ -23,4 +23,10 @@ public class Character : ScriptableObject{
 
     [Header("Journal")]
     internal Journal jo;
+
+    public void ChooseChar()
+    {
+        mm = GameObject.Find("Canvas").GetComponent<MainMenu>();
+        mm.ShowSheet(this);
+    }
 }
