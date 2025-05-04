@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\charcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\charcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\synergycreator\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\optionstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\optionstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\sheetmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,12 +23,16 @@
       "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\characteroptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\journal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\idiceroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\idiceroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\pathprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\pathprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45829E25-3E2A-D9D3-8FFD-3D67976C528D}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\assets\\scripts\\data\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,53 +74,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Journal.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\Journal.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\Journal.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\Journal.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Data\\Journal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T13:29:01.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\Character.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\Character.cs",
               "RelativeToolTip": "Assets\\Scripts\\Data\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T12:36:50.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T05:55:17.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PathProgress.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\PathProgress.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\PathProgress.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\PathProgress.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Data\\PathProgress.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T05:55:01.132Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OptionsTable.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\OptionsTable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\OptionsTable.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\OptionsTable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\OptionsTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T15:58:43.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "SheetManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\SheetManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SheetManager.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\SheetManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\SheetManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T15:43:54.71Z",
+              "WhenOpened": "2025-04-30T05:54:51.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CharCreator.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\CharCreator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharCreator.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\CharCreator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharCreator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:42:32.571Z",
               "EditorCaption": ""
             },
             {
@@ -131,26 +129,26 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAYwIsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-01T14:03:54.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "IDiceRoll.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\IDiceRoll.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\IDiceRoll.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\IDiceRoll.cs",
               "RelativeToolTip": "Assets\\Scripts\\IDiceRoll.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T17:34:51.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CharacterOptions.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\CharacterOptions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\CharacterOptions.cs",
@@ -158,8 +156,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Data\\CharacterOptions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T17:10:05.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T17:10:05.633Z"
             },
             {
               "$type": "Document",
@@ -187,13 +184,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\Repository.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\Repository.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\SynergyCreator\\Assets\\Scripts\\Data\\Repository.cs",
               "RelativeToolTip": "Assets\\Scripts\\Data\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T17:08:23.966Z",
               "EditorCaption": ""

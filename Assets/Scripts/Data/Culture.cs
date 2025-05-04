@@ -1,3 +1,4 @@
-﻿internal class Culture
+﻿public class Culture
 {
+    public string cultName;
 }

@@ -32,7 +32,6 @@ RectTransform:
   m_Children:
   - {fileID: 5218047803725412505}
   - {fileID: 3047418375181844319}
-  - {fileID: 4669178649940929871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -143,39 +142,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'At 1st level, your practice of martial arts gives you mastery of combat
+  m_text: At 1st level, your practice of martial arts gives you mastery of combat
     styles that use unarmed strikes and monk weapons, which are shortswords and any
-    simple melee weapons that don''t have the two-handed or heavy property.
-
-    
-
-    You
-    gain the following benefits while you are unarmed or wielding only monk weapons
-    and you aren''t wearing armor or wielding a shield:
-
-    
-
-    - You can use
-    Dexterity instead of Strength for the attack and damage rolls of your unarmed
-    strikes and monk weapons.
-
-    - You can roll a d4 in place of the normal damage
-    of your unarmed strike or monk weapon. This die changes as you gain monk levels,
-    as shown in the Martial Arts column of the Monk table.
-
-    - When you use the
-    Attack action with an unarmed strike or a monk weapon on your turn, you can make
-    one unarmed strike as a bonus action. For example, if you take the Attack action
-    and attack with a quarterstaff, you can also make an unarmed strike as a bonus
-    action, assuming you haven''t already taken a bonus action this turn.
-
-
-    Certain
-    monasteries use specialized forms of the monk weapons. For example, you might
-    use a club that is two lengths of wood connected by a short chain (called a nunchaku)
-    or a sickle with a shorter, straighter blade (called a kama). Whatever name you
-    use for a monk weapon, you can use the game statistics provided for the weapon
-    on the Weapons page.'
+    simple melee weapons that don't have the two-handed or heavy property.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -202,15 +171,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.9
-  m_fontSizeBase: 36
+  m_fontSize: 2.6
+  m_fontSizeBase: 2.6
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 1
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -240,87 +209,12 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.469515, y: 0.8161822, z: -104.944885, w: -66.31933}
+  m_margin: {x: -19.469515, y: 0.8161822, z: -104.944885, w: -10.69309}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &2997264143797008089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4669178649940929871}
-  - component: {fileID: 881954515560305749}
-  - component: {fileID: 3089876001643416220}
-  m_Layer: 0
-  m_Name: optionOption_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4669178649940929871
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997264143797008089}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0576606, y: 1.3097965, z: 1.0576606}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 3094065071229234643}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.29582596, y: -1.144}
-  m_SizeDelta: {x: 0.56, y: 0.13}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &881954515560305749
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997264143797008089}
-  m_CullTransparentMesh: 1
---- !u!114 &3089876001643416220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997264143797008089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -6063774023505499271, guid: 2d24f8c6328428e478db763dc1a7c918, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6037821053165900504
 GameObject:
   m_ObjectHideFlags: 0

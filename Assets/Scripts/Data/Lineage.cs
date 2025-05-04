@@ -1,3 +1,4 @@
-﻿internal class Lineage
+﻿public class Lineage
 {
+    public string lineName;
 }

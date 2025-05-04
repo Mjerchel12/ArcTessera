@@ -1,3 +1,4 @@
-﻿internal class Background
+﻿public class Background
 {
+    public string backName;
 }

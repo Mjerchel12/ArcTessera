@@ -3,7 +3,6 @@
 public class Journal
 {
     internal string name;
-    internal string surname;
     internal byte age;
     internal string nationality;
     internal string faith;

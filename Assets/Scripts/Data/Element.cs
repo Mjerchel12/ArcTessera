@@ -1,3 +1,4 @@
-﻿internal class Element
+﻿public class Element
 {
+    public string elName;
 }

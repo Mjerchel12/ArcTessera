@@ -1,3 +1,4 @@
-﻿internal class StarSign
+﻿public class StarSign
 {
+    public string signName;
 }

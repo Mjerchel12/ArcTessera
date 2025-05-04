@@ -8,7 +8,8 @@ public class CharacterOptions
     internal StarSign starsign;
     internal Element element;
     internal List<Trait> traits;
-    internal List<PathProgress> paths;
+    internal byte level;
+    internal string desc;
     internal List<Feature> features;
     internal List<Spell> spells;
     internal List<Maneuver> maneuvers;
