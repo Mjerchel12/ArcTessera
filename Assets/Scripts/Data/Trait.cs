@@ -1,3 +1,3 @@
-﻿internal class Trait
+﻿internal class Trait: Feature
 {
 }

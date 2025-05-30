@@ -1,3 +1,3 @@
-﻿internal class LegFeature
+﻿internal class LegFeature: Feature
 {
 }

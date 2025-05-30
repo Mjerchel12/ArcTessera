@@ -5,9 +5,8 @@ public class Weapon : Item{
     internal char GRscaling;
     internal char MIscaling;
     internal char SLscaling;
-    internal Damage baseDmgOne;
-    internal Damage baseDmgTwo;
-    internal Damage dmg;
+    internal Roll attackOne;
+    internal Roll attackTwo;
     internal byte stCost;
     internal byte apCost;
     internal byte range;
@@ -15,12 +14,12 @@ public class Weapon : Item{
     internal string skill;
     internal string size;
     internal string type;
-    internal List<Feature> features;
+    internal List<string> traits;
     internal bool balanced;
     internal bool ranged;
     internal bool simple;
     internal bool shield;
 
-    internal Material material;
-    internal Style style;
+    internal string material;
+    internal string style;
 }

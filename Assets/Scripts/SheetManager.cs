@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using TMPro;
+using System.Collections;
 
 public class SheetManager : MonoBehaviour
 {
@@ -21,30 +22,27 @@ public class SheetManager : MonoBehaviour
     public TextMeshProUGUI detLabel;
     public GameObject shield;
     public TextMeshProUGUI shieldLabel;
-    public GameObject wounds;
-    public GameObject options;
-    public TextMeshProUGUI backLabel;
-    public TextMeshProUGUI signLabel;
-    public TextMeshProUGUI attuLabel;
-    public GameObject speeds;
-    public GameObject languageBars;
-    public GameObject condPoints;
-    public GameObject attPaper;
-    public GameObject equ;
-    public GameObject buttons;
-    public GameObject column;
-    public GameObject greekStuff;
+
+    public Animator speedGroup;
+    public bool speedShown=false;
+    public GameObject speedArrow;
+
+    public Animator condGroup;
+    public bool condShown = false;
+    public GameObject condArrow;
+
+    public Animator equGroup;
+
+    private Character character;
 
     public void ShowSheet(Character ch)
     {
         Debug.Log(ch);
         Debug.Log(ch.jo);
         Debug.Log(ch.jo.name);
-        //nameLabel.text = ch.jo.name;
-        //descLabel.text = ch.co.lineage.lineName + " (" + ch.co.culture.cultName + ") Level " + ch.co.level +"\n"+ ch.co.desc;
-        //backLabel.text = ch.co.background.backName;
-        //signLabel.text = ch.co.starsign.signName;
-        //attuLabel.text = ch.co.element.elName;
+        character = ch;
+        nameLabel.text = ch.jo.name;
+        descLabel.text = ch.co.lineage.lineName + " (" + ch.co.culture.cultName + ") Level " + ch.co.level +"\n"+ ch.co.desc;
     }
     public void RollDice(int bonus, char favor)
     {
@@ -61,6 +59,45 @@ public class SheetManager : MonoBehaviour
         {
             int result = Math.Min(rnd.Next(1, 101) + bonus, rnd.Next(1, 101) + bonus);
         }
+    }
+    public void ShowSpeed()
+    {
+        speedArrow.transform.Rotate(new Vector3(0f, 0f, 180f));
+        if (!speedShown) {
+            speedGroup.SetTrigger("StartDown");
+            speedShown = true;
+            speedGroup.ResetTrigger("StartUp");
+        }
+        else
+        {
+            speedGroup.SetTrigger("StartUp");
+            speedShown = false;
+            speedGroup.ResetTrigger("StartDown");
+        }
+    }
+    public void ShowCond()
+    {
+        condArrow.transform.Rotate(new Vector3(0f, 0f, 180f));
+        if (!condShown)
+        {
+            condGroup.SetTrigger("StartDown");
+            condShown = true;
+            condGroup.ResetTrigger("StartUp");
+        }
+        else
+        {
+            condGroup.SetTrigger("StartUp");
+            condShown = false;
+            condGroup.ResetTrigger("StartDown");
+        }
+    }
+    public void ShowEqu(int tab)
+    {
+        equGroup.SetInteger("anim", 1);
+    }
+    public void HideEqu()
+    {
+        equGroup.SetInteger("anim", 0);
     }
 }
 

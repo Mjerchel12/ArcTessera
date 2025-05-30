@@ -4,8 +4,9 @@ public class Statistics
 {
     internal Stat vitality;
     internal Stat mana;
-    internal Stat wounds;
-    internal Stat AP;
+    internal byte wounds;
+    internal byte AP;
+    internal byte Reactions;
     internal byte speedBonus;
     internal Stat stamina;
     internal Stat sanity;

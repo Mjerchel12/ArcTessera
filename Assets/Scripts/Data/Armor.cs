@@ -7,6 +7,6 @@ public class Armor : Item{
     
     internal bool stealthFavor;
 
-    internal Material material;
-    internal Style style;
+    internal string material;
+    internal string style;
 }

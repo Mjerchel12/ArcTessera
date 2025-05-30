@@ -6,7 +6,7 @@ public class Conditions
     internal byte toxin;
     internal byte curse;
     internal List<string> conditions;
-    internal List<DamageType> resistances;
-    internal List<DamageType> immunities;
-    internal List<DamageType> vulnerabilities;
+    internal List<string> resistances;
+    internal List<string> immunities;
+    internal List<string> vulnerabilities;
 }

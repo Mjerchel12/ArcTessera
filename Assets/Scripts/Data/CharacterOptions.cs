@@ -14,4 +14,5 @@ public class CharacterOptions
     internal List<Spell> spells;
     internal List<Maneuver> maneuvers;
     internal List<LegFeature> legFeatures;
+    internal byte Talent;
 }

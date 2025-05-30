@@ -25,6 +25,8 @@ public class MainMenu : MonoBehaviour
     public GameObject step4;
     public GameObject step5;
     public GameObject sheet;
+
+    public Animator sheetAnimator;
     
     private int x = 0;
     private int y = 0;
@@ -178,6 +180,7 @@ public class MainMenu : MonoBehaviour
             x = 0;
             y++;
         }
+        sheetAnimator.SetTrigger("Start");
     }
     public void ShowSheet(Character character)
     {
@@ -193,6 +196,7 @@ public class MainMenu : MonoBehaviour
         levelUp.SetActive(false);
         pathsLv.SetActive(false);
         this.character = character;
+        sheetAnimator.SetTrigger("Start");
     }
     public void LevelUp()
     {

@@ -9,7 +9,6 @@ public class Attributes
     internal Skill resistance;
     internal Skill endurance;
     internal Skill fortitude;
-    internal Skill brawl;
     internal Skill melee;
     internal Skill throwing;
 
@@ -19,14 +18,12 @@ public class Attributes
     internal Skill stealth;
     internal Skill dexterity;
     internal Skill martial;
-    internal Skill polearms;
     internal Skill fencing;
-    internal Skill dodge;
+    internal Skill react;
     internal Skill riding;
 
     internal Stat mind;
     internal Skill arcana;
-    internal Skill manipulation;
     internal Skill nature;
     internal Skill religion;
     internal Skill survival;
@@ -35,13 +32,11 @@ public class Attributes
     internal Skill tactics;
 
     internal Stat soul;
-    internal Skill composure;
+    internal Skill willpower;
     internal Skill intuition;
     internal Skill alertness;
-    internal Skill spellslinging;
-    internal Skill blessing;
-    internal Skill witchcraft;
-    internal Skill premonition;
+    internal Skill spellcraft;
+    internal Skill fervor;
 
     internal Stat trade;
     internal Skill medicine;
@@ -50,11 +45,12 @@ public class Attributes
     internal Skill craft;
     internal Skill burglary;
     internal Skill tinkering;
+    internal Skill performance;
 
     internal Stat personality;
     internal Skill courtship;
+    internal Skill manipulation;
     internal Skill persuasion;
-    internal Skill performances;
     internal Skill business;
     internal Skill intimidation;
 }
