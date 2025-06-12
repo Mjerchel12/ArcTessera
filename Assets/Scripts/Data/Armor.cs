@@ -1,12 +1,14 @@
 using System.Collections.Generic;
+using UnityEngine;
 
+[CreateAssetMenu(fileName = "Armor", menuName = "ScriptableObjects/Item/Armor")]
 public class Armor : Item{
-    internal string weightType;
-    internal byte weight;
-    internal byte defense;
-    
-    internal bool stealthFavor;
+    public string weightType;
+    public byte weight;
+    public byte defense;
 
-    internal string material;
-    internal string style;
+    public bool stealthFavor;
+
+    public string material;
+    public string style;
 }

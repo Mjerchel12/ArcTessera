@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5b30b77fcd4c944adfb76344cd23f3, type: 3}
+  m_Name: Champion
+  m_EditorClassIdentifier: 
+  pathName: Warrior
+  desc: Martial warrior subpath
+  required: {fileID: 11400000, guid: a1a793971f03b1547baf784125749ca6, type: 2}
+  secondRequired: {fileID: 0}
+  expertise:
+  - Athletics
+  - Strength
+  - Vigor
+  - Resistance
+  - Endurance
+  - Fortitude
+  - Melee Weapons
+  - Throwing
+  - Marksmanship
+  - Fencing
+  - Reactions
+  - Riding
+  - Lore
+  - Tactics
+  - Courtship
+  - Persuasion
+  - Intimidation
+  equipment: []
+  initFeature: {fileID: 11400000, guid: d656ae5bcce18ea4ba292f08dfa3e44c, type: 2}
+  features: []

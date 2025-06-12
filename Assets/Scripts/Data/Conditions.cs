@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
-
-public class Conditions
+using UnityEngine;
+[CreateAssetMenu(fileName = "Conds", menuName = "ScriptableObjects/Characters/Conds")]
+public class Conditions:ScriptableObject
 {
-    internal byte exhaustion;
-    internal byte toxin;
-    internal byte curse;
-    internal List<string> conditions;
-    internal List<string> resistances;
-    internal List<string> immunities;
-    internal List<string> vulnerabilities;
+    public byte exhaustion;
+    public byte toxin;
+    public byte curse;
+    public List<string> conditions;
+    public List<string> resistances;
+    public List<string> immunities;
+    public List<string> vulnerabilities;
 }

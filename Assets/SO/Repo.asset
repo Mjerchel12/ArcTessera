@@ -12,8 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81750da514332fd4f8d779bac1526045, type: 3}
   m_Name: Repo
   m_EditorClassIdentifier: 
+  features:
+  - {fileID: 11400000, guid: 4bc701aafef2a99448ef125474b0e792, type: 2}
+  - {fileID: 11400000, guid: 03ed4ea5bd031d94da89ede056be0cee, type: 2}
+  - {fileID: 11400000, guid: 33f384afd5b2a1a4e96d77acd98dcafc, type: 2}
   allCharacters:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c08a2eca33d72274c9e388da8d53849e, type: 2}
+  attunements:
+  - {fileID: 11400000, guid: 9dcc54e168787004691e58d5819b9623, type: 2}
+  signs:
+  - {fileID: 11400000, guid: f903b9c9916107c4b82e7a8cb5c9a16f, type: 2}
+  backs:
+  - {fileID: 11400000, guid: fd8d8a78d0bea9a4abd7d0add9070e5c, type: 2}
+  cultures:
+  - {fileID: 11400000, guid: 5cd95dc41acd01447a0bf358583dc786, type: 2}
+  - {fileID: 11400000, guid: a666bb42824c1074690e716e74988b17, type: 2}
+  lineages:
+  - {fileID: 11400000, guid: bae435d733507044ab6418ebea2b6d20, type: 2}
+  - {fileID: 11400000, guid: 9984bcf5e553b76479fdadb41cee8b39, type: 2}

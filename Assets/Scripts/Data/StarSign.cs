@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-
-public class StarSign
+using UnityEngine;
+[CreateAssetMenu(fileName = "StarSign", menuName = "ScriptableObjects/CO/StarSign")]
+public class StarSign:ScriptableObject
 {
     public string signName;
     public string desc;
@@ -10,7 +11,7 @@ public class StarSign
     public byte soulBonus;
     public byte tradeBonus;
     public byte personalityBonus;
-    internal List<Feature> features;
+    public List<Feature> features;
     public StarSign(string nm)
     {
         this.signName = nm;

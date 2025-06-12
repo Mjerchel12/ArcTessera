@@ -1,37 +1,27 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour{
-    internal MainMenu mm;
+[CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Characters/Character")]
+public class Character : ScriptableObject{
 
     [Header("Character Options")]
-    internal CharacterOptions co = new CharacterOptions();
+    public CharacterOptions co;
 
     [Header("Attributes")]
-    internal Attributes att = new Attributes();
+    public Attributes att;
 
     [Header("Statistic")]
-    internal Statistics stats = new Statistics();
+    public Statistics stats;
 
     [Header("Conditions")]
-    internal Conditions cons = new Conditions();
+    public Conditions cons;
 
     [Header("Combat")]
-    internal Combat cmb = new Combat();
+    public Combat cmb;
 
     [Header("Equipment")]
-    internal Equipment eq = new Equipment();
+    public Equipment eq;
 
     [Header("Journal")]
-    internal Journal jo = new Journal();
+    public Journal jo;
 
-    public Character()
-    {
-        Debug.Log("stworzone");
-    }
-
-    public void ChooseChar()
-    {
-        mm = GameObject.Find("Canvas").GetComponent<MainMenu>();
-        mm.ShowSheet(this);
-    }
 }

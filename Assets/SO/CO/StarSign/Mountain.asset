@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09187287ccb8ff4294be597451f285a, type: 3}
+  m_Name: Mountain
+  m_EditorClassIdentifier: 
+  signName: Mountain
+  desc: 'Sign of those who stand the strongest of all.  '
+  bodyBonus: 1
+  graceBonus: 0
+  mindBonus: 0
+  soulBonus: 0
+  tradeBonus: 0
+  personalityBonus: 0
+  features:
+  - {fileID: 11400000, guid: 41a338063d807b34d894df4e59214190, type: 2}

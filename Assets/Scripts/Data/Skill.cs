@@ -1,8 +1,9 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Skill", menuName = "ScriptableObjects/Skills/Skill")]
 public class Skill : Stat, IDiceRoll{
-    internal bool favor;
-    internal bool disfavor;
+    public bool favor;
+    public bool disfavor;
 
     public byte Roll(){
         System.Random rnd = new System.Random();

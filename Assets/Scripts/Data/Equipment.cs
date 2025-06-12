@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-
-public class Equipment
+using UnityEngine;
+[CreateAssetMenu(fileName = "Equ", menuName = "ScriptableObjects/Characters/Equ")]
+public class Equipment:ScriptableObject
 {
-    internal List<Weapon> weaponry;
-    internal List<Armor> armory;
-    internal List<Consumable> consumables;
-    internal List<Item> other;
+    public List<Weapon> weaponry;
+    public List<Armor> armory;
+    public List<Consumable> consumables;
+    public List<Item> other;
 }

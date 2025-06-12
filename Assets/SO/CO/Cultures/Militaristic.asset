@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ff551c81e67fb459a64501a12cb704, type: 3}
+  m_Name: Militaristic
+  m_EditorClassIdentifier: 
+  cultName: Militaristic
+  desc: Generic Culture
+  bodyBonus: 1
+  graceBonus: 0
+  mindBonus: 0
+  soulBonus: 0
+  tradeBonus: 1
+  personalityBonus: 0
+  skillBonus: {fileID: 11400000, guid: b177f3e0d1fec8943b4cb4cc4357bba6, type: 2}
+  features:
+  - {fileID: 11400000, guid: 1fdc78cf06091b044b8433abb99cac89, type: 2}
+  equipment:
+  - {fileID: 11400000, guid: 14b2e94cc92743743bba07dd2a3b1f46, type: 2}

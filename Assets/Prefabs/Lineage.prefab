@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <b>Trait. (Cost 8)</b> You can take one free Trait of your choice
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.469515, y: 0.8161822, z: -104.944885, w: -3.1898782}
+  m_margin: {x: -19.469515, y: 0.8161822, z: -69.13437, w: -3.1898782}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Walking Speed
+  m_text: Speed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3313,7 +3313,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.8089051, y: 0.8161822, z: -104.944885, w: -3.1898782}
+  m_margin: {x: -13.647331, y: 0.8161822, z: -104.944885, w: -3.1898782}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4516,7 +4516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087501515671512951, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
       propertyPath: m_text
-      value: "Medium mammal\r"
+      value: "<i>Medium mammal\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6087501515671512951, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
       propertyPath: m_fontSize
@@ -4528,7 +4528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087501515671512951, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
       propertyPath: m_fontStyle
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6087501515671512951, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
       propertyPath: m_fontSizeBase

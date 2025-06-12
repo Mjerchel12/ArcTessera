@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class Element
+[CreateAssetMenu(fileName = "Element", menuName = "ScriptableObjects/CO/Element")]
+public class Element:ScriptableObject
 {
     public string elName;
     public string desc;
-    internal List<Feature> features;
+    public List<Feature> features;
     public Element(string nm)
     {
         this.elName = nm;

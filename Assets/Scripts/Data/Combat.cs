@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-
-public class Combat
+using UnityEngine;
+[CreateAssetMenu(fileName = "Combat", menuName = "ScriptableObjects/Characters/Combat")]
+public class Combat:ScriptableObject
 {
-    internal string currentStance;
-    internal Weapon leftHand;
-    internal Weapon rightHand;
-    internal Armor armor;
+    public string currentStance;
+    public Weapon leftHand;
+    public Weapon rightHand;
+    public Armor armor;
 }

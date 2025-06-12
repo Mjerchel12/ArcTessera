@@ -1,9 +1,11 @@
-public class Stat{
-    internal string statName;
-    internal string desc;
-    internal byte value;
-    internal byte bonus;
-    internal byte flaw;
-    internal byte max;
-    internal byte current;
+using UnityEngine;
+[CreateAssetMenu(fileName = "Stat", menuName = "ScriptableObjects/Skills/Stat")]
+public class Stat:ScriptableObject{
+    public string statName;
+    public string desc;
+    public byte value;
+    public byte bonus;
+    public byte flaw;
+    public byte max;
+    public byte current;
 }

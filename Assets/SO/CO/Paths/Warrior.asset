@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5b30b77fcd4c944adfb76344cd23f3, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  pathName: Warrior
+  desc: Martial warrior basic path
+  required: {fileID: 0}
+  secondRequired: {fileID: 0}
+  expertise:
+  - Athletics
+  - Strength
+  - Vigor
+  - Resistance
+  - Endurance
+  - Fortitude
+  - Melee Weapons
+  - Throwing
+  - Marksmanship
+  - Fencing
+  - Reactions
+  - Riding
+  - Lore
+  - Tactics
+  - Courtship
+  - Persuasion
+  - Intimidation
+  equipment:
+  - {fileID: 11400000, guid: 24e0c1bce3ba0d74e8fe3fa5514f40d1, type: 2}
+  - {fileID: 11400000, guid: 5777d37f8c6ca0745bb572828d455751, type: 2}
+  - {fileID: 11400000, guid: 7fbc01422dc84ed459cf87de654d0093, type: 2}
+  - {fileID: 11400000, guid: 4938b38374d50654fa6a2602ba241287, type: 2}
+  initFeature: {fileID: 11400000, guid: d656ae5bcce18ea4ba292f08dfa3e44c, type: 2}
+  features: []

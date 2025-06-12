@@ -1,6 +1,9 @@
-﻿internal class Consumable : Item
+﻿using UnityEngine;
+
+[CreateAssetMenu(fileName = "Consumable", menuName = "ScriptableObjects/Item/Consumable")]
+public class Consumable : Item
 {
-    internal Roll roll;
-    internal byte range;
-    internal byte maxRange;
+    public Roll roll;
+    public byte range;
+    public byte maxRange;
 }

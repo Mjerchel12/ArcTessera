@@ -1,20 +1,16 @@
 ﻿using System.Collections.Generic;
-
-public class Statistics
+using UnityEngine;
+[CreateAssetMenu(fileName = "Stats", menuName = "ScriptableObjects/Characters/Stats")]
+public class Statistics:ScriptableObject
 {
-    internal Stat vitality;
-    internal Stat mana;
-    internal byte wounds;
-    internal byte AP;
-    internal byte Reactions;
-    internal byte speedBonus;
-    internal Stat stamina;
-    internal Stat sanity;
-    internal Stat walk;
-    internal Stat climb;
-    internal Stat swim;
-    internal Stat crawl;
-    internal Stat highLeap;
-    internal Stat farLeap;
-    internal Stat determination;
+    public Stat vitality;
+    public Stat mana;
+    public byte wounds;
+    public byte AP;
+    public byte Reactions;
+    public byte speedBonus;
+    public Stat stamina;
+    public Stat sanity;
+    public Speed speed;
+    public Stat determination;
 }

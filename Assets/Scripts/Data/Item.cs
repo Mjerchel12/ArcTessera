@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using UnityEngine;
 
-public class Item{
-    internal string itemName;
-    internal string desc;
-    internal byte quantity;
+[CreateAssetMenu(fileName = "Item", menuName = "ScriptableObjects/Item/Item")]
+public class Item:ScriptableObject{
+    public string itemName;
+    public string desc;
+    public byte quantity;
 }

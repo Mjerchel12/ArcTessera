@@ -1,7 +1,9 @@
 ﻿using static Lineage;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class Background
+[CreateAssetMenu(fileName = "Background", menuName = "ScriptableObjects/CO/Background")]
+public class Background:ScriptableObject
 {
     public string backName;
     public string desc;
@@ -12,8 +14,8 @@ public class Background
     public byte tradeBonus;
     public byte personalityBonus;
     public SkillBonus skillBonus;
-    internal List<Feature> features;
-    internal List<Item> equipment;
+    public List<Feature> features;
+    public List<Item> equipment;
     public Background(string nm)
     {
         this.backName = nm;

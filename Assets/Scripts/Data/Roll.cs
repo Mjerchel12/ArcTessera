@@ -1,14 +1,16 @@
+using UnityEngine;
 
-public class Roll : IDiceRoll{
-    internal byte diceQuantity;
-    internal byte die;
-    internal byte bonus;
-    internal byte dmg;
-    internal string type;
+[CreateAssetMenu(fileName = "Roll", menuName = "ScriptableObjects/Roll")]
+public class Roll : ScriptableObject{
+    public byte diceQuantity;
+    public byte die;
+    public byte bonus;
+    public byte dmg;
+    public string type;
 
-    internal byte addDmg;
+    public byte addDmg;
 
-    byte IDiceRoll.Roll()
+    byte DiceRoll()
     {
         throw new System.NotImplementedException();
     }

@@ -1,18 +1,20 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class CharacterOptions
+[CreateAssetMenu(fileName = "CO", menuName = "ScriptableObjects/Characters/CO")]
+public class CharacterOptions:ScriptableObject
 {
-    internal Lineage lineage;
-    internal Culture culture;
-    internal Background background;
-    internal StarSign starsign;
-    internal Element element;
-    internal List<Trait> traits;
-    internal byte level;
-    internal string desc;
-    internal List<Feature> features;
-    internal List<Spell> spells;
-    internal List<Maneuver> maneuvers;
-    internal List<LegFeature> legFeatures;
-    internal byte Talent;
+    public Lineage lineage;
+    public Culture culture;
+    public Background background;
+    public StarSign starsign;
+    public Element element;
+    public List<Trait> traits;
+    public byte level;
+    public string desc;
+    public List<Feature> features;
+    public List<Spell> spells;
+    public List<Maneuver> maneuvers;
+    public List<LegFeature> legFeatures;
+    public byte Talent;
 }

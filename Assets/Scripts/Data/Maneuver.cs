@@ -1,10 +1,13 @@
-﻿internal class Maneuver
+﻿using UnityEngine;
+
+[CreateAssetMenu(fileName = "Maneuver", menuName = "ScriptableObjects/Features/Maneuver")]
+public class Maneuver:ScriptableObject
 {
-    internal string manName;
-    internal string types;
-    internal byte APCost;
-    internal bool isReaction;
-    internal byte staminaCost;
-    internal string desc;
-    internal Roll rollHit;
+    public string manName;
+    public string types;
+    public byte APCost;
+    public bool isReaction;
+    public byte staminaCost;
+    public string desc;
+    public Roll rollHit;
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
@@ -9,6 +10,10 @@ public class MainMenu : MonoBehaviour
 
     public GameObject charPrefab;
     public Transform parentObject;
+
+    public GameObject featPrefab;
+    public Transform parentFeatObject;
+
     public Repository repo;
     public GameObject menu;
     public GameObject settings;
@@ -31,6 +36,9 @@ public class MainMenu : MonoBehaviour
     private int x = 0;
     private int y = 0;
 
+    private int xf = 0;
+    private int yf = 0;
+
     private Character character;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -40,11 +48,11 @@ public class MainMenu : MonoBehaviour
         foreach (Character c in repo.allCharacters)
         {
             Debug.Log("wesz這 w foreach");
-            if (c == null)
+            if (c != null)
             {
                 var guy = Instantiate(charPrefab, new Vector2(-180f + (90f * x), 55f - (30f * y)), Quaternion.identity, parentObject);
-                var guyChar = guy.GetComponent<Character>();
-                guyChar = c;
+                var guyChar = guy.GetComponent<CharacterBar>();
+                guyChar.character = c;
                 x++;
                 if (x == 5)
                 {
@@ -128,6 +136,24 @@ public class MainMenu : MonoBehaviour
         step3.SetActive(false);
         step2.SetActive(false);
         levelUp.SetActive(false);
+        Debug.Log("Wesz這 w metode");
+        foreach (var feature in repo.features) 
+        {
+            Debug.Log("Wesz這 w foreach feature");
+            if (feature.requiredFeatures==null && feature.requiredFeatures.All(element => character.co.features.Contains(element)))
+            {
+                Debug.Log("Wesz這 w if");
+                var guy = Instantiate(featPrefab, new Vector2(80f + (90f * x), 35f - (30f * y)), Quaternion.identity, parentFeatObject);
+                var guyChar = guy.GetComponent<Feature>();
+                guyChar = feature;
+                xf++;
+                if (xf == 5)
+                {
+                    xf = 0;
+                    yf++;
+                }
+            }
+        }
     }
     public void Step3()
     {
@@ -158,7 +184,7 @@ public class MainMenu : MonoBehaviour
         step5.SetActive(true);
         levelUp.SetActive(false);
     }
-    public void Finalize(Character character)
+    public void Finalize(CharacterBar character)
     {
         marble.SetActive(false);
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
@@ -167,13 +193,13 @@ public class MainMenu : MonoBehaviour
         step5.SetActive(false);
         creator.SetActive(false);
         sheet.SetActive(true);
-        Debug.Log(character);
-        sheetManager.ShowSheet(character);
+        Debug.Log(character.character);
+        sheetManager.ShowSheet(character.character);
         levelUp.SetActive(false);
-        repo.allCharacters.Add(character);
+        repo.allCharacters.Add(character.character);
         var guy = Instantiate(charPrefab, new Vector2(-180f + (90f * x), 55f - (30f * y)), Quaternion.identity, parentObject);
         var guyChar = guy.GetComponent<Character>();
-        guyChar = character;
+        guyChar = character.character;
         x++;
         if (x == 5)
         {
@@ -182,7 +208,7 @@ public class MainMenu : MonoBehaviour
         }
         sheetAnimator.SetTrigger("Start");
     }
-    public void ShowSheet(Character character)
+    public void ShowSheet(CharacterBar character)
     {
         marble.SetActive(false);
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
@@ -191,11 +217,11 @@ public class MainMenu : MonoBehaviour
         step5.SetActive(false);
         creator.SetActive(false);
         sheet.SetActive(true);
-        Debug.Log(character);
-        sheetManager.ShowSheet(character);
+        Debug.Log(character.character);
+        sheetManager.ShowSheet(character.character);
         levelUp.SetActive(false);
         pathsLv.SetActive(false);
-        this.character = character;
+        this.character = character.character;
         sheetAnimator.SetTrigger("Start");
     }
     public void LevelUp()

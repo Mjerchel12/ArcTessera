@@ -1,20 +1,21 @@
 ﻿using System.Collections.Generic;
-
-public class Journal
+using UnityEngine;
+[CreateAssetMenu(fileName = "Jour", menuName = "ScriptableObjects/Characters/Jour")]
+public class Journal:ScriptableObject
 {
-    internal string name;
-    internal byte age;
-    internal string genderIdentity;
-    internal string nationality;
-    internal string faith;
-    internal string appearance;
-    internal string homeTown;
-    internal string backstory;
+    public string charName;
+    public byte age;
+    public string genderIdentity;
+    public string nationality;
+    public string faith;
+    public string appearance;
+    public string homeTown;
+    public string backstory;
 
-    internal string flaws;
-    internal string charTraits;
-    internal string bonds;
-    internal string goals;
+    public string flaws;
+    public string charTraits;
+    public string bonds;
+    public string goals;
 
-    internal string notes;
+    public string notes;
 }

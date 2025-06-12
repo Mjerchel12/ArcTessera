@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-internal class Spell:Maneuver
+[CreateAssetMenu(fileName = "Spell", menuName = "ScriptableObjects/Features/Spell")]
+public class Spell:Maneuver
 {
-    internal List<Spell> spellOptions;
-    internal byte spellForce;
+    public List<Spell> spellOptions;
+    public byte spellForce;
 }

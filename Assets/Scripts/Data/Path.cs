@@ -1,19 +1,19 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
+using UnityEngine;
 
-internal class Path
+[CreateAssetMenu(fileName = "Path", menuName = "ScriptableObjects/CO/Path")]
+internal class Path:ScriptableObject
 {
-    internal string pathName;
-    internal Path required;
-    internal List<string> expertise;
-    internal List<Item> equipment;
-    internal Feature initFeature;
-    internal List<Feature> features;
+    public string pathName;
+    public string desc;
+    public Path required;
+    public Path secondRequired;
+    public List<string> expertise;
+    public List<Item> equipment;
+    public Feature initFeature;
+    public List<Feature> features;
 
-    internal class ItemChoice:Item
-    {
-        internal List<Item> choices;
-    }
     public Path()
     {
     }

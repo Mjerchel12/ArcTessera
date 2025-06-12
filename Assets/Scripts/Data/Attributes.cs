@@ -1,56 +1,58 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class Attributes
+[CreateAssetMenu(fileName = "Att", menuName = "ScriptableObjects/Characters/Att")]
+public class Attributes:ScriptableObject
 {
-    internal Stat body;
-    internal Skill athletics;
-    internal Skill strength;
-    internal Skill vigor;
-    internal Skill resistance;
-    internal Skill endurance;
-    internal Skill fortitude;
-    internal Skill melee;
-    internal Skill throwing;
+    public Stat body;
+    public Skill athletics;
+    public Skill strength;
+    public Skill vigor;
+    public Skill resistance;
+    public Skill endurance;
+    public Skill fortitude;
+    public Skill melee;
+    public Skill throwing;
 
-    internal Stat grace;
-    internal Skill acrobatics;
-    internal Skill marksmanship;
-    internal Skill stealth;
-    internal Skill dexterity;
-    internal Skill martial;
-    internal Skill fencing;
-    internal Skill react;
-    internal Skill riding;
+    public Stat grace;
+    public Skill acrobatics;
+    public Skill marksmanship;
+    public Skill stealth;
+    public Skill dexterity;
+    public Skill martial;
+    public Skill fencing;
+    public Skill react;
+    public Skill riding;
 
-    internal Stat mind;
-    internal Skill arcana;
-    internal Skill nature;
-    internal Skill religion;
-    internal Skill survival;
-    internal Skill lore;
-    internal Skill investigation;
-    internal Skill tactics;
+    public Stat mind;
+    public Skill arcana;
+    public Skill nature;
+    public Skill religion;
+    public Skill survival;
+    public Skill lore;
+    public Skill investigation;
+    public Skill tactics;
 
-    internal Stat soul;
-    internal Skill willpower;
-    internal Skill intuition;
-    internal Skill alertness;
-    internal Skill spellcraft;
-    internal Skill fervor;
+    public Stat soul;
+    public Skill willpower;
+    public Skill intuition;
+    public Skill alertness;
+    public Skill spellcraft;
+    public Skill fervor;
 
-    internal Stat trade;
-    internal Skill medicine;
-    internal Skill alchemy;
-    internal Skill forgery;
-    internal Skill craft;
-    internal Skill burglary;
-    internal Skill tinkering;
-    internal Skill performance;
+    public Stat trade;
+    public Skill medicine;
+    public Skill alchemy;
+    public Skill forgery;
+    public Skill craft;
+    public Skill burglary;
+    public Skill tinkering;
+    public Skill performance;
 
-    internal Stat personality;
-    internal Skill courtship;
-    internal Skill manipulation;
-    internal Skill persuasion;
-    internal Skill business;
-    internal Skill intimidation;
+    public Stat personality;
+    public Skill courtship;
+    public Skill manipulation;
+    public Skill persuasion;
+    public Skill business;
+    public Skill intimidation;
 }

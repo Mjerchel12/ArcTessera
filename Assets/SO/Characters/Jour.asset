@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438d3a1aec8ab0448a26f41c9e01489c, type: 3}
+  m_Name: Jour
+  m_EditorClassIdentifier: 
+  charName: Adrian Zandberg
+  age: 69
+  genderIdentity: Woke
+  nationality: Danish
+  faith: Socialism
+  appearance: Tall, viking-like
+  homeTown: Aalborg
+  backstory: idk
+  flaws: no
+  charTraits: cool as shit
+  bonds: razem party
+  goals: to win
+  notes: 
