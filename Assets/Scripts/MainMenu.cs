@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public SheetManager sheetManager;
 
     public GameObject charPrefab;
-    public Transform parentObject;
+    public RectTransform parentObject;
 
     public GameObject featPrefab;
     public Transform parentFeatObject;
@@ -50,15 +50,23 @@ public class MainMenu : MonoBehaviour
             Debug.Log("wesz³o w foreach");
             if (c != null)
             {
-                var guy = Instantiate(charPrefab, new Vector2(-180f + (90f * x), 55f - (30f * y)), Quaternion.identity, parentObject);
+                var guy = Instantiate(charPrefab, parentObject);
                 var guyChar = guy.GetComponent<CharacterBar>();
                 guyChar.character = c;
-                x++;
-                if (x == 5)
-                {
-                    x = 0;
-                    y++;
-                }
+                //x++;
+                //if (x == 5)
+                //{
+                //    x = 0;
+                //    y++;
+
+                //    Vector2 sizeDelta = parentObject.sizeDelta;
+
+                //    // Increase the height by the specified increment
+                //    sizeDelta.y += 118.511f;
+
+                //    // Apply the new sizeDelta
+                //    parentObject.sizeDelta = sizeDelta;
+                //}
             }
         }
     }
