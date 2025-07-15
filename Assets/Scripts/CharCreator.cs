@@ -12,6 +12,11 @@ public class CharCreator : MonoBehaviour
     public GameObject displayBack;
     public GameObject displaySign;
     public GameObject displayAttune;
+    public GameObject displayFeature;
+    public GameObject chooseSpec;
+    public GameObject marbleListSpec;
+    public GameObject paperSpec;
+
     public TMP_Dropdown dropLineage;
     public TMP_Dropdown dropCulture;
     public TMP_Dropdown dropBack;
@@ -20,17 +25,30 @@ public class CharCreator : MonoBehaviour
     public TMP_InputField inputName;
     public TMP_InputField inputLevel;
     public CharacterBar character;
+
+    public TextMeshProUGUI pointsToEx;
+    public TextMeshProUGUI pointsToSkill;
+    public TextMeshProUGUI pointsToAtt;
+
     GameObject dis;
+
+    bool hasOp = false;
+
     private void Start()
     {
         character.character = ScriptableObject.CreateInstance<Character>();
         character.character.co = ScriptableObject.CreateInstance<CharacterOptions>();
         character.character.att = ScriptableObject.CreateInstance<Attributes>();
+        character.character.att.athletics = ScriptableObject.CreateInstance<Skill>();
+        character.character.att.body = ScriptableObject.CreateInstance<Stat>();
         character.character.stats = ScriptableObject.CreateInstance<Statistics>();
         character.character.cons = ScriptableObject.CreateInstance<Conditions>();
         character.character.cmb = ScriptableObject.CreateInstance<Combat>();
         character.character.eq = ScriptableObject.CreateInstance<Equipment>();
         character.character.jo = ScriptableObject.CreateInstance<Journal>();
+        pointsToAtt.text = 20.ToString();
+        pointsToSkill.text = 60.ToString();
+        pointsToEx.text = 50.ToString();
     }
     public void ChooseLineage()
     {
@@ -41,7 +59,7 @@ public class CharCreator : MonoBehaviour
         Lineage chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text);
         Debug.Log(chosen);
         character.character.co.lineage = chosen;
-        dis = Instantiate(displayLin, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
+        dis = Instantiate(displayLin, equipPaper.transform);
         var disScript = dis.GetComponent<CharCreatorFeature>();
         disScript.nameDisplay.text = chosen.lineName;
         disScript.sizeAndClade.text = "<i>" + chosen.size + " " + chosen.clade + "</i>";
@@ -55,7 +73,7 @@ public class CharCreator : MonoBehaviour
         disScript.trade.text = chosen.tradeBonus.ToString();
         disScript.personality.text = chosen.personalityBonus.ToString();
         disScript.speed.text = chosen.speed.walk + "m";
-        if(chosen.speed.swim != 0)
+        if (chosen.speed.swim != 0)
         {
             disScript.speed.text = disScript.speed.text + ", Swimming:" + chosen.speed.swim.ToString();
         }
@@ -79,9 +97,18 @@ public class CharCreator : MonoBehaviour
         disScript.size.text = chosen.sizeSpan;
         disScript.lifespan.text = chosen.lifeSpan;
         disScript.skills.text = chosen.skillBonus.desc;
-        foreach (Feature f in chosen.features) 
-        { 
+        foreach (Feature f in chosen.features)
+        {
             disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+            if (f.subOptions != null)
+            {
+                hasOp = true;
+                chooseSpec.SetActive(true);
+            }
+            else if (hasOp == false)
+            {
+                chooseSpec.SetActive(false);
+            }
         }
     }
     public void ChooseCulture()
@@ -139,5 +166,24 @@ public class CharCreator : MonoBehaviour
     public void SetName()
     {
         character.character.jo.charName = inputName.text;
+    }
+    public void ChooseSpec(TMP_Dropdown drop)
+    {
+        if (dis != null)
+        {
+            Destroy(dis);
+            foreach(var i in drop.options)
+            {
+                Feature prev = character.character.co.features.First(item => item.featName == i.text);
+                character.character.co.features.Remove(prev);
+            }
+        }
+        Feature chosen = character.character.co.features.First(item => item.subOptions.First(item => item.featName == drop.options[drop.value].text));
+        Debug.Log(chosen);
+        character.character.co.features.Add(chosen);
+        dis = Instantiate(displayFeature, paperSpec.transform);
+        var disScript = dis.GetComponent<FeatureScript>();
+        disScript.featName.text = chosen.featName;
+        disScript.featDescription.text = chosen.desc;
     }
 }

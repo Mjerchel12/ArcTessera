@@ -12,7 +12,9 @@ public class MainMenu : MonoBehaviour
     public RectTransform parentObject;
 
     public GameObject featPrefab;
-    public Transform parentFeatObject;
+
+    public GameObject featSpecPrefab;
+    public RectTransform parentSpecObject;
 
     public Repository repo;
     public GameObject menu;
@@ -21,6 +23,7 @@ public class MainMenu : MonoBehaviour
     public GameObject marble;
     public GameObject background;
     public GameObject step1;
+    public GameObject spec;
     public GameObject levelUp;
     public GameObject paths;
     public GameObject pathsLv;
@@ -53,20 +56,6 @@ public class MainMenu : MonoBehaviour
                 var guy = Instantiate(charPrefab, parentObject);
                 var guyChar = guy.GetComponent<CharacterBar>();
                 guyChar.character = c;
-                //x++;
-                //if (x == 5)
-                //{
-                //    x = 0;
-                //    y++;
-
-                //    Vector2 sizeDelta = parentObject.sizeDelta;
-
-                //    // Increase the height by the specified increment
-                //    sizeDelta.y += 118.511f;
-
-                //    // Apply the new sizeDelta
-                //    parentObject.sizeDelta = sizeDelta;
-                //}
             }
         }
     }
@@ -76,6 +65,7 @@ public class MainMenu : MonoBehaviour
     }
     public void NewCharacter()
     {
+        character = new Character();
         Step1();
     }
     public void Back()
@@ -88,6 +78,7 @@ public class MainMenu : MonoBehaviour
         creator.SetActive(false);
         menu.SetActive(true);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void Step1()
     {
@@ -100,7 +91,29 @@ public class MainMenu : MonoBehaviour
         creator.SetActive(true);
         step1.SetActive(true);
         levelUp.SetActive(false);
-        character = new Character();
+        spec.SetActive(false);
+    }
+    public void ChooseSpec()
+    {
+        background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        menu.SetActive(false);
+        marble.SetActive(true);
+        paths.SetActive(false);
+        features.SetActive(false);
+        step2.SetActive(false);
+        creator.SetActive(true);
+        step1.SetActive(false);
+        levelUp.SetActive(false);
+        spec.SetActive(true);
+        foreach (var feat in character.co.lineage.features) { 
+            if(feat.subOptions != null)
+            {
+                var bar = Instantiate(featSpecPrefab, parentSpecObject);
+                var barScript = bar.GetComponent<SpecFeature>();
+                barScript.source.text = character.co.lineage.lineName;
+                barScript.featName.text = feat.featName;
+            }
+        }
     }
     public void Step2()
     {
@@ -111,6 +124,7 @@ public class MainMenu : MonoBehaviour
         step3.SetActive(false);
         step2.SetActive(true);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void ShowPaths()
     {
@@ -122,6 +136,7 @@ public class MainMenu : MonoBehaviour
         step3.SetActive(false);
         step2.SetActive(false);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void ShowPathsLv()
     {
@@ -133,6 +148,7 @@ public class MainMenu : MonoBehaviour
         step3.SetActive(false);
         step2.SetActive(false);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void ShowFeatures()
     {
@@ -144,6 +160,7 @@ public class MainMenu : MonoBehaviour
         step3.SetActive(false);
         step2.SetActive(false);
         levelUp.SetActive(false);
+        spec.SetActive(false);
         Debug.Log("Wesz³o w metode");
         foreach (var feature in repo.features) 
         {
@@ -151,7 +168,7 @@ public class MainMenu : MonoBehaviour
             if (feature.requiredFeatures==null && feature.requiredFeatures.All(element => character.co.features.Contains(element)))
             {
                 Debug.Log("Wesz³o w if");
-                var guy = Instantiate(featPrefab, new Vector2(80f + (90f * x), 35f - (30f * y)), Quaternion.identity, parentFeatObject);
+                var guy = Instantiate(charPrefab, parentObject);
                 var guyChar = guy.GetComponent<Feature>();
                 guyChar = feature;
                 xf++;
@@ -172,6 +189,7 @@ public class MainMenu : MonoBehaviour
         step4.SetActive(false);
         step3.SetActive(true);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void Step4()
     {
@@ -182,6 +200,7 @@ public class MainMenu : MonoBehaviour
         step5.SetActive(false);
         step4.SetActive(true);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void Step5()
     {
@@ -191,9 +210,11 @@ public class MainMenu : MonoBehaviour
         features.SetActive(false);
         step5.SetActive(true);
         levelUp.SetActive(false);
+        spec.SetActive(false);
     }
     public void Finalize(CharacterBar character)
     {
+        this.character = character.character;
         marble.SetActive(false);
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         menu.SetActive(false);
@@ -204,8 +225,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log(character.character);
         sheetManager.ShowSheet(character.character);
         levelUp.SetActive(false);
+        spec.SetActive(false);
         repo.allCharacters.Add(character.character);
-        var guy = Instantiate(charPrefab, new Vector2(-180f + (90f * x), 55f - (30f * y)), Quaternion.identity, parentObject);
+        var guy = Instantiate(charPrefab, parentObject);
         var guyChar = guy.GetComponent<Character>();
         guyChar = character.character;
         x++;
@@ -229,6 +251,7 @@ public class MainMenu : MonoBehaviour
         sheetManager.ShowSheet(character.character);
         levelUp.SetActive(false);
         pathsLv.SetActive(false);
+        spec.SetActive(false);
         this.character = character.character;
         sheetAnimator.SetTrigger("Start");
     }
@@ -243,6 +266,7 @@ public class MainMenu : MonoBehaviour
         creator.SetActive(true);
         levelUp.SetActive(true);
         pathsLv.SetActive(false);
+        spec.SetActive(false);
     }
     public void Settings()
     {
