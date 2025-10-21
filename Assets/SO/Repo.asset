@@ -12,21 +12,6349 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81750da514332fd4f8d779bac1526045, type: 3}
   m_Name: Repo
   m_EditorClassIdentifier: 
-  features:
-  - {fileID: 11400000, guid: 4bc701aafef2a99448ef125474b0e792, type: 2}
-  - {fileID: 11400000, guid: 03ed4ea5bd031d94da89ede056be0cee, type: 2}
-  - {fileID: 11400000, guid: 33f384afd5b2a1a4e96d77acd98dcafc, type: 2}
+  traits:
+  - featName: Parry Master
+    desc: "Using a Block action with a shield, or a weapon with a Deflect trait,
+      doesn\u2019t cost you any Stamina.  "
+    descOnSheet: 
+    types:
+    - Combat
+    requiredFeatures: []
+    range: 
+    turns: 0
+    min: 0
+    hours: 0
+    requiredLevel: 0
+    uses: 
+    spent: 0
+    roll:
+      diceQuantity: 0
+      die: 0
+      bonus: 
+      dmg: 0
+      type: 
+      addDmg: 0
+    ApCost: 0
+    isReaction: 1
+    staminaCost: 0
+    subOptions: []
+    showOnSheet: 1
+    favors: []
+    disfavors: []
+    resistances: []
+    vulnerabilities: []
+    immunities: []
+    bonuses: []
+    bonusNumb: 
+    addedStance: 
+    freeTrait: 0
+    up:
+      level: 0
+      changes:
+        featName: 
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions: []
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        subChosen: 0
+                    subChosen: 0
+                subChosen: 0
+            subChosen: 0
+        subChosen: 0
+    subChosen: 0
+  - featName: Powerful Deflect
+    desc: 'Successfully blocking an attack costs your opponent twice as much Stamina.  '
+    descOnSheet: 
+    types:
+    - Combat
+    requiredFeatures:
+    - Parry Master
+    range: 
+    turns: 0
+    min: 0
+    hours: 0
+    requiredLevel: 0
+    uses: 
+    spent: 0
+    roll:
+      diceQuantity: 0
+      die: 0
+      bonus: 
+      dmg: 0
+      type: 
+      addDmg: 0
+    ApCost: 0
+    isReaction: 1
+    staminaCost: 0
+    subOptions: []
+    showOnSheet: 0
+    favors: []
+    disfavors: []
+    resistances: []
+    vulnerabilities: []
+    immunities: []
+    bonuses: []
+    bonusNumb: 
+    addedStance: 
+    freeTrait: 0
+    up:
+      level: 0
+      changes:
+        featName: 
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions: []
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        subChosen: 0
+                    subChosen: 0
+                subChosen: 0
+            subChosen: 0
+        subChosen: 0
+    subChosen: 0
+  - featName: Guard Counter
+    desc: 'After successfully blocking an attack you can make one attack as part
+      of that Reaction.  '
+    descOnSheet: 
+    types:
+    - Combat
+    requiredFeatures:
+    - Parry Master
+    range: 
+    turns: 0
+    min: 0
+    hours: 0
+    requiredLevel: 0
+    uses: 
+    spent: 0
+    roll:
+      diceQuantity: 0
+      die: 0
+      bonus: 
+      dmg: 0
+      type: 
+      addDmg: 0
+    ApCost: 0
+    isReaction: 1
+    staminaCost: 0
+    subOptions: []
+    showOnSheet: 0
+    favors: []
+    disfavors: []
+    resistances: []
+    vulnerabilities: []
+    immunities: []
+    bonuses: []
+    bonusNumb: 
+    addedStance: 
+    freeTrait: 0
+    up:
+      level: 0
+      changes:
+        featName: 
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions: []
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        subChosen: 0
+                    subChosen: 0
+                subChosen: 0
+            subChosen: 0
+        subChosen: 0
+    subChosen: 0
+  legendaries: []
   allCharacters:
-  - {fileID: 11400000, guid: c08a2eca33d72274c9e388da8d53849e, type: 2}
+  - lineage: Human
+    culture: Militaristic
+    background: Soldier
+    starsign: Boulder
+    element: Dry
+    level: 1
+    desc: 
+    features: []
+    spells: []
+    maneuvers: []
+    legFeatures: []
+    Talent: 0
+    body:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    athletics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    strength:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vigor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    resistance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    endurance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fortitude:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    melee:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    throwing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    grace:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    acrobatics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    marksmanship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    stealth:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    dexterity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    martial:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fencing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    react:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    riding:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    mind:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    arcana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    nature:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    religion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    survival:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    lore:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    investigation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tactics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    soul:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    willpower:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intuition:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alertness:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    spellcraft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fervor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    trade:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    medicine:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alchemy:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    forgery:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    craft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    burglary:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tinkering:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    performance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    personality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    courtship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    manipulation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    persuasion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    business:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intimidation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vitality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    mana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    wounds: 0
+    AP: 0
+    Reactions: 0
+    speedBonus: 0
+    stamina:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    sanity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    speed:
+      walk: 0
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    determination:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    exhaustion: 0
+    toxin: 0
+    curse: 0
+    conditions: []
+    resistances: []
+    immunities: []
+    vulnerabilities: []
+    currentStance: 
+    knownStances: []
+    leftHand: 
+    rightHand: 
+    wornArmor: 
+    weaponry: []
+    armory: []
+    consumables: []
+    other: []
+    charName: 
+    age: 0
+    genderIdentity: 
+    ethnicity: 
+    nationality: 
+    faith: 
+    appearance: 
+    homeTown: 
+    backstory: 
+    flaws: 
+    charTraits: 
+    bonds: 
+    goals: 
+    notes: 
+  - lineage: Human
+    culture: 
+    background: 
+    starsign: 
+    element: 
+    level: 0
+    desc: 
+    features: []
+    spells: []
+    maneuvers: []
+    legFeatures: []
+    Talent: 0
+    body:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    athletics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    strength:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vigor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    resistance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    endurance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fortitude:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    melee:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    throwing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    grace:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    acrobatics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    marksmanship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    stealth:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    dexterity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    martial:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fencing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    react:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    riding:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    mind:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    arcana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    nature:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    religion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    survival:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    lore:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    investigation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tactics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    soul:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    willpower:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intuition:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alertness:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    spellcraft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fervor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    trade:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    medicine:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alchemy:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    forgery:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    craft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    burglary:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tinkering:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    performance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    personality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    courtship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    manipulation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    persuasion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    business:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intimidation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vitality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    mana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    wounds: 0
+    AP: 0
+    Reactions: 0
+    speedBonus: 0
+    stamina:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    sanity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    speed:
+      walk: 0
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    determination:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    exhaustion: 0
+    toxin: 0
+    curse: 0
+    conditions: []
+    resistances: []
+    immunities: []
+    vulnerabilities: []
+    currentStance: 
+    knownStances: []
+    leftHand: 
+    rightHand: 
+    wornArmor: 
+    weaponry: []
+    armory: []
+    consumables: []
+    other: []
+    charName: Lenin
+    age: 0
+    genderIdentity: 
+    ethnicity: 
+    nationality: 
+    faith: 
+    appearance: 
+    homeTown: 
+    backstory: 
+    flaws: 
+    charTraits: 
+    bonds: 
+    goals: 
+    notes: 
+  - lineage: Elf
+    culture: 
+    background: 
+    starsign: 
+    element: 
+    level: 0
+    desc: 
+    features: []
+    spells: []
+    maneuvers: []
+    legFeatures: []
+    Talent: 0
+    body:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    athletics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    strength:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vigor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    resistance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    endurance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fortitude:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    melee:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    throwing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    grace:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    acrobatics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    marksmanship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    stealth:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    dexterity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    martial:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fencing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    react:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    riding:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    mind:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    arcana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    nature:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    religion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    survival:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    lore:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    investigation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tactics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    soul:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    willpower:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intuition:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alertness:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    spellcraft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fervor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    trade:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    medicine:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alchemy:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    forgery:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    craft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    burglary:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tinkering:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    performance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    personality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    courtship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    manipulation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    persuasion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    business:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intimidation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vitality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    mana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    wounds: 0
+    AP: 0
+    Reactions: 0
+    speedBonus: 0
+    stamina:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    sanity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    speed:
+      walk: 0
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    determination:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    exhaustion: 0
+    toxin: 0
+    curse: 0
+    conditions: []
+    resistances: []
+    immunities: []
+    vulnerabilities: []
+    currentStance: 
+    knownStances: []
+    leftHand: 
+    rightHand: 
+    wornArmor: 
+    weaponry: []
+    armory: []
+    consumables: []
+    other: []
+    charName: Elf
+    age: 0
+    genderIdentity: 
+    ethnicity: 
+    nationality: 
+    faith: 
+    appearance: 
+    homeTown: 
+    backstory: 
+    flaws: 
+    charTraits: 
+    bonds: 
+    goals: 
+    notes: 
   attunements:
-  - {fileID: 11400000, guid: 9dcc54e168787004691e58d5819b9623, type: 2}
+  - elName: Dry
+    desc: Common amongst those who dwell in deserts and dry environment.
+    features:
+    - featName: Scorching Resilience
+      desc: You have Favor on rolls against extreme heat.
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances:
+      - Extreme heat
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
   signs:
-  - {fileID: 11400000, guid: f903b9c9916107c4b82e7a8cb5c9a16f, type: 2}
+  - signName: Mountain
+    desc: Sign of those who stand the strongest.
+    bodyBonus: 1
+    graceBonus: 0
+    mindBonus: 0
+    soulBonus: 0
+    tradeBonus: 0
+    personalityBonus: 0
+    features:
+    - featName: Standing Strong
+      desc: You have Favor on rolls against forced movement or being knocked prone.
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances:
+      - Prone
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
   backs:
-  - {fileID: 11400000, guid: fd8d8a78d0bea9a4abd7d0add9070e5c, type: 2}
+  - backName: Soldier
+    desc: Common Background
+    bodyBonus: 1
+    graceBonus: 1
+    mindBonus: 0
+    soulBonus: 1
+    tradeBonus: 0
+    personalityBonus: 0
+    skillBonus:
+      bonusName:
+      - Body
+      bonusNumb: 01
+      expertise: 0
+      desc: You can add 1 additional points to any Body skill.
+    features:
+    - featName: First Strike
+      desc: You have a Favor on your first attack in combat.
+      descOnSheet: 
+      types:
+      - Combat
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 1
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    - featName: Military Rank
+      desc: You have a military rank from your career as a soldier. Soldiers loyal
+        to your former military organization still recognize your authority and influence,
+        and they defer to you if they are of a lower rank. You can invoke your rank
+        to exert influence over other soldiers and requisition simple equipment or
+        horses for temporary use. You can also usually gain access to friendly military
+        encampments and fortresses where your rank is recognized.
+      descOnSheet: 
+      types:
+      - Social
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 1
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    equipment:
+    - 
+    - 
+    - 
   cultures:
-  - {fileID: 11400000, guid: 5cd95dc41acd01447a0bf358583dc786, type: 2}
-  - {fileID: 11400000, guid: a666bb42824c1074690e716e74988b17, type: 2}
+  - cultName: Militaristic
+    desc: Generic Culture
+    bodyBonus: 1
+    graceBonus: 1
+    mindBonus: 0
+    soulBonus: 0
+    tradeBonus: 0
+    personalityBonus: 0
+    skillBonus:
+      bonusName:
+      - Body
+      - Grace
+      bonusNumb: 0101
+      expertise: 0
+      desc: You can add 1 additional points to any Body and Grace skill.
+    features:
+    - featName: Determination
+      desc: You have one more point of Determination.
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses:
+      - Determination
+      bonusNumb: 01
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    equipment:
+    - 
+  - cultName: Sect of Wilds
+    desc: Elvish Culture
+    bodyBonus: 0
+    graceBonus: 2
+    mindBonus: 0
+    soulBonus: 0
+    tradeBonus: 0
+    personalityBonus: 0
+    skillBonus:
+      bonusName:
+      - Grace
+      bonusNumb: 02
+      expertise: 0
+      desc: You can add 2 additional points to any Grace skill.
+    features:
+    - featName: Mask of the Wild
+      desc: You can attempt to hide even when you are only lightly obscured by foliage,
+        heavy rain, falling snow, mist, and other natural phenomena.
+      descOnSheet: 
+      types:
+      - Stealth
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 1
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    - featName: Fleef of Foot
+      desc: Your base walking speed increases by 1 meter.
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses:
+      - Walk
+      bonusNumb: 01
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    equipment:
+    - 
   lineages:
-  - {fileID: 11400000, guid: bae435d733507044ab6418ebea2b6d20, type: 2}
-  - {fileID: 11400000, guid: 9984bcf5e553b76479fdadb41cee8b39, type: 2}
+  - lineName: Human
+    size: Medium
+    clade: Mammal
+    vitDiceQuantity: 4
+    vitDice: 10
+    staminaBase: 15
+    sanityBase: 15
+    bodyBonus: 2
+    graceBonus: 0
+    mindBonus: 3
+    soulBonus: -1
+    tradeBonus: 1
+    personalityBonus: 1
+    speed:
+      walk: 6
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    senses: Regular senses
+    sizeSpan: 1.4 - 1.9 meters
+    lifeSpan: Adulthood - 16, Death - 70
+    skillBonus:
+      bonusName: []
+      bonusNumb: 
+      expertise: 5
+      desc: You can add 5 additional points to your Expertise skills.
+    features:
+    - featName: Trait
+      desc: You can take one free Trait of your choice.
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 1
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+  - lineName: Elf
+    size: Medium
+    clade: Mammal
+    vitDiceQuantity: 4
+    vitDice: 10
+    staminaBase: 12
+    sanityBase: 18
+    bodyBonus: 0
+    graceBonus: 2
+    mindBonus: 1
+    soulBonus: 3
+    tradeBonus: 0
+    personalityBonus: 0
+    speed:
+      walk: 7
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    senses: 12 meters of darkvision
+    sizeSpan: 1.5 - 2.0 meters
+    lifeSpan: Adulthood - 50, Death - 400
+    skillBonus:
+      bonusName:
+      - Mind
+      - Soul
+      bonusNumb: 0203
+      expertise: 0
+      desc: 
+    features:
+    - featName: Trance
+      desc: Instead of sleeping you meditate deeply, remaining semi-conscious, for
+        4 hours a day. While meditating, you dream after a fashion; such dreams are
+        actually mental exercises that have become reflexive after years of practice.
+        After resting in this way, you gain the same benefit a human would from 8
+        hours of sleep.
+      descOnSheet: 
+      types:
+      - Resting
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions:
+      - featName: Trans1
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions:
+        - featName: placki
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+        - featName: placki2
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        subChosen: 0
+                    subChosen: 0
+                subChosen: 0
+            subChosen: 0
+        subChosen: 0
+      - featName: Trans2
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions:
+        - featName: placki
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+        - featName: placki2
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        subChosen: 0
+                    subChosen: 0
+                subChosen: 0
+            subChosen: 0
+        subChosen: 0
+      - featName: Trans3
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions:
+        - featName: placki
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+        - featName: placki2
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        subChosen: 0
+                    subChosen: 0
+                subChosen: 0
+            subChosen: 0
+        subChosen: 0
+      showOnSheet: 1
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    - featName: Fey Resistance
+      desc: "You have Favor on rolls against being charmed, and magic can\u2019t
+        put you to sleep."
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances:
+      - Charmed
+      vulnerabilities: []
+      immunities:
+      - Magical sleep
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    - featName: Ambush Hunter
+      desc: You have Favor on all Stealth rolls.
+      descOnSheet: 
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 0
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors:
+      - Stealth
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+  paths:
+  - pathName: Warrior
+    desc: 'Martial basic path  '
+    expertise:
+    - Athletics
+    - Strength
+    - Vigor
+    - Resistance
+    - Endurance
+    - Fortitude
+    - Brutality
+    - Accuracy
+    - Fencing
+    - Reactions
+    - Riding
+    - Lore
+    - Tactics
+    - Intimidation
+    equipment:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    initFeature:
+      featName: Combat Training
+      desc: 'You can choose and take a number of Martial Maneuvers equal to your
+        Talent score.<br> By expending one AP you can change your Stance, while fighting
+        with a weapon. You choose your first stance at the beginning of the combat.<br>
+        - Tree Stance: The default Stance. No additional features. A Stance most
+        warriors are taught first.<br> - Waves Stance: If you are holding only one
+        weapon and the other hand is free, your main weapon gains one additional
+        meter of range. A Stance often used by duelists and rogues.<br> - Earth Stance:
+        You lose one AP, but instead gain one Reaction. A defensive Stance focused
+        on reacting, rather than attacking.<br> - Flame Stance: You lose one Reaction,
+        but instead gain one additional AP. An offensive Stance, that focuses on
+        attacking rather than reacting.<br> - Iron Stance: You hold the weapon in
+        two hands. Attacks made with this weapon cost one less AP, two less Stamina
+        points, and you use a larger damage. A Stance used by noble knights and powerful
+        warriors.<br>'
+      descOnSheet: By expending one AP you can change your Stance, while fighting
+        with a weapon. You choose your first stance at the beginning of the combat.
+      types: []
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: 
+      spent: 0
+      roll:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 0
+        type: 
+        addDmg: 0
+      ApCost: 1
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 0
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 0
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 0
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+    features:
+    - featName: Adrenaline
+      desc: "You can fight where other warriors would fail. You can spend one AP
+        to regain Vitality points equal to 1d6 + your Body modifier.<br> You can
+        make this action a number of times equal to your Talent. One hour of rest
+        replenishes one use of Adrenaline.<br> At 6th general level your Adrenaline\u2019s
+        healing die changes from 1d6 to 1d8."
+      descOnSheet: 
+      types:
+      - Combat
+      requiredFeatures: []
+      range: 
+      turns: 0
+      min: 0
+      hours: 0
+      requiredLevel: 0
+      uses: Talent
+      spent: 0
+      roll:
+        diceQuantity: 1
+        die: 6
+        bonus: Body
+        dmg: 0
+        type: Self-Healing
+        addDmg: 0
+      ApCost: 1
+      isReaction: 0
+      staminaCost: 0
+      subOptions: []
+      showOnSheet: 1
+      favors: []
+      disfavors: []
+      resistances: []
+      vulnerabilities: []
+      immunities: []
+      bonuses: []
+      bonusNumb: 
+      addedStance: 
+      freeTrait: 0
+      up:
+        level: 6
+        changes:
+          featName: 
+          desc: 
+          descOnSheet: 
+          types: []
+          requiredFeatures: []
+          range: 
+          turns: 0
+          min: 0
+          hours: 0
+          requiredLevel: 0
+          uses: 
+          spent: 0
+          roll:
+            diceQuantity: 0
+            die: 8
+            bonus: 
+            dmg: 0
+            type: 
+            addDmg: 0
+          ApCost: 0
+          isReaction: 0
+          staminaCost: 0
+          subOptions: []
+          showOnSheet: 0
+          favors: []
+          disfavors: []
+          resistances: []
+          vulnerabilities: []
+          immunities: []
+          bonuses: []
+          bonusNumb: 
+          addedStance: 
+          freeTrait: 0
+          up:
+            level: 0
+            changes:
+              featName: 
+              desc: 
+              descOnSheet: 
+              types: []
+              requiredFeatures: []
+              range: 
+              turns: 0
+              min: 0
+              hours: 0
+              requiredLevel: 0
+              uses: 
+              spent: 0
+              roll:
+                diceQuantity: 0
+                die: 0
+                bonus: 
+                dmg: 0
+                type: 
+                addDmg: 0
+              ApCost: 0
+              isReaction: 0
+              staminaCost: 0
+              subOptions: []
+              showOnSheet: 0
+              favors: []
+              disfavors: []
+              resistances: []
+              vulnerabilities: []
+              immunities: []
+              bonuses: []
+              bonusNumb: 
+              addedStance: 
+              freeTrait: 0
+              up:
+                level: 0
+                changes:
+                  featName: 
+                  desc: 
+                  descOnSheet: 
+                  types: []
+                  requiredFeatures: []
+                  range: 
+                  turns: 0
+                  min: 0
+                  hours: 0
+                  requiredLevel: 0
+                  uses: 
+                  spent: 0
+                  roll:
+                    diceQuantity: 0
+                    die: 0
+                    bonus: 
+                    dmg: 0
+                    type: 
+                    addDmg: 0
+                  ApCost: 0
+                  isReaction: 0
+                  staminaCost: 0
+                  subOptions: []
+                  showOnSheet: 0
+                  favors: []
+                  disfavors: []
+                  resistances: []
+                  vulnerabilities: []
+                  immunities: []
+                  bonuses: []
+                  bonusNumb: 
+                  addedStance: 
+                  freeTrait: 0
+                  up:
+                    level: 0
+                    changes:
+                      featName: 
+                      desc: 
+                      descOnSheet: 
+                      types: []
+                      requiredFeatures: []
+                      range: 
+                      turns: 0
+                      min: 0
+                      hours: 0
+                      requiredLevel: 0
+                      uses: 
+                      spent: 0
+                      roll:
+                        diceQuantity: 0
+                        die: 0
+                        bonus: 
+                        dmg: 0
+                        type: 
+                        addDmg: 0
+                      ApCost: 0
+                      isReaction: 0
+                      staminaCost: 0
+                      subOptions: []
+                      showOnSheet: 0
+                      favors: []
+                      disfavors: []
+                      resistances: []
+                      vulnerabilities: []
+                      immunities: []
+                      bonuses: []
+                      bonusNumb: 
+                      addedStance: 
+                      freeTrait: 0
+                      up:
+                        level: 0
+                      subChosen: 0
+                  subChosen: 0
+              subChosen: 0
+          subChosen: 0
+      subChosen: 0
+  items: []
+  armors: []
+  consumables: []
+  weapons: []
+  spells:
+  - manName: Create Flame
+    types:
+    - Simple
+    - Pyromancy
+    range: 
+    APCost: 0
+    isReaction: 0
+    staminaCost: 0
+    desc: 
+    rollHit:
+      diceQuantity: 0
+      die: 0
+      bonus: 
+      dmg: 0
+      type: 
+      addDmg: 0
+    manaCost: 0
+    spellOptions:
+    - manName: Summon Flame
+      types:
+      - Utility
+      range: Self
+      APCost: 1
+      isReaction: 0
+      staminaCost: 0
+      desc: A flame appears in your hand. The flame remains there for the duration
+        and harms neither you nor your equipment. The spell ends if you dismiss it
+        with 1 AP or if you cast it again.<br> Anyone else touching the flame take
+        2 + Spellforce magical fire damage.
+      rollHit:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 2
+        type: Fire
+        addDmg: 0
+      manaCost: 1
+      spellOptions: []
+      catalyst: A simple gesture and a mental command.
+      S: 1
+      V: 0
+      M: 0
+      turns: 2
+      min: 0
+      hours: 0
+    - manName: Hurl Flame
+      types:
+      - Combat
+      - Projectile
+      range: 6m
+      APCost: 1
+      isReaction: 0
+      staminaCost: 3
+      desc: When having summoned a flame, you can throw it at any target within your
+        range. You make an Spellcraft check. That attack deals half the damage when
+        blocked, and it can be dodged as normal.<br> If the attack hits, target takes
+        4 + Spellforce magical fire damage.
+      rollHit:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 4
+        type: Fire
+        addDmg: 0
+      manaCost: 2
+      spellOptions: []
+      catalyst: A throwing motion and a mental command.
+      S: 1
+      V: 0
+      M: 0
+      turns: 0
+      min: 0
+      hours: 0
+    - manName: Fire Blast
+      types:
+      - Combat
+      - Blast
+      range: 2m
+      APCost: 1
+      isReaction: 0
+      staminaCost: 2
+      desc: When having summoned a flame, you can turn it into a blast of fire against
+        any target within your range. You make an Spellcraft check. That attack deals
+        half the damage when blocked, and it can be dodged as normal.<br> If the
+        attack hits, target takes 6 + Spellforce magical fire damage.
+      rollHit:
+        diceQuantity: 0
+        die: 0
+        bonus: 
+        dmg: 6
+        type: Fire
+        addDmg: 0
+      manaCost: 2
+      spellOptions: []
+      catalyst: Two hands gesture and a mental command.
+      S: 0
+      V: 0
+      M: 0
+      turns: 0
+      min: 0
+      hours: 0
+    catalyst: 
+    S: 0
+    V: 0
+    M: 0
+    turns: 0
+    min: 0
+    hours: 0
+  maneuvers:
+  - manName: Swiping Attack
+    types:
+    - Simple
+    - Martial Maneuver
+    range: 
+    APCost: 0
+    isReaction: 0
+    staminaCost: 0
+    desc: You make an attack against two targets. You divide your damage by two and
+      deal those halves to two different enemies standing next to each other. Instead
+      of regular Skill you use Tactics to make an attack roll with that weapon.
+    rollHit:
+      diceQuantity: 0
+      die: 0
+      bonus: Tactics
+      dmg: 0
+      type: -1
+      addDmg: 0

@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LegFeature", menuName = "ScriptableObjects/Features/LegFeature")]
+[Serializable]
 public class LegFeature : Feature
 {
     

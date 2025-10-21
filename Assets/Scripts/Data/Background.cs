@@ -1,9 +1,9 @@
 ﻿using static Lineage;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Background", menuName = "ScriptableObjects/CO/Background")]
-public class Background:ScriptableObject
+using System;
+[Serializable]
+public class Background
 {
     public string backName;
     public string desc;
@@ -15,9 +15,13 @@ public class Background:ScriptableObject
     public byte personalityBonus;
     public SkillBonus skillBonus;
     public List<Feature> features;
-    public List<Item> equipment;
+    public List<string> equipment;
     public Background(string nm)
     {
         this.backName = nm;
+    }
+    public override string ToString()
+    {
+        return backName;
     }
 }

@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.15438583, y: -0.053995}
+  m_AnchoredPosition: {x: -0.138, y: -0.084}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8840051664945332965
@@ -65,12 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'John
-
-    McDefault'
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: da9f7cc01f299cf4dbcaec2725dd532b, type: 2}
+  m_sharedMaterial: {fileID: -2192063902653934305, guid: da9f7cc01f299cf4dbcaec2725dd532b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -94,14 +92,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.5
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 40
+  m_fontSizeMin: 0.1
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -132,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -9.465607, y: -20.445768, z: 26.70996, w: -23.09616}
+  m_margin: {x: -18.469353, y: -34.66539, z: -79.25717, w: -9.857296}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -417,4 +415,544 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0e5f5990446eb4db71ebfc3264a94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character:
+    lineage: 
+    culture: 
+    background: 
+    starsign: 
+    element: 
+    level: 0
+    desc: 
+    features: []
+    spells: []
+    maneuvers: []
+    legFeatures: []
+    Talent: 0
+    body:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    athletics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    strength:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vigor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    resistance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    endurance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fortitude:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    melee:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    throwing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    grace:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    acrobatics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    marksmanship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    stealth:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    dexterity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    martial:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fencing:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    react:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    riding:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    mind:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    arcana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    nature:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    religion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    survival:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    lore:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    investigation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tactics:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    soul:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    willpower:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intuition:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alertness:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    spellcraft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    fervor:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    trade:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    medicine:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    alchemy:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    forgery:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    craft:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    burglary:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    tinkering:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    performance:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    personality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    courtship:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    manipulation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    persuasion:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    business:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    intimidation:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+      favor: 0
+      disfavor: 0
+    vitality:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    mana:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    wounds: 0
+    AP: 0
+    Reactions: 0
+    speedBonus: 0
+    stamina:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    sanity:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    speed:
+      walk: 0
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    determination:
+      statName: 
+      desc: 
+      value: 0
+      bonus: 0
+      flaw: 0
+      max: 0
+      current: 0
+    exhaustion: 0
+    toxin: 0
+    curse: 0
+    conditions: []
+    resistances: []
+    immunities: []
+    vulnerabilities: []
+    currentStance: 
+    leftHand: 
+    rightHand: 
+    wornArmor: 
+    weaponry: []
+    armory: []
+    consumables: []
+    other: []
+    charName: 
+    age: 0
+    genderIdentity: 
+    nationality: 
+    faith: 
+    appearance: 
+    homeTown: 
+    backstory: 
+    flaws: 
+    charTraits: 
+    bonds: 
+    goals: 
+    notes: 
+  namePlace: {fileID: 7227064600798724311}

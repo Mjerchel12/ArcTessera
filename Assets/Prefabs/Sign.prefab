@@ -563,8 +563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <b>Standing Strong.</b> You have Favor on rolls against forced movement
-    or being knocked prone.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -629,7 +628,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.469515, y: 0.8161822, z: -83.587364, w: -6.8211675}
+  m_margin: {x: -19.469515, y: 0.8161822, z: -78.5662, w: -6.8211675}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2266,25 +2265,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameDisplay: {fileID: 6737258910172771570}
-  sizeAndClade: {fileID: 0}
+  sizeAndClade: {fileID: 7431402479016291182}
   vit: {fileID: 0}
   stam: {fileID: 0}
   san: {fileID: 0}
-  body: {fileID: 0}
-  grace: {fileID: 0}
-  mind: {fileID: 0}
-  soul: {fileID: 0}
-  trade: {fileID: 0}
-  personality: {fileID: 0}
+  body: {fileID: 5180114873973758879}
+  grace: {fileID: 2567080907953035547}
+  mind: {fileID: 3234687734204361262}
+  soul: {fileID: 3588327787530716498}
+  trade: {fileID: 3888752298730305115}
+  personality: {fileID: 4223648848304702408}
   speed: {fileID: 0}
   senses: {fileID: 0}
   size: {fileID: 0}
   lifespan: {fileID: 0}
   skills: {fileID: 0}
-  features: {fileID: 0}
+  features: {fileID: 6206494288059882190}
+  items: {fileID: 0}
 --- !u!114 &6737258910172771570 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7936765340855793899, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
+  m_PrefabInstance: {fileID: 3700414416277834777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7431402479016291182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6087501515671512951, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
   m_PrefabInstance: {fileID: 3700414416277834777}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

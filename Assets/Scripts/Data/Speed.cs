@@ -1,6 +1,7 @@
-﻿using UnityEngine;
-[CreateAssetMenu(fileName = "Speed", menuName = "ScriptableObjects/CO/Speed")]
-public class Speed:ScriptableObject
+﻿using System;
+using UnityEngine;
+[Serializable]
+public class Speed
 {
     public byte walk;
     public byte swim;

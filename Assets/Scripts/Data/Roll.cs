@@ -1,10 +1,10 @@
+using System;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Roll", menuName = "ScriptableObjects/Roll")]
-public class Roll : ScriptableObject{
+[Serializable]
+public class Roll{
     public byte diceQuantity;
     public byte die;
-    public byte bonus;
+    public string bonus;
     public byte dmg;
     public string type;
 

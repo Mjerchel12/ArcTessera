@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "StarSign", menuName = "ScriptableObjects/CO/StarSign")]
-public class StarSign:ScriptableObject
+[Serializable]
+public class StarSign
 {
     public string signName;
     public string desc;
@@ -15,5 +16,9 @@ public class StarSign:ScriptableObject
     public StarSign(string nm)
     {
         this.signName = nm;
+    }
+    public override string ToString()
+    {
+        return signName;
     }
 }

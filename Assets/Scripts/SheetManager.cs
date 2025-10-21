@@ -38,11 +38,9 @@ public class SheetManager : MonoBehaviour
     public void ShowSheet(Character ch)
     {
         Debug.Log(ch);
-        Debug.Log(ch.jo);
-        Debug.Log(ch.jo.name);
         character = ch;
-        nameLabel.text = ch.jo.charName;
-        descLabel.text = ch.co.lineage.lineName + " (" + ch.co.culture.cultName + ") Level " + ch.co.level +"\n"+ ch.co.desc;
+        nameLabel.text = ch.charName;
+        descLabel.text = ch.lineage + " (" + ch.culture + ") Level " + ch.level +"\n"+ ch.desc;
     }
     public void RollDice(int bonus, char favor)
     {

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "SkillBonus", menuName = "ScriptableObjects/CO/SkillBonus")]
-public class SkillBonus : ScriptableObject
+[Serializable]
+public class SkillBonus
 {
     public List<string> bonusName;
     public List<byte> bonusNumb;

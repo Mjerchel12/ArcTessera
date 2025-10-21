@@ -219,7 +219,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.469515, y: 0.8161822, z: -83.587364, w: -6.8211675}
+  m_margin: {x: -19.469515, y: 0.8161822, z: -80.9146, w: -6.8211675}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -547,7 +547,8 @@ MonoBehaviour:
   size: {fileID: 0}
   lifespan: {fileID: 0}
   skills: {fileID: 0}
-  features: {fileID: 0}
+  features: {fileID: 6206494288059882190}
+  items: {fileID: 0}
 --- !u!114 &6737258910172771570 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7936765340855793899, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}

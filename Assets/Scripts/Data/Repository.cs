@@ -5,12 +5,14 @@ using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 [CreateAssetMenu(fileName = "Repo", menuName = "ScriptableObjects/Repo")]
 public class Repository : ScriptableObject{
-    public List<Feature> features = new List<Feature>()
+    public List<Trait> traits = new List<Trait>()
+    {
+    };
+    public List<LegFeature> legendaries = new List<LegFeature>()
     {
     };
     public List<Character> allCharacters = new List<Character>()
     {
-
     };
     public List<Element> attunements = new List<Element>()
     {
@@ -26,6 +28,26 @@ public class Repository : ScriptableObject{
     };
     public List<Lineage> lineages = new List<Lineage>()
     {
-
+    };
+    public List<Path> paths = new List<Path>()
+    {
+    };
+    public List<Item> items = new List<Item>()
+    {
+    };
+    public List<Armor> armors = new List<Armor>()
+    {
+    };
+    public List<Consumable> consumables = new List<Consumable>()
+    {
+    };
+    public List<Weapon> weapons = new List<Weapon>()
+    {
+    };
+    public List<Spell> spells = new List<Spell>()
+    {
+    };
+    public List<Maneuver> maneuvers = new List<Maneuver>()
+    {
     };
 }

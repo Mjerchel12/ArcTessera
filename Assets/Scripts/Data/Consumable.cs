@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-
-[CreateAssetMenu(fileName = "Consumable", menuName = "ScriptableObjects/Item/Consumable")]
+﻿using System;
+using UnityEngine;
+[Serializable]
 public class Consumable : Item
 {
     public Roll roll;

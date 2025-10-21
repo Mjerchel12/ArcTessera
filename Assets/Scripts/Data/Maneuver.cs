@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
-[CreateAssetMenu(fileName = "Maneuver", menuName = "ScriptableObjects/Features/Maneuver")]
-public class Maneuver:ScriptableObject
+[Serializable]
+public class Maneuver
 {
     public string manName;
-    public string types;
+    public List<string> types;
+    public string range;
     public byte APCost;
     public bool isReaction;
     public byte staminaCost;

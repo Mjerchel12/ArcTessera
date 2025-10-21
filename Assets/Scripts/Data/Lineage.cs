@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Lineage", menuName = "ScriptableObjects/CO/Lineage")]
-public class Lineage:ScriptableObject
+[Serializable]
+public class Lineage
 {
     public string lineName;
     public string size;
@@ -45,5 +45,9 @@ public class Lineage:ScriptableObject
         this.lifeSpan = lifeSpan;
         this.skillBonus = skillBonus;
         this.features = features;
+    }
+    public override string ToString()
+    {
+        return lineName;
     }
 }

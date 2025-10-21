@@ -1,19 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Feature", menuName = "ScriptableObjects/Features/Feature")]
-public class Feature:ScriptableObject
+[Serializable]
+public class Feature
 {
     public string featName;
     public string desc;
-    public List<Feature> requiredFeatures;
-    public byte? requiredLevel;
-    public byte? uses;
-    internal byte spent=0;
+    public string descOnSheet;
+    public List<string> types;
+    public List<string> requiredFeatures;
+    public string range;
+    public byte turns;
+    public byte min;
+    public byte hours;
+    public byte requiredLevel;
+    public string uses;
+    public byte spent=0;
     public Roll roll;
-    public byte? APcost;
+    public byte ApCost;
     public bool isReaction;
-    public byte? staminaCost;
+    public byte staminaCost;
     public List<Feature> subOptions;
     public bool showOnSheet;
     public List<string> favors;
@@ -23,4 +31,19 @@ public class Feature:ScriptableObject
     public List<string> immunities;
     public List<string> bonuses;
     public List<sbyte> bonusNumb;
+    public string addedStance;
+    public bool freeTrait;
+    public FeatureUpgrade up;
+    public bool subChosen;
+
+    public override string ToString()
+    {
+        return featName;
+    }
+}
+[Serializable]
+public class FeatureUpgrade
+{
+    public byte level;
+    public Feature changes;
 }

@@ -24,15 +24,15 @@ public class MainMenu : MonoBehaviour
     public GameObject background;
     public GameObject step1;
     public GameObject spec;
-    public GameObject levelUp;
     public GameObject paths;
-    public GameObject pathsLv;
     public GameObject features;
     public GameObject step2;
     public GameObject step3;
     public GameObject step4;
     public GameObject step5;
     public GameObject sheet;
+
+    public ForgeScript forge;
 
     public Animator sheetAnimator;
     
@@ -43,11 +43,26 @@ public class MainMenu : MonoBehaviour
     private int yf = 0;
 
     private Character character;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        Debug.Log("wesz這 w start");
-        
+        repo.allCharacters = FileHandler.ReadFromJson<Character>("characters.json");
+        repo.traits = FileHandler.ReadFromJson<Trait>("traits.json");
+        repo.legendaries = FileHandler.ReadFromJson<LegFeature>("legendaries.json");
+        repo.attunements = FileHandler.ReadFromJson<Element>("attunements.json");
+        repo.signs = FileHandler.ReadFromJson<StarSign>("starSigns.json");
+        repo.backs = FileHandler.ReadFromJson<Background>("backgrounds.json");
+        repo.cultures = FileHandler.ReadFromJson<Culture>("cultures.json");
+        //repo.lineages = FileHandler.ReadFromJson<Lineage>("lineages.json");
+        repo.paths = FileHandler.ReadFromJson<Path>("paths.json");
+        repo.items = FileHandler.ReadFromJson<Item>("items.json");
+        repo.armors = FileHandler.ReadFromJson<Armor>("armors.json");
+        repo.consumables = FileHandler.ReadFromJson<Consumable>("consumables.json");
+        repo.weapons = FileHandler.ReadFromJson<Weapon>("weapons.json");
+        repo.spells = FileHandler.ReadFromJson<Spell>("spells.json");
+        repo.maneuvers = FileHandler.ReadFromJson<Maneuver>("maneuvers.json");
+
         foreach (Character c in repo.allCharacters)
         {
             Debug.Log("wesz這 w foreach");
@@ -56,11 +71,27 @@ public class MainMenu : MonoBehaviour
                 var guy = Instantiate(charPrefab, parentObject);
                 var guyChar = guy.GetComponent<CharacterBar>();
                 guyChar.character = c;
+                guyChar.namePlace.text = c.charName;
             }
         }
     }
     public void Close()
     {
+        FileHandler.SaveToJson<Character>(repo.allCharacters, "characters.json");
+        FileHandler.SaveToJson<Trait>(repo.traits, "traits.json");
+        FileHandler.SaveToJson<LegFeature>(repo.legendaries, "legendaries.json");
+        FileHandler.SaveToJson<Element>(repo.attunements, "attunements.json");
+        FileHandler.SaveToJson<StarSign>(repo.signs, "starSigns.json");
+        FileHandler.SaveToJson<Background>(repo.backs, "backgrounds.json");
+        FileHandler.SaveToJson<Culture>(repo.cultures, "cultures.json");
+        FileHandler.SaveToJson<Lineage>(repo.lineages, "lineages.json");
+        FileHandler.SaveToJson<Path>(repo.paths, "paths.json");
+        FileHandler.SaveToJson<Item>(repo.items, "items.json");
+        FileHandler.SaveToJson<Armor>(repo.armors, "armors.json");
+        FileHandler.SaveToJson<Consumable>(repo.consumables, "consumables.json");
+        FileHandler.SaveToJson<Weapon>(repo.weapons, "weapons.json");
+        FileHandler.SaveToJson<Spell>(repo.spells, "spells.json");
+        FileHandler.SaveToJson<Maneuver>(repo.maneuvers, "maneuvers.json");
         Application.Quit();
     }
     public void NewCharacter()
@@ -77,7 +108,6 @@ public class MainMenu : MonoBehaviour
         step1.SetActive(false);
         creator.SetActive(false);
         menu.SetActive(true);
-        levelUp.SetActive(false);
         spec.SetActive(false);
     }
     public void Step1()
@@ -90,31 +120,8 @@ public class MainMenu : MonoBehaviour
         step2.SetActive(false);
         creator.SetActive(true);
         step1.SetActive(true);
-        levelUp.SetActive(false);
         spec.SetActive(false);
-    }
-    public void ChooseSpec()
-    {
-        background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-        menu.SetActive(false);
-        marble.SetActive(true);
-        paths.SetActive(false);
-        features.SetActive(false);
-        step2.SetActive(false);
-        creator.SetActive(true);
-        step1.SetActive(false);
-        levelUp.SetActive(false);
-        spec.SetActive(true);
-        foreach (var feat in character.co.lineage.features) { 
-            if(feat.subOptions != null)
-            {
-                var bar = Instantiate(featSpecPrefab, parentSpecObject);
-                var barScript = bar.GetComponent<SpecFeature>();
-                barScript.source.text = character.co.lineage.lineName;
-                barScript.featName.text = feat.featName;
-            }
-        }
-    }
+    }    
     public void Step2()
     {
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
@@ -123,7 +130,6 @@ public class MainMenu : MonoBehaviour
         features.SetActive(false);
         step3.SetActive(false);
         step2.SetActive(true);
-        levelUp.SetActive(false);
         spec.SetActive(false);
     }
     public void ShowPaths()
@@ -135,20 +141,8 @@ public class MainMenu : MonoBehaviour
         features.SetActive(false);
         step3.SetActive(false);
         step2.SetActive(false);
-        levelUp.SetActive(false);
         spec.SetActive(false);
-    }
-    public void ShowPathsLv()
-    {
-        background.GetComponent<Image>().color = new Color32(0, 31, 138, 255);
-        marble.SetActive(false);
-        step1.SetActive(false);
-        pathsLv.SetActive(true);
-        features.SetActive(false);
-        step3.SetActive(false);
-        step2.SetActive(false);
-        levelUp.SetActive(false);
-        spec.SetActive(false);
+        forge.Spawn();
     }
     public void ShowFeatures()
     {
@@ -159,26 +153,25 @@ public class MainMenu : MonoBehaviour
         features.SetActive(true);
         step3.SetActive(false);
         step2.SetActive(false);
-        levelUp.SetActive(false);
         spec.SetActive(false);
         Debug.Log("Wesz這 w metode");
-        foreach (var feature in repo.features) 
-        {
-            Debug.Log("Wesz這 w foreach feature");
-            if (feature.requiredFeatures==null && feature.requiredFeatures.All(element => character.co.features.Contains(element)))
-            {
-                Debug.Log("Wesz這 w if");
-                var guy = Instantiate(charPrefab, parentObject);
-                var guyChar = guy.GetComponent<Feature>();
-                guyChar = feature;
-                xf++;
-                if (xf == 5)
-                {
-                    xf = 0;
-                    yf++;
-                }
-            }
-        }
+        //foreach (var feature in repo.features) 
+        //{
+        //    Debug.Log("Wesz這 w foreach feature");
+            //if (feature.requiredFeatures==null && feature.requiredFeatures.All(element => character.co.features.Contains(element)))
+            //{
+            //    Debug.Log("Wesz這 w if");
+            //    var guy = Instantiate(charPrefab, parentObject);
+            //    var guyChar = guy.GetComponent<Feature>();
+            //    guyChar = feature;
+            //    xf++;
+            //    if (xf == 5)
+            //    {
+            //        xf = 0;
+            //        yf++;
+            //    }
+            //}
+        //}
     }
     public void Step3()
     {
@@ -188,7 +181,6 @@ public class MainMenu : MonoBehaviour
         features.SetActive(false);
         step4.SetActive(false);
         step3.SetActive(true);
-        levelUp.SetActive(false);
         spec.SetActive(false);
     }
     public void Step4()
@@ -199,7 +191,6 @@ public class MainMenu : MonoBehaviour
         features.SetActive(false);
         step5.SetActive(false);
         step4.SetActive(true);
-        levelUp.SetActive(false);
         spec.SetActive(false);
     }
     public void Step5()
@@ -209,7 +200,6 @@ public class MainMenu : MonoBehaviour
         step4.SetActive(false);
         features.SetActive(false);
         step5.SetActive(true);
-        levelUp.SetActive(false);
         spec.SetActive(false);
     }
     public void Finalize(CharacterBar character)
@@ -224,12 +214,11 @@ public class MainMenu : MonoBehaviour
         sheet.SetActive(true);
         Debug.Log(character.character);
         sheetManager.ShowSheet(character.character);
-        levelUp.SetActive(false);
         spec.SetActive(false);
         repo.allCharacters.Add(character.character);
         var guy = Instantiate(charPrefab, parentObject);
-        var guyChar = guy.GetComponent<Character>();
-        guyChar = character.character;
+        var guyChar = guy.GetComponent<CharacterBar>();
+        guyChar.character = character.character;
         x++;
         if (x == 5)
         {
@@ -249,24 +238,9 @@ public class MainMenu : MonoBehaviour
         sheet.SetActive(true);
         Debug.Log(character.character);
         sheetManager.ShowSheet(character.character);
-        levelUp.SetActive(false);
-        pathsLv.SetActive(false);
         spec.SetActive(false);
         this.character = character.character;
         sheetAnimator.SetTrigger("Start");
-    }
-    public void LevelUp()
-    {
-        background.GetComponent<Image>().color = new Color32(0, 31, 138, 255);
-        sheet.SetActive(false);
-        menu.SetActive(false);
-        marble.SetActive(false);
-        features.SetActive(false);
-        step2.SetActive(false);
-        creator.SetActive(true);
-        levelUp.SetActive(true);
-        pathsLv.SetActive(false);
-        spec.SetActive(false);
     }
     public void Settings()
     {

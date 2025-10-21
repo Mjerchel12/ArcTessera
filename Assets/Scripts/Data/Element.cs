@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Element", menuName = "ScriptableObjects/CO/Element")]
-public class Element:ScriptableObject
+[Serializable]
+public class Element
 {
     public string elName;
     public string desc;
@@ -10,5 +10,9 @@ public class Element:ScriptableObject
     public Element(string nm)
     {
         this.elName = nm;
+    }
+    public override string ToString()
+    {
+        return elName;
     }
 }

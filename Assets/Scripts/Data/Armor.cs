@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Armor", menuName = "ScriptableObjects/Item/Armor")]
+[Serializable]
 public class Armor : Item{
     public string weightType;
     public byte weight;

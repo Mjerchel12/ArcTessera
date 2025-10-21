@@ -20,4 +20,6 @@ public class CharCreatorFeature : MonoBehaviour
     public TextMeshProUGUI lifespan;
     public TextMeshProUGUI skills;
     public TextMeshProUGUI features;
+    public TextMeshProUGUI items;
+    public TextMeshProUGUI expertise;
 }

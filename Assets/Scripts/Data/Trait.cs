@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Trait", menuName = "ScriptableObjects/Features/Trait")]
+[Serializable]
 public class Trait : Feature
 {
 

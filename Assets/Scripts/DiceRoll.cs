@@ -12,8 +12,7 @@ public class DiceRoll : MonoBehaviour
     }
     public void Roll(int x)
     {
-        var rnd = new System.Random();
-        int result = rnd.Next(1, x);
         SwitchTab();
+        noti.Roll(x, 0, "Basic d" + x + " roll", 'n');
     }
 }

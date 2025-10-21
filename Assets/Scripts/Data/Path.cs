@@ -1,18 +1,22 @@
 ﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Path", menuName = "ScriptableObjects/CO/Path")]
-internal class Path:ScriptableObject
+[Serializable]
+public class Path
 {
     public string pathName;
     public string desc;
-    public Path required;
-    public Path secondRequired;
+    public string required;
+    public byte reqAdv;
+    public string secondRequired;
+    public byte secReqAdv;
     public List<string> expertise;
-    public List<Item> equipment;
+    public List<string> equipment;
     public Feature initFeature;
     public List<Feature> features;
+
+    public byte howAdvanced;
 
     public Path()
     {

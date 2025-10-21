@@ -1,9 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Spell", menuName = "ScriptableObjects/Features/Spell")]
+[Serializable]
 public class Spell:Maneuver
 {
+    public byte manaCost;
     public List<Spell> spellOptions;
-    public byte spellForce;
+    public string catalyst;
+    public bool S;
+    public bool V;
+    public bool M;
+    public byte turns;
+    public byte min;
+    public byte hours;
 }

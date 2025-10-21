@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Skill", menuName = "ScriptableObjects/Skills/Skill")]
+[Serializable]
 public class Skill : Stat, IDiceRoll{
     public bool favor;
     public bool disfavor;

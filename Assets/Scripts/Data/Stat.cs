@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
-[CreateAssetMenu(fileName = "Stat", menuName = "ScriptableObjects/Skills/Stat")]
-public class Stat:ScriptableObject{
+[Serializable]
+public class Stat{
     public string statName;
     public string desc;
     public byte value;

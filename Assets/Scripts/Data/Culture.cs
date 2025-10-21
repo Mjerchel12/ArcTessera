@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Culture", menuName = "ScriptableObjects/CO/Culture")]
-public class Culture:ScriptableObject
+[Serializable]
+public class Culture
 {
     public string cultName;
     public string desc;
@@ -14,9 +14,13 @@ public class Culture:ScriptableObject
     public byte personalityBonus;
     public SkillBonus skillBonus;
     public List<Feature> features;
-    public List<Item> equipment;
+    public List<string> equipment;
     public Culture(string nm)
     {
         this.cultName = nm;
+    }
+    public override string ToString()
+    {
+        return cultName;
     }
 }
