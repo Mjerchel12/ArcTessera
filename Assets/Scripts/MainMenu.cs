@@ -41,8 +41,6 @@ public class MainMenu : MonoBehaviour
 
     private int xf = 0;
     private int yf = 0;
-
-    private Character character;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -96,7 +94,8 @@ public class MainMenu : MonoBehaviour
     }
     public void NewCharacter()
     {
-        character = new Character();
+        CharCreator cc=creator.GetComponent<CharCreator>();
+        cc.StartCreating();
         Step1();
     }
     public void Back()
@@ -142,6 +141,8 @@ public class MainMenu : MonoBehaviour
         step3.SetActive(false);
         step2.SetActive(false);
         spec.SetActive(false);
+        var cc = creator.GetComponent<CharCreator>();
+        cc.displayed = "path";
         forge.Spawn();
     }
     public void ShowFeatures()
@@ -204,7 +205,6 @@ public class MainMenu : MonoBehaviour
     }
     public void Finalize(CharacterBar character)
     {
-        this.character = character.character;
         marble.SetActive(false);
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         menu.SetActive(false);
@@ -239,7 +239,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log(character.character);
         sheetManager.ShowSheet(character.character);
         spec.SetActive(false);
-        this.character = character.character;
         sheetAnimator.SetTrigger("Start");
     }
     public void Settings()

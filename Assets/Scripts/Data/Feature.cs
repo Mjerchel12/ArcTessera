@@ -34,8 +34,7 @@ public class Feature
     public string addedStance;
     public bool freeTrait;
     public FeatureUpgrade up;
-    public bool subChosen;
-
+    public bool isSub;
     public override string ToString()
     {
         return featName;

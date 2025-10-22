@@ -5,6 +5,7 @@ using System.Linq;
 using NUnit.Framework;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.TextCore.Text;
 
 public class CharCreator : MonoBehaviour
 {
@@ -41,9 +42,16 @@ public class CharCreator : MonoBehaviour
 
     public string displayed;
 
-    private void Start()
+    public List<Feature> chosenSubs;
+
+    public ForgeScript fs;
+
+    public void StartCreating()
     {
-        //character.character = ScriptableObject.CreateInstance<Character>();
+        character.character = new Character();
+        character.character.level = 1;
+        character.character.features = new List<Feature>();
+        character.character.paths = new List<Path>();
         pointsToAtt.text = 20.ToString();
         pointsToSkill.text = 60.ToString();
         pointsToEx.text = 50.ToString();
@@ -60,6 +68,20 @@ public class CharCreator : MonoBehaviour
     }
     public void ChooseLineage()
     {
+        if(character.character.lineage != null)
+        {
+            foreach (Feature f in repo.lineages.First(item => item.lineName == character.character.lineage).features)
+            {
+                character.character.features.Remove(f);
+                foreach (Feature l in f.subOptions)
+                {
+                    foreach(Feature r in l.subOptions)
+                    {
+                        character.character.features.Remove(r);
+                    }
+                }
+            }
+        }
         displayed = "lin";
         if (dis != null)
         {
@@ -121,6 +143,7 @@ public class CharCreator : MonoBehaviour
             Debug.Log(disScript);
             Debug.Log(disScript.features);
             disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+            character.character.features.Add(f);
             foreach (Feature l in f.subOptions)
             {
                 Debug.Log(l.featName);
@@ -141,6 +164,20 @@ public class CharCreator : MonoBehaviour
     }
     public void ChooseCulture()
     {
+        if (character.character.culture != null)
+        {
+            foreach (Feature f in repo.cultures.First(item => item.cultName == character.character.culture).features)
+            {
+                character.character.features.Remove(f);
+                foreach (Feature l in f.subOptions)
+                {
+                    foreach (Feature r in l.subOptions)
+                    {
+                        character.character.features.Remove(r);
+                    }
+                }
+            }
+        }
         displayed = "cul";
         if (dis != null)
         {
@@ -175,6 +212,7 @@ public class CharCreator : MonoBehaviour
             Debug.Log(disScript);
             Debug.Log(disScript.features);
             disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+            character.character.features.Add(f);
             foreach (Feature l in f.subOptions)
             {
                 Debug.Log(l.featName);
@@ -197,11 +235,32 @@ public class CharCreator : MonoBehaviour
             Debug.Log(f);
             Debug.Log(chosen);
             Debug.Log(disScript);
-            disScript.items.text = disScript.items.text + f;
+            List<List<Item>> items = repo.Decode(f);
+            foreach (List<Item> l in items)
+            {
+                foreach (Item item in l)
+                {
+                    disScript.items.text = disScript.items.text + item.itemName +", ";
+                }
+            }
         }
     }
     public void ChooseBack()
     {
+        if (character.character.background != null)
+        {
+            foreach (Feature f in repo.backs.First(item => item.backName == character.character.background).features)
+            {
+                character.character.features.Remove(f);
+                foreach (Feature l in f.subOptions)
+                {
+                    foreach (Feature r in l.subOptions)
+                    {
+                        character.character.features.Remove(r);
+                    }
+                }
+            }
+        }
         displayed = "back";
         if (dis != null)
         {
@@ -236,6 +295,7 @@ public class CharCreator : MonoBehaviour
             Debug.Log(disScript);
             Debug.Log(disScript.features);
             disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+            character.character.features.Add(f);
             foreach (Feature l in f.subOptions)
             {
                 Debug.Log(l.featName);
@@ -258,11 +318,32 @@ public class CharCreator : MonoBehaviour
             Debug.Log(f);
             Debug.Log(chosen);
             Debug.Log(disScript);
-            disScript.items.text = disScript.items.text + f;
+            List<List<Item>> items = repo.Decode(f);
+            foreach (List<Item> l in items)
+            {
+                foreach (Item item in l)
+                {
+                    disScript.items.text = disScript.items.text + item.itemName + ", ";
+                }
+            }
         }
     }
     public void ChooseSign()
     {
+        if (character.character.starsign != null)
+        {
+            foreach (Feature f in repo.signs.First(item => item.signName == character.character.starsign).features)
+            {
+                character.character.features.Remove(f);
+                foreach (Feature l in f.subOptions)
+                {
+                    foreach (Feature r in l.subOptions)
+                    {
+                        character.character.features.Remove(r);
+                    }
+                }
+            }
+        }
         displayed = "sign";
         if (dis != null)
         {
@@ -296,6 +377,7 @@ public class CharCreator : MonoBehaviour
             Debug.Log(disScript);
             Debug.Log(disScript.features);
             disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+            character.character.features.Add(f);
             foreach (Feature l in f.subOptions)
             {
                 Debug.Log(l.featName);
@@ -316,6 +398,20 @@ public class CharCreator : MonoBehaviour
     }
     public void ChooseAttunement()
     {
+        if (character.character.element != null)
+        {
+            foreach (Feature f in repo.attunements.First(item => item.elName == character.character.element).features)
+            {
+                character.character.features.Remove(f);
+                foreach (Feature l in f.subOptions)
+                {
+                    foreach (Feature r in l.subOptions)
+                    {
+                        character.character.features.Remove(r);
+                    }
+                }
+            }
+        }
         displayed = "attu";
         if (dis != null)
         {
@@ -343,6 +439,7 @@ public class CharCreator : MonoBehaviour
             Debug.Log(disScript);
             Debug.Log(disScript.features);
             disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+            character.character.features.Add(f);
             foreach (Feature l in f.subOptions)
             {
                 Debug.Log(l.featName);
@@ -388,13 +485,13 @@ public class CharCreator : MonoBehaviour
                     .subOptions;
                 foreach (var o in options)
                 {
-                    o.subChosen = false;
+                    character.character.features.Remove(o);
                 }
                 Feature chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
                     .features.First(item => item.featName == src)
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
-                chosen.subChosen = true;
+                character.character.features.Add(chosen);
                 break;
             case "cul":
                 List<Feature> culOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
@@ -403,13 +500,13 @@ public class CharCreator : MonoBehaviour
                     .subOptions;
                 foreach (var o in culOptions)
                 {
-                    o.subChosen = false;
+                    character.character.features.Remove(o);
                 }
                 Feature culChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
                     .features.First(item => item.featName == src)
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
-                culChosen.subChosen = true;
+                character.character.features.Add(culChosen);
                 break;
             case "back":
                 List<Feature> backOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
@@ -418,13 +515,13 @@ public class CharCreator : MonoBehaviour
                     .subOptions;
                 foreach (var o in backOptions)
                 {
-                    o.subChosen = false;
+                    character.character.features.Remove(o);
                 }
                 Feature backChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
                     .features.First(item => item.featName == src)
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
-                backChosen.subChosen = true;
+                character.character.features.Add(backChosen);
                 break;
             case "sign":
                 List<Feature> signOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
@@ -433,13 +530,13 @@ public class CharCreator : MonoBehaviour
                     .subOptions;
                 foreach (var o in signOptions)
                 {
-                    o.subChosen = false;
+                    character.character.features.Remove(o);
                 }
                 Feature signChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
                     .features.First(item => item.featName == src)
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
-                signChosen.subChosen = true;
+                character.character.features.Add(signChosen);
                 break;
             case "attu":
                 List<Feature> attuOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
@@ -448,13 +545,28 @@ public class CharCreator : MonoBehaviour
                     .subOptions;
                 foreach (var o in attuOptions)
                 {
-                    o.subChosen = false;
+                    character.character.features.Remove(o);
                 }
                 Feature attuChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
                     .features.First(item => item.featName == src)
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
-                attuChosen.subChosen = true;
+                character.character.features.Add(attuChosen);
+                break;
+            case "path":
+                List<Feature> pathOptions = repo.paths.First(item => item.pathName == fs.displayed.pathName)
+                    .features.First(item => item.featName == src)
+                    .subOptions.First(item => item.featName == feat)
+                    .subOptions;
+                foreach (var o in pathOptions)
+                {
+                    chosenSubs.Remove(o);
+                }
+                Feature pathChosen = repo.paths.First(item => item.pathName == fs.displayed.pathName)
+                    .features.First(item => item.featName == src)
+                    .subOptions.First(item => item.featName == feat)
+                    .subOptions.First(item => item.featName == specName);
+                chosenSubs.Add(pathChosen);
                 break;
         }
     }

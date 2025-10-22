@@ -424,6 +424,7 @@ MonoBehaviour:
     howAdvanced: 0
   namePlace: {fileID: 4789893312892098497}
   forge: {fileID: 0}
+  button: {fileID: 856375312676722289}
 --- !u!114 &856375312676722289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,8 +447,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.64146495, g: 0.8773585, b: 0.64988977, a: 1}
-    m_PressedColor: {r: 0.23255605, g: 0.735849, b: 0.24781297, a: 1}
+    m_HighlightedColor: {r: 0.8784314, g: 0.6431373, b: 0.6478421, a: 1}
+    m_PressedColor: {r: 0.7372549, g: 0.23137255, b: 0.2520266, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

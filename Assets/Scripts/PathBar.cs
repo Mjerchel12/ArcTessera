@@ -1,11 +1,13 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PathBar:MonoBehaviour
 {
     public Path path;
     public TextMeshProUGUI namePlace;
     public ForgeScript forge;
+    public Button button;
 
     public void ChoosePath()
     {
