@@ -90,7 +90,7 @@ public class InventoryChoosing : MonoBehaviour
         //    spawnedGuys.Add(guy);
         //}
         Debug.Log("jeszcze nie foreach");
-        foreach (string m in repo.cultures.First(item => item.cultName == cb.character.culture).equipment)
+        foreach (string m in repo.cultures.First(item => item == cb.character.culture).equipment)
         {
             List<List<List<Item>>> decoded = repo.Decode(m);
             Debug.Log("wesz³o w foreach");

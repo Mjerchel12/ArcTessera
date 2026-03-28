@@ -7,11 +7,11 @@ using UnityEngine;
 public class Character{
 
     [Header("Character Options")]
-    public string lineage;
-    public string culture;
-    public string background;
-    public string starsign;
-    public string element;
+    public Lineage lineage;
+    public Culture culture;
+    public Background background;
+    public StarSign starsign;
+    public Element element;
     public byte level;
     public byte takenPerks;
     public string desc;

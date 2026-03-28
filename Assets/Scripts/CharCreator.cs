@@ -111,9 +111,9 @@ public class CharCreator : MonoBehaviour
     {
         if (dropLineage.options[dropLineage.value].text != "None")
         {
-            if (character.character.lineage != null)
+            if (character.character.lineage.lineName != null)
             {
-                foreach (Feature f in repo.lineages.First(item => item.lineName == character.character.lineage).features)
+                foreach (Feature f in character.character.lineage.features)
                 {
                     character.character.features.Remove(f);
                     foreach (Feature l in f.subOptions)
@@ -132,7 +132,7 @@ public class CharCreator : MonoBehaviour
             }
             Lineage chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text);
             Debug.Log(chosen);
-            character.character.lineage = chosen.lineName;
+            character.character.lineage = chosen;
             dis = Instantiate(displayLin, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
             disScript.nameDisplay.text = chosen.lineName;
@@ -226,9 +226,9 @@ public class CharCreator : MonoBehaviour
     {
         if (dropCulture.options[dropCulture.value].text != "None")
         {
-            if (character.character.culture != null)
+            if (character.character.culture.cultName != null)
             {
-                foreach (Feature f in repo.cultures.First(item => item.cultName == character.character.culture).features)
+                foreach (Feature f in repo.cultures.First(item => item == character.character.culture).features)
                 {
                     character.character.features.Remove(f);
                     foreach (Feature l in f.subOptions)
@@ -246,7 +246,7 @@ public class CharCreator : MonoBehaviour
                 Destroy(dis);
             }
             Culture chosen = repo.cultures.First(item => item.cultName == dropCulture.options[dropCulture.value].text);
-            character.character.culture = chosen.cultName;
+            character.character.culture = chosen;
             dis = Instantiate(displayCul, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
             disScript.nameDisplay.text = chosen.cultName;
@@ -321,9 +321,9 @@ public class CharCreator : MonoBehaviour
     {
         if (dropBack.options[dropBack.value].text != "None")
         {
-            if (character.character.background != null)
+            if (character.character.background.backName != null)
             {
-                foreach (Feature f in repo.backs.First(item => item.backName == character.character.background).features)
+                foreach (Feature f in repo.backs.First(item => item == character.character.background).features)
                 {
                     character.character.features.Remove(f);
                     foreach (Feature l in f.subOptions)
@@ -341,7 +341,7 @@ public class CharCreator : MonoBehaviour
                 Destroy(dis);
             }
             Background chosen = repo.backs.First(item => item.backName == dropBack.options[dropBack.value].text);
-            character.character.background = chosen.backName;
+            character.character.background = chosen;
             dis = Instantiate(displayBack, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
             disScript.nameDisplay.text = chosen.backName;
@@ -416,9 +416,9 @@ public class CharCreator : MonoBehaviour
     {
         if (dropSign.options[dropSign.value].text != "None")
         {
-            if (character.character.starsign != null)
+            if (character.character.starsign.signName != null)
             {
-                foreach (Feature f in repo.signs.First(item => item.signName == character.character.starsign).features)
+                foreach (Feature f in repo.signs.First(item => item == character.character.starsign).features)
                 {
                     character.character.features.Remove(f);
                     foreach (Feature l in f.subOptions)
@@ -436,7 +436,7 @@ public class CharCreator : MonoBehaviour
                 Destroy(dis);
             }
             StarSign chosen = repo.signs.First(item => item.signName == dropSign.options[dropSign.value].text);
-            character.character.starsign = chosen.signName;
+            character.character.starsign = chosen;
             dis = Instantiate(displaySign, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
             disScript.nameDisplay.text = chosen.signName;
@@ -503,9 +503,9 @@ public class CharCreator : MonoBehaviour
     {
         if (dropAttune.options[dropAttune.value].text != "None")
         {
-            if (character.character.element != null)
+            if (character.character.element.elName != null)
             {
-                foreach (Feature f in repo.attunements.First(item => item.elName == character.character.element).features)
+                foreach (Feature f in repo.attunements.First(item => item == character.character.element).features)
                 {
                     character.character.features.Remove(f);
                     foreach (Feature l in f.subOptions)
@@ -523,7 +523,7 @@ public class CharCreator : MonoBehaviour
                 Destroy(dis);
             }
             Element chosen = repo.attunements.First(item => item.elName == dropAttune.options[dropAttune.value].text);
-            character.character.element = chosen.elName;
+            character.character.element = chosen;
             dis = Instantiate(displayAttune, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
             disScript.nameDisplay.text = chosen.elName;

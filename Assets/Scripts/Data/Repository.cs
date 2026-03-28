@@ -1,11 +1,10 @@
-using UnityEngine;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 using JetBrains.Annotations;
-using System.Linq;
 using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
+using UnityEngine;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 [CreateAssetMenu(fileName = "Repo", menuName = "ScriptableObjects/Repo")]
 public class Repository : ScriptableObject{
     public List<Trait> traits = new List<Trait>()

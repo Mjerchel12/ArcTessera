@@ -254,7 +254,7 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (cb.character.lineage == null || cb.character.culture == null || cb.character.starsign == null || cb.character.element == null || cb.character.background == null ||
+        if (cb.character.lineage.lineName == null || cb.character.culture.cultName == null || cb.character.starsign.signName == null || cb.character.element.elName == null || cb.character.background.backName == null ||
             cc.specFeats.Any(item => item.isNone))
         {
             step2arrow.interactable = false;
