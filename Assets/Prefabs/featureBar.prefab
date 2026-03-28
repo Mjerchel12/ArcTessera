@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1704035288906647388}
   - component: {fileID: 1157949923085066835}
   - component: {fileID: 5848057281184693314}
+  - component: {fileID: 6838653920464002040}
+  - component: {fileID: 242409807437472839}
   m_Layer: 0
   m_Name: featureBar
   m_TagString: Untagged
@@ -76,6 +78,280 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6838653920464002040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7334882960707221560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1a1c14551d2aa47a06c2a89dbe841b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feat:
+    featName: 
+    desc: 
+    descOnSheet: 
+    types: []
+    requiredFeatures: []
+    range: 
+    turns: 0
+    min: 0
+    hours: 0
+    requiredLevel: 0
+    uses: 
+    spent: 0
+    roll:
+      diceQuantity: 0
+      die: 0
+      bonus: 
+      dmg: 0
+      type: 
+      addDmg: 0
+    ApCost: 0
+    isReaction: 0
+    staminaCost: 0
+    subOptions: []
+    showOnSheet: 0
+    favors: []
+    disfavors: []
+    resistances: []
+    vulnerabilities: []
+    immunities: []
+    bonuses: []
+    bonusNumb: 
+    addedStance: 
+    freeTrait: 0
+    up:
+      level: 0
+      changes:
+        featName: 
+        desc: 
+        descOnSheet: 
+        types: []
+        requiredFeatures: []
+        range: 
+        turns: 0
+        min: 0
+        hours: 0
+        requiredLevel: 0
+        uses: 
+        spent: 0
+        roll:
+          diceQuantity: 0
+          die: 0
+          bonus: 
+          dmg: 0
+          type: 
+          addDmg: 0
+        ApCost: 0
+        isReaction: 0
+        staminaCost: 0
+        subOptions: []
+        showOnSheet: 0
+        favors: []
+        disfavors: []
+        resistances: []
+        vulnerabilities: []
+        immunities: []
+        bonuses: []
+        bonusNumb: 
+        addedStance: 
+        freeTrait: 0
+        up:
+          level: 0
+          changes:
+            featName: 
+            desc: 
+            descOnSheet: 
+            types: []
+            requiredFeatures: []
+            range: 
+            turns: 0
+            min: 0
+            hours: 0
+            requiredLevel: 0
+            uses: 
+            spent: 0
+            roll:
+              diceQuantity: 0
+              die: 0
+              bonus: 
+              dmg: 0
+              type: 
+              addDmg: 0
+            ApCost: 0
+            isReaction: 0
+            staminaCost: 0
+            subOptions: []
+            showOnSheet: 0
+            favors: []
+            disfavors: []
+            resistances: []
+            vulnerabilities: []
+            immunities: []
+            bonuses: []
+            bonusNumb: 
+            addedStance: 
+            freeTrait: 0
+            up:
+              level: 0
+              changes:
+                featName: 
+                desc: 
+                descOnSheet: 
+                types: []
+                requiredFeatures: []
+                range: 
+                turns: 0
+                min: 0
+                hours: 0
+                requiredLevel: 0
+                uses: 
+                spent: 0
+                roll:
+                  diceQuantity: 0
+                  die: 0
+                  bonus: 
+                  dmg: 0
+                  type: 
+                  addDmg: 0
+                ApCost: 0
+                isReaction: 0
+                staminaCost: 0
+                subOptions: []
+                showOnSheet: 0
+                favors: []
+                disfavors: []
+                resistances: []
+                vulnerabilities: []
+                immunities: []
+                bonuses: []
+                bonusNumb: 
+                addedStance: 
+                freeTrait: 0
+                up:
+                  level: 0
+                  changes:
+                    featName: 
+                    desc: 
+                    descOnSheet: 
+                    types: []
+                    requiredFeatures: []
+                    range: 
+                    turns: 0
+                    min: 0
+                    hours: 0
+                    requiredLevel: 0
+                    uses: 
+                    spent: 0
+                    roll:
+                      diceQuantity: 0
+                      die: 0
+                      bonus: 
+                      dmg: 0
+                      type: 
+                      addDmg: 0
+                    ApCost: 0
+                    isReaction: 0
+                    staminaCost: 0
+                    subOptions: []
+                    showOnSheet: 0
+                    favors: []
+                    disfavors: []
+                    resistances: []
+                    vulnerabilities: []
+                    immunities: []
+                    bonuses: []
+                    bonusNumb: 
+                    addedStance: 
+                    freeTrait: 0
+                    up:
+                      level: 0
+                      changes:
+                        featName: 
+                        desc: 
+                        descOnSheet: 
+                        range: 
+                        turns: 0
+                        min: 0
+                        hours: 0
+                        requiredLevel: 0
+                        uses: 
+                        spent: 0
+                        ApCost: 0
+                        isReaction: 0
+                        staminaCost: 0
+                        showOnSheet: 0
+                        addedStance: 
+                        freeTrait: 0
+                        isSub: 0
+                    isSub: 0
+                isSub: 0
+            isSub: 0
+        isSub: 0
+    isSub: 0
+  namePlace: {fileID: 3588428857840647558}
+  forge: {fileID: 0}
+  button: {fileID: 242409807437472839}
+--- !u!114 &242409807437472839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7334882960707221560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8396226, g: 0.7366659, b: 0.40792987, a: 1}
+    m_PressedColor: {r: 0.754717, g: 0.6005837, b: 0, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 5848057281184693314}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6838653920464002040}
+        m_TargetAssemblyTypeName: FeatBar, Assembly-CSharp
+        m_MethodName: ChooseFeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7750170327369287558
 GameObject:
   m_ObjectHideFlags: 0

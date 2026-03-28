@@ -1,11 +1,13 @@
-using System;
-using TMPro;
-using UnityEngine;
-using System.Linq;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class CharCreator : MonoBehaviour
 {
@@ -45,422 +47,566 @@ public class CharCreator : MonoBehaviour
     public List<Feature> chosenSubs;
 
     public ForgeScript fs;
+    public List<SpecFeature> specFeats = new List<SpecFeature>();
 
     public void StartCreating()
     {
         character.character = new Character();
         character.character.level = 1;
-        character.character.features = new List<Feature>();
-        character.character.paths = new List<Path>();
         pointsToAtt.text = 20.ToString();
         pointsToSkill.text = 60.ToString();
         pointsToEx.text = 50.ToString();
         dropLineage.ClearOptions();
+        dropLineage.AddOptions(new List<string>() { "None" });
         dropLineage.AddOptions(repo.lineages.ToStringList());
         dropCulture.ClearOptions();
+        dropCulture.AddOptions(new List<string>() { "None" });
         dropCulture.AddOptions(repo.cultures.ToStringList());
         dropBack.ClearOptions();
+        dropBack.AddOptions(new List<string>() { "None" });
         dropBack.AddOptions(repo.backs.ToStringList());
         dropSign.ClearOptions();
+        dropSign.AddOptions(new List<string>() { "None" });
         dropSign.AddOptions(repo.signs.ToStringList());
         dropAttune.ClearOptions();
+        dropAttune.AddOptions(new List<string>() { "None" });
         dropAttune.AddOptions(repo.attunements.ToStringList());
+
+        //character.character.lineage = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text).lineName;
+        //foreach (Feature f in repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text).features)
+        //{
+        //    character.character.features.Add(f);
+        //}
+        //Feature chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
+        //            .features.First(item => item.featName == src)
+        //            .subOptions.First(item => item.featName == feat)
+        //            .subOptions.First(item => item.featName == specName);
+        //character.character.features.Add(chosen);
+
+        //character.character.culture = repo.cultures.First(item => item.cultName == dropCulture.options[dropCulture.value].text).cultName;
+        //foreach (Feature f in repo.cultures.First(item => item.cultName == dropCulture.options[dropCulture.value].text).features)
+        //{
+        //    character.character.features.Add(f);
+        //}
+
+        //character.character.background = repo.backs.First(item => item.backName == dropBack.options[dropBack.value].text).backName;
+        //foreach (Feature f in repo.backs.First(item => item.backName == dropBack.options[dropBack.value].text).features)
+        //{
+        //    character.character.features.Add(f);
+        //}
+
+        //character.character.starsign = repo.signs.First(item => item.signName == dropSign.options[dropSign.value].text).signName;
+        //foreach (Feature f in repo.signs.First(item => item.signName == dropSign.options[dropSign.value].text).features)
+        //{
+        //    character.character.features.Add(f);
+        //}
+
+        //character.character.element = repo.attunements.First(item => item.elName == dropAttune.options[dropAttune.value].text).elName;
+        //foreach (Feature f in repo.attunements.First(item => item.elName == dropAttune.options[dropAttune.value].text).features)
+        //{
+        //    character.character.features.Add(f);
+        //}
     }
     public void ChooseLineage()
     {
-        if(character.character.lineage != null)
+        if (dropLineage.options[dropLineage.value].text != "None")
         {
-            foreach (Feature f in repo.lineages.First(item => item.lineName == character.character.lineage).features)
+            if (character.character.lineage != null)
             {
-                character.character.features.Remove(f);
-                foreach (Feature l in f.subOptions)
+                foreach (Feature f in repo.lineages.First(item => item.lineName == character.character.lineage).features)
                 {
-                    foreach(Feature r in l.subOptions)
+                    character.character.features.Remove(f);
+                    foreach (Feature l in f.subOptions)
                     {
-                        character.character.features.Remove(r);
+                        foreach (Feature r in l.subOptions)
+                        {
+                            character.character.features.Remove(r);
+                        }
                     }
                 }
             }
-        }
-        displayed = "lin";
-        if (dis != null)
-        {
-            Destroy(dis);
-        }
-        Lineage chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text);
-        Debug.Log(chosen);
-        character.character.lineage = chosen.lineName;
-        dis = Instantiate(displayLin, equipPaper.transform);
-        var disScript = dis.GetComponent<CharCreatorFeature>();
-        disScript.nameDisplay.text = chosen.lineName;
-        disScript.sizeAndClade.text = "<i>" + chosen.size + " " + chosen.clade + "</i>";
-        disScript.vit.text = chosen.vitDiceQuantity + "d" + chosen.vitDice;
-        disScript.stam.text = chosen.staminaBase.ToString();
-        disScript.san.text = chosen.sanityBase.ToString();
-        disScript.body.text = chosen.bodyBonus.ToString();
-        disScript.grace.text = chosen.graceBonus.ToString();
-        disScript.mind.text = chosen.mindBonus.ToString();
-        disScript.soul.text = chosen.soulBonus.ToString();
-        disScript.trade.text = chosen.tradeBonus.ToString();
-        disScript.personality.text = chosen.personalityBonus.ToString();
-        disScript.speed.text = chosen.speed.walk + "m";
-        if (chosen.speed.swim != 0)
-        {
-            disScript.speed.text = disScript.speed.text + ", Swimming:" + chosen.speed.swim.ToString();
-        }
-        if (chosen.speed.fly != 0)
-        {
-            disScript.speed.text = disScript.speed.text + ", Flying:" + chosen.speed.fly.ToString();
-        }
-        if (chosen.speed.crawl != 0)
-        {
-            disScript.speed.text = disScript.speed.text + ", Crawling:" + chosen.speed.crawl.ToString();
-        }
-        if (chosen.speed.highLeap != 0)
-        {
-            disScript.speed.text = disScript.speed.text + ", High Leap:" + chosen.speed.highLeap.ToString();
-        }
-        if (chosen.speed.farLeap != 0)
-        {
-            disScript.speed.text = disScript.speed.text + ", Far Leap:" + chosen.speed.farLeap.ToString();
-        }
-        disScript.senses.text = chosen.senses;
-        disScript.size.text = chosen.sizeSpan;
-        disScript.lifespan.text = chosen.lifeSpan;
-        disScript.skills.text = chosen.skillBonus.desc;
-        specNote.gameObject.SetActive(false);
-        for (int i = parentObject.childCount - 1; i >= 0; i--)
-        {
-            Destroy(parentObject.GetChild(i).gameObject);
-        }
-        foreach (Feature f in chosen.features)
-        {
-            Debug.Log(f);
-            Debug.Log(f.featName);
-            Debug.Log(f.desc);
-            Debug.Log(chosen);
-            Debug.Log(chosen.features);
-            Debug.Log(disScript);
-            Debug.Log(disScript.features);
-            disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
-            character.character.features.Add(f);
-            foreach (Feature l in f.subOptions)
+            displayed = "lin";
+            if (dis != null)
             {
-                Debug.Log(l.featName);
-                if (l.subOptions.Count > 0)
+                Destroy(dis);
+            }
+            Lineage chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text);
+            Debug.Log(chosen);
+            character.character.lineage = chosen.lineName;
+            dis = Instantiate(displayLin, equipPaper.transform);
+            var disScript = dis.GetComponent<CharCreatorFeature>();
+            disScript.nameDisplay.text = chosen.lineName;
+            disScript.sizeAndClade.text = "<i>" + chosen.size + " " + chosen.clade + "</i>";
+            disScript.vit.text = chosen.vitDiceQuantity + "d" + chosen.vitDice;
+            disScript.stam.text = chosen.staminaBase.ToString();
+            disScript.san.text = chosen.sanityBase.ToString();
+            disScript.body.text = chosen.bodyBonus.ToString();
+            disScript.grace.text = chosen.graceBonus.ToString();
+            disScript.mind.text = chosen.mindBonus.ToString();
+            disScript.soul.text = chosen.soulBonus.ToString();
+            disScript.trade.text = chosen.tradeBonus.ToString();
+            disScript.personality.text = chosen.personalityBonus.ToString();
+            disScript.speed.text = chosen.speed.walk + "m";
+            if (chosen.speed.swim != 0)
+            {
+                disScript.speed.text = disScript.speed.text + ", Swimming:" + chosen.speed.swim.ToString();
+            }
+            if (chosen.speed.fly != 0)
+            {
+                disScript.speed.text = disScript.speed.text + ", Flying:" + chosen.speed.fly.ToString();
+            }
+            if (chosen.speed.crawl != 0)
+            {
+                disScript.speed.text = disScript.speed.text + ", Crawling:" + chosen.speed.crawl.ToString();
+            }
+            if (chosen.speed.highLeap != 0)
+            {
+                disScript.speed.text = disScript.speed.text + ", High Leap:" + chosen.speed.highLeap.ToString();
+            }
+            if (chosen.speed.farLeap != 0)
+            {
+                disScript.speed.text = disScript.speed.text + ", Far Leap:" + chosen.speed.farLeap.ToString();
+            }
+            disScript.senses.text = chosen.senses;
+            disScript.size.text = chosen.sizeSpan;
+            disScript.lifespan.text = chosen.lifeSpan;
+            disScript.skills.text = chosen.skillBonus.desc;
+            specNote.gameObject.SetActive(false);
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
+            }
+            specFeats.Clear();
+            foreach (Feature f in chosen.features)
+            {
+                Debug.Log(f);
+                Debug.Log(f.featName);
+                Debug.Log(f.desc);
+                Debug.Log(chosen);
+                Debug.Log(chosen.features);
+                Debug.Log(disScript);
+                Debug.Log(disScript.features);
+                disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+                character.character.features.Add(f);
+                foreach (Feature l in f.subOptions)
                 {
-                    Debug.Log(l.featName + "entered");
-                    var spec = Instantiate(specPrefab, parentObject);
-                    var specLab = spec.GetComponent<SpecFeature>();
-                    specLab.src = f.featName;
-                    specLab.l = l.subOptions;
-                    specLab.label.text = l.featName;
-                    var specDrop = spec.GetComponent<TMP_Dropdown>();
-                    specDrop.ClearOptions();
-                    specDrop.AddOptions(l.subOptions.ToStringList());
+                    Debug.Log(l.featName);
+                    if (l.subOptions.Count > 0)
+                    {
+                        Debug.Log(l.featName + "entered");
+                        var spec = Instantiate(specPrefab, parentObject);
+                        var specLab = spec.GetComponent<SpecFeature>();
+                        specFeats.Add(specLab);
+                        specLab.src = f.featName;
+                        specLab.l = l.subOptions;
+                        specLab.label.text = l.featName;
+                        var specDrop = spec.GetComponent<TMP_Dropdown>();
+                        specDrop.ClearOptions();
+                        specDrop.AddOptions(new List<string>() { "None" });
+                        specDrop.AddOptions(l.subOptions.ToStringList());
+                    }
                 }
+            }
+            //dropLineage.options.RemoveAt(0);
+        }
+        else
+        {
+            character.character.lineage = null;
+            if (dis != null)
+            {
+                Destroy(dis);
+            }
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
             }
         }
     }
     public void ChooseCulture()
     {
-        if (character.character.culture != null)
+        if (dropCulture.options[dropCulture.value].text != "None")
         {
-            foreach (Feature f in repo.cultures.First(item => item.cultName == character.character.culture).features)
+            if (character.character.culture != null)
             {
-                character.character.features.Remove(f);
-                foreach (Feature l in f.subOptions)
+                foreach (Feature f in repo.cultures.First(item => item.cultName == character.character.culture).features)
                 {
-                    foreach (Feature r in l.subOptions)
+                    character.character.features.Remove(f);
+                    foreach (Feature l in f.subOptions)
                     {
-                        character.character.features.Remove(r);
+                        foreach (Feature r in l.subOptions)
+                        {
+                            character.character.features.Remove(r);
+                        }
                     }
                 }
             }
-        }
-        displayed = "cul";
-        if (dis != null)
-        {
-            Destroy(dis);
-        }
-        Culture chosen = repo.cultures.First(item => item.cultName == dropCulture.options[dropCulture.value].text);
-        character.character.culture = chosen.cultName;
-        dis = Instantiate(displayCul, equipPaper.transform);
-        var disScript = dis.GetComponent<CharCreatorFeature>();
-        disScript.nameDisplay.text = chosen.cultName;
+            displayed = "cul";
+            if (dis != null)
+            {
+                Destroy(dis);
+            }
+            Culture chosen = repo.cultures.First(item => item.cultName == dropCulture.options[dropCulture.value].text);
+            character.character.culture = chosen.cultName;
+            dis = Instantiate(displayCul, equipPaper.transform);
+            var disScript = dis.GetComponent<CharCreatorFeature>();
+            disScript.nameDisplay.text = chosen.cultName;
 
-        disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
-        disScript.body.text = chosen.bodyBonus.ToString();
-        disScript.grace.text = chosen.graceBonus.ToString();
-        disScript.mind.text = chosen.mindBonus.ToString();
-        disScript.soul.text = chosen.soulBonus.ToString();
-        disScript.trade.text = chosen.tradeBonus.ToString();
-        disScript.personality.text = chosen.personalityBonus.ToString();
-        disScript.skills.text = chosen.skillBonus.desc;
-        specNote.gameObject.SetActive(false);
-        for (int i = parentObject.childCount - 1; i >= 0; i--)
-        {
-            Destroy(parentObject.GetChild(i).gameObject);
-        }
-        foreach (Feature f in chosen.features)
-        {
-            Debug.Log(f);
-            Debug.Log(f.featName);
-            Debug.Log(f.desc);
-            Debug.Log(chosen);
-            Debug.Log(chosen.features);
-            Debug.Log(disScript);
-            Debug.Log(disScript.features);
-            disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
-            character.character.features.Add(f);
-            foreach (Feature l in f.subOptions)
+            disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
+            disScript.body.text = chosen.bodyBonus.ToString();
+            disScript.grace.text = chosen.graceBonus.ToString();
+            disScript.mind.text = chosen.mindBonus.ToString();
+            disScript.soul.text = chosen.soulBonus.ToString();
+            disScript.trade.text = chosen.tradeBonus.ToString();
+            disScript.personality.text = chosen.personalityBonus.ToString();
+            disScript.skills.text = chosen.skillBonus.desc;
+            specNote.gameObject.SetActive(false);
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
             {
-                Debug.Log(l.featName);
-                if (l.subOptions.Count > 0)
+                Destroy(parentObject.GetChild(i).gameObject);
+            }
+            specFeats.Clear();
+            foreach (Feature f in chosen.features)
+            {
+                Debug.Log(f);
+                Debug.Log(f.featName);
+                Debug.Log(f.desc);
+                Debug.Log(chosen);
+                Debug.Log(chosen.features);
+                Debug.Log(disScript);
+                Debug.Log(disScript.features);
+                disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+                character.character.features.Add(f);
+                foreach (Feature l in f.subOptions)
                 {
-                    Debug.Log(l.featName + "entered");
-                    var spec = Instantiate(specPrefab, parentObject);
-                    var specLab = spec.GetComponent<SpecFeature>();
-                    specLab.src = f.featName;
-                    specLab.l = l.subOptions;
-                    specLab.label.text = l.featName;
-                    var specDrop = spec.GetComponent<TMP_Dropdown>();
-                    specDrop.ClearOptions();
-                    specDrop.AddOptions(l.subOptions.ToStringList());
+                    Debug.Log(l.featName);
+                    if (l.subOptions.Count > 0)
+                    {
+                        Debug.Log(l.featName + "entered");
+                        var spec = Instantiate(specPrefab, parentObject);
+                        var specLab = spec.GetComponent<SpecFeature>();
+                        specFeats.Add(specLab);
+                        specLab.src = f.featName;
+                        specLab.l = l.subOptions;
+                        specLab.label.text = l.featName;
+                        var specDrop = spec.GetComponent<TMP_Dropdown>();
+                        specDrop.ClearOptions();
+                        specDrop.AddOptions(new List<string>() { "None" });
+                        specDrop.AddOptions(l.subOptions.ToStringList());
+                    }
                 }
             }
-        }
-        foreach (string f in chosen.equipment)
-        {
-            Debug.Log(f);
-            Debug.Log(chosen);
-            Debug.Log(disScript);
-            List<List<Item>> items = repo.Decode(f);
-            foreach (List<Item> l in items)
+            foreach (string f in chosen.equipment)
             {
-                foreach (Item item in l)
-                {
-                    disScript.items.text = disScript.items.text + item.itemName +", ";
-                }
+                Debug.Log(f);
+                Debug.Log(chosen);
+                Debug.Log(disScript);
+                disScript.items.text = chosen.equipmentDesc;
             }
+            //dropCulture.options.RemoveAt(0);
+        }
+        else
+            {
+                character.character.culture = null;
+                if (dis != null)
+                {
+                    Destroy(dis);
+                }
+                for (int i = parentObject.childCount - 1; i >= 0; i--)
+                {
+                    Destroy(parentObject.GetChild(i).gameObject);
+                }
         }
     }
     public void ChooseBack()
     {
-        if (character.character.background != null)
+        if (dropBack.options[dropBack.value].text != "None")
         {
-            foreach (Feature f in repo.backs.First(item => item.backName == character.character.background).features)
+            if (character.character.background != null)
             {
-                character.character.features.Remove(f);
-                foreach (Feature l in f.subOptions)
+                foreach (Feature f in repo.backs.First(item => item.backName == character.character.background).features)
                 {
-                    foreach (Feature r in l.subOptions)
+                    character.character.features.Remove(f);
+                    foreach (Feature l in f.subOptions)
                     {
-                        character.character.features.Remove(r);
+                        foreach (Feature r in l.subOptions)
+                        {
+                            character.character.features.Remove(r);
+                        }
                     }
                 }
             }
-        }
-        displayed = "back";
-        if (dis != null)
-        {
-            Destroy(dis);
-        }
-        Background chosen = repo.backs.First(item => item.backName == dropBack.options[dropBack.value].text);
-        character.character.background = chosen.backName;
-        dis = Instantiate(displayBack, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
-        var disScript = dis.GetComponent<CharCreatorFeature>();
-        disScript.nameDisplay.text = chosen.backName;
-
-        disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
-        disScript.body.text = chosen.bodyBonus.ToString();
-        disScript.grace.text = chosen.graceBonus.ToString();
-        disScript.mind.text = chosen.mindBonus.ToString();
-        disScript.soul.text = chosen.soulBonus.ToString();
-        disScript.trade.text = chosen.tradeBonus.ToString();
-        disScript.personality.text = chosen.personalityBonus.ToString();
-        disScript.skills.text = chosen.skillBonus.desc;
-        specNote.gameObject.SetActive(false);
-        for (int i = parentObject.childCount - 1; i >= 0; i--)
-        {
-            Destroy(parentObject.GetChild(i).gameObject);
-        }
-        foreach (Feature f in chosen.features)
-        {
-            Debug.Log(f);
-            Debug.Log(f.featName);
-            Debug.Log(f.desc);
-            Debug.Log(chosen);
-            Debug.Log(chosen.features);
-            Debug.Log(disScript);
-            Debug.Log(disScript.features);
-            disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
-            character.character.features.Add(f);
-            foreach (Feature l in f.subOptions)
+            displayed = "back";
+            if (dis != null)
             {
-                Debug.Log(l.featName);
-                if (l.subOptions.Count > 0)
+                Destroy(dis);
+            }
+            Background chosen = repo.backs.First(item => item.backName == dropBack.options[dropBack.value].text);
+            character.character.background = chosen.backName;
+            dis = Instantiate(displayBack, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
+            var disScript = dis.GetComponent<CharCreatorFeature>();
+            disScript.nameDisplay.text = chosen.backName;
+
+            disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
+            disScript.body.text = chosen.bodyBonus.ToString();
+            disScript.grace.text = chosen.graceBonus.ToString();
+            disScript.mind.text = chosen.mindBonus.ToString();
+            disScript.soul.text = chosen.soulBonus.ToString();
+            disScript.trade.text = chosen.tradeBonus.ToString();
+            disScript.personality.text = chosen.personalityBonus.ToString();
+            disScript.skills.text = chosen.skillBonus.desc;
+            specNote.gameObject.SetActive(false);
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
+            }
+            specFeats.Clear();
+            foreach (Feature f in chosen.features)
+            {
+                Debug.Log(f);
+                Debug.Log(f.featName);
+                Debug.Log(f.desc);
+                Debug.Log(chosen);
+                Debug.Log(chosen.features);
+                Debug.Log(disScript);
+                Debug.Log(disScript.features);
+                disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+                character.character.features.Add(f);
+                foreach (Feature l in f.subOptions)
                 {
-                    Debug.Log(l.featName + "entered");
-                    var spec = Instantiate(specPrefab, parentObject);
-                    var specLab = spec.GetComponent<SpecFeature>();
-                    specLab.src = f.featName;
-                    specLab.l = l.subOptions;
-                    specLab.label.text = l.featName;
-                    var specDrop = spec.GetComponent<TMP_Dropdown>();
-                    specDrop.ClearOptions();
-                    specDrop.AddOptions(l.subOptions.ToStringList());
+                    Debug.Log(l.featName);
+                    if (l.subOptions.Count > 0)
+                    {
+                        Debug.Log(l.featName + "entered");
+                        var spec = Instantiate(specPrefab, parentObject);
+                        var specLab = spec.GetComponent<SpecFeature>();
+                        specFeats.Add(specLab);
+                        specLab.src = f.featName;
+                        specLab.l = l.subOptions;
+                        specLab.label.text = l.featName;
+                        var specDrop = spec.GetComponent<TMP_Dropdown>();
+                        specDrop.ClearOptions();
+                        specDrop.AddOptions(new List<string>() { "None" });
+                        specDrop.AddOptions(l.subOptions.ToStringList());
+                    }
                 }
             }
-        }
-        foreach (string f in chosen.equipment)
-        {
-            Debug.Log(f);
-            Debug.Log(chosen);
-            Debug.Log(disScript);
-            List<List<Item>> items = repo.Decode(f);
-            foreach (List<Item> l in items)
+            foreach (string f in chosen.equipment)
             {
-                foreach (Item item in l)
-                {
-                    disScript.items.text = disScript.items.text + item.itemName + ", ";
-                }
+                Debug.Log(f);
+                Debug.Log(chosen);
+                Debug.Log(disScript);
+                disScript.items.text = chosen.equipmentDesc;
+            }
+            //dropBack.options.RemoveAt(0);
+        }
+        else
+        {
+            character.character.background = null;
+            if (dis != null)
+            {
+                Destroy(dis);
+            }
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
             }
         }
     }
     public void ChooseSign()
     {
-        if (character.character.starsign != null)
+        if (dropSign.options[dropSign.value].text != "None")
         {
-            foreach (Feature f in repo.signs.First(item => item.signName == character.character.starsign).features)
+            if (character.character.starsign != null)
             {
-                character.character.features.Remove(f);
-                foreach (Feature l in f.subOptions)
+                foreach (Feature f in repo.signs.First(item => item.signName == character.character.starsign).features)
                 {
-                    foreach (Feature r in l.subOptions)
+                    character.character.features.Remove(f);
+                    foreach (Feature l in f.subOptions)
                     {
-                        character.character.features.Remove(r);
+                        foreach (Feature r in l.subOptions)
+                        {
+                            character.character.features.Remove(r);
+                        }
                     }
                 }
             }
-        }
-        displayed = "sign";
-        if (dis != null)
-        {
-            Destroy(dis);
-        }
-        StarSign chosen = repo.signs.First(item => item.signName == dropSign.options[dropSign.value].text);
-        character.character.starsign = chosen.signName;
-        dis = Instantiate(displaySign, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
-        var disScript = dis.GetComponent<CharCreatorFeature>();
-        disScript.nameDisplay.text = chosen.signName;
-
-        disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
-        disScript.body.text = chosen.bodyBonus.ToString();
-        disScript.grace.text = chosen.graceBonus.ToString();
-        disScript.mind.text = chosen.mindBonus.ToString();
-        disScript.soul.text = chosen.soulBonus.ToString();
-        disScript.trade.text = chosen.tradeBonus.ToString();
-        disScript.personality.text = chosen.personalityBonus.ToString();
-        specNote.gameObject.SetActive(false);
-        for (int i = parentObject.childCount - 1; i >= 0; i--)
-        {
-            Destroy(parentObject.GetChild(i).gameObject);
-        }
-        foreach (Feature f in chosen.features)
-        {
-            Debug.Log(f);
-            Debug.Log(f.featName);
-            Debug.Log(f.desc);
-            Debug.Log(chosen);
-            Debug.Log(chosen.features);
-            Debug.Log(disScript);
-            Debug.Log(disScript.features);
-            disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
-            character.character.features.Add(f);
-            foreach (Feature l in f.subOptions)
+            displayed = "sign";
+            if (dis != null)
             {
-                Debug.Log(l.featName);
-                if (l.subOptions.Count > 0)
+                Destroy(dis);
+            }
+            StarSign chosen = repo.signs.First(item => item.signName == dropSign.options[dropSign.value].text);
+            character.character.starsign = chosen.signName;
+            dis = Instantiate(displaySign, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
+            var disScript = dis.GetComponent<CharCreatorFeature>();
+            disScript.nameDisplay.text = chosen.signName;
+
+            disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
+            disScript.body.text = chosen.bodyBonus.ToString();
+            disScript.grace.text = chosen.graceBonus.ToString();
+            disScript.mind.text = chosen.mindBonus.ToString();
+            disScript.soul.text = chosen.soulBonus.ToString();
+            disScript.trade.text = chosen.tradeBonus.ToString();
+            disScript.personality.text = chosen.personalityBonus.ToString();
+            specNote.gameObject.SetActive(false);
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
+            }
+            specFeats.Clear();
+            foreach (Feature f in chosen.features)
+            {
+                Debug.Log(f);
+                Debug.Log(f.featName);
+                Debug.Log(f.desc);
+                Debug.Log(chosen);
+                Debug.Log(chosen.features);
+                Debug.Log(disScript);
+                Debug.Log(disScript.features);
+                disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+                character.character.features.Add(f);
+                foreach (Feature l in f.subOptions)
                 {
-                    Debug.Log(l.featName + "entered");
-                    var spec = Instantiate(specPrefab, parentObject);
-                    var specLab = spec.GetComponent<SpecFeature>();
-                    specLab.src = f.featName;
-                    specLab.l = l.subOptions;
-                    specLab.label.text = l.featName;
-                    var specDrop = spec.GetComponent<TMP_Dropdown>();
-                    specDrop.ClearOptions();
-                    specDrop.AddOptions(l.subOptions.ToStringList());
+                    Debug.Log(l.featName);
+                    if (l.subOptions.Count > 0)
+                    {
+                        Debug.Log(l.featName + "entered");
+                        var spec = Instantiate(specPrefab, parentObject);
+                        var specLab = spec.GetComponent<SpecFeature>();
+                        specFeats.Add(specLab);
+                        specLab.src = f.featName;
+                        specLab.l = l.subOptions;
+                        specLab.label.text = l.featName;
+                        var specDrop = spec.GetComponent<TMP_Dropdown>();
+                        specDrop.ClearOptions();
+                        specDrop.AddOptions(new List<string>() { "None" });
+                        specDrop.AddOptions(l.subOptions.ToStringList());
+                    }
                 }
+            }
+            //dropSign.options.RemoveAt(0);
+        }
+        else
+        {
+            character.character.starsign = null;
+            if (dis != null)
+            {
+                Destroy(dis);
+            }
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
             }
         }
     }
     public void ChooseAttunement()
     {
-        if (character.character.element != null)
+        if (dropAttune.options[dropAttune.value].text != "None")
         {
-            foreach (Feature f in repo.attunements.First(item => item.elName == character.character.element).features)
+            if (character.character.element != null)
             {
-                character.character.features.Remove(f);
-                foreach (Feature l in f.subOptions)
+                foreach (Feature f in repo.attunements.First(item => item.elName == character.character.element).features)
                 {
-                    foreach (Feature r in l.subOptions)
+                    character.character.features.Remove(f);
+                    foreach (Feature l in f.subOptions)
                     {
-                        character.character.features.Remove(r);
+                        foreach (Feature r in l.subOptions)
+                        {
+                            character.character.features.Remove(r);
+                        }
                     }
                 }
             }
-        }
-        displayed = "attu";
-        if (dis != null)
-        {
-            Destroy(dis);
-        }
-        Element chosen = repo.attunements.First(item => item.elName == dropAttune.options[dropAttune.value].text);
-        character.character.element = chosen.elName;
-        dis = Instantiate(displayAttune, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
-        var disScript = dis.GetComponent<CharCreatorFeature>();
-        disScript.nameDisplay.text = chosen.elName;
-
-        disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
-        specNote.gameObject.SetActive(false);
-        for (int i = parentObject.childCount - 1; i >= 0; i--)
-        {
-            Destroy(parentObject.GetChild(i).gameObject);
-        }
-        foreach (Feature f in chosen.features)
-        {
-            Debug.Log(f);
-            Debug.Log(f.featName);
-            Debug.Log(f.desc);
-            Debug.Log(chosen);
-            Debug.Log(chosen.features);
-            Debug.Log(disScript);
-            Debug.Log(disScript.features);
-            disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
-            character.character.features.Add(f);
-            foreach (Feature l in f.subOptions)
+            displayed = "attu";
+            if (dis != null)
             {
-                Debug.Log(l.featName);
-                if (l.subOptions.Count > 0)
+                Destroy(dis);
+            }
+            Element chosen = repo.attunements.First(item => item.elName == dropAttune.options[dropAttune.value].text);
+            character.character.element = chosen.elName;
+            dis = Instantiate(displayAttune, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
+            var disScript = dis.GetComponent<CharCreatorFeature>();
+            disScript.nameDisplay.text = chosen.elName;
+
+            disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
+            specNote.gameObject.SetActive(false);
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
+            }
+            specFeats.Clear();
+            foreach (Feature f in chosen.features)
+            {
+                Debug.Log(f);
+                Debug.Log(f.featName);
+                Debug.Log(f.desc);
+                Debug.Log(chosen);
+                Debug.Log(chosen.features);
+                Debug.Log(disScript);
+                Debug.Log(disScript.features);
+                disScript.features.text = disScript.features.text + "<b>" + f.featName + ".</b> " + f.desc + "<br><br>";
+                character.character.features.Add(f);
+                foreach (Feature l in f.subOptions)
                 {
-                    Debug.Log(l.featName + "entered");
-                    var spec = Instantiate(specPrefab, parentObject);
-                    var specLab = spec.GetComponent<SpecFeature>();
-                    specLab.src = f.featName;
-                    specLab.l = l.subOptions;
-                    specLab.label.text = l.featName;
-                    var specDrop = spec.GetComponent<TMP_Dropdown>();
-                    specDrop.ClearOptions();
-                    specDrop.AddOptions(l.subOptions.ToStringList());
+                    Debug.Log(l.featName);
+                    if (l.subOptions.Count > 0)
+                    {
+                        Debug.Log(l.featName + "entered");
+                        var spec = Instantiate(specPrefab, parentObject);
+                        var specLab = spec.GetComponent<SpecFeature>();
+                        specFeats.Add(specLab);
+                        specLab.src = f.featName;
+                        specLab.l = l.subOptions;
+                        specLab.label.text = l.featName;
+                        var specDrop = spec.GetComponent<TMP_Dropdown>();
+                        specDrop.ClearOptions();
+                        specDrop.AddOptions(new List<string>() { "None" });
+                        specDrop.AddOptions(l.subOptions.ToStringList());
+                    }
                 }
+            }
+            //dropAttune.options.Remove("None");
+        }
+        else
+        {
+            character.character.element = null;
+            if (dis != null)
+            {
+                Destroy(dis);
+            }
+            for (int i = parentObject.childCount - 1; i >= 0; i--)
+            {
+                Destroy(parentObject.GetChild(i).gameObject);
             }
         }
     }
     public void SetLevel()
     {
         character.character.level = Convert.ToByte(inputLevel.text);
+        if (fs.pathsSwitch.activeSelf)
+        {
+            fs.SpawnFeatures();
+        }
+        else
+        {
+            fs.Spawn();
+        }
+        if (character.character.level < 3)
+        {
+            character.character.talent = 3;
+        }
+        else if (character.character.level < 7)
+        {
+            character.character.talent = 4;
+        }
+        else if (character.character.level < 13)
+        {
+            character.character.talent = 5;
+        }
+        else
+        {
+            character.character.talent = 6;
+        }
     }
     public void SetName()
     {
@@ -468,6 +614,10 @@ public class CharCreator : MonoBehaviour
     }
     public void ChooseSpec(string specName, string specDesc, string src, string feat)
     {
+        if(specName == "None")
+        {
+            return;
+        }
         specNote.gameObject.SetActive(true);
         this.specName.text = specName;
         this.specDesc.text = specDesc;
@@ -554,19 +704,45 @@ public class CharCreator : MonoBehaviour
                 character.character.features.Add(attuChosen);
                 break;
             case "path":
+                Debug.Log("pafCzóz");
                 List<Feature> pathOptions = repo.paths.First(item => item.pathName == fs.displayed.pathName)
-                    .features.First(item => item.featName == src)
+                    .initFeature
                     .subOptions.First(item => item.featName == feat)
                     .subOptions;
                 foreach (var o in pathOptions)
                 {
+                    Debug.Log("pafCzózForicz");
                     chosenSubs.Remove(o);
+                    character.character.features.Remove(o);
                 }
                 Feature pathChosen = repo.paths.First(item => item.pathName == fs.displayed.pathName)
-                    .features.First(item => item.featName == src)
+                    .initFeature
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
+                Debug.Log(pathChosen);
                 chosenSubs.Add(pathChosen);
+                if (fs.pathOn)
+                {
+                    character.character.features.Add(pathChosen);
+                }
+                break;
+            case "feat":
+                List<Feature> featOptions = fs.displayedFeat
+                    .subOptions.First(item => item.featName == feat)
+                    .subOptions;
+                foreach (var o in featOptions)
+                {
+                    chosenSubs.Remove(o);
+                    character.character.features.Remove(o);
+                }
+                Feature featChosen = fs.displayedFeat
+                    .subOptions.First(item => item.featName == feat)
+                    .subOptions.First(item => item.featName == specName);
+                chosenSubs.Add(featChosen);
+                if (fs.pathOn)
+                {
+                    character.character.features.Add(featChosen);
+                }
                 break;
         }
     }

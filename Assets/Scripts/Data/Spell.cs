@@ -11,6 +11,7 @@ public class Spell:Maneuver
     public bool S;
     public bool V;
     public bool M;
+    public List<string> components;
     public byte turns;
     public byte min;
     public byte hours;

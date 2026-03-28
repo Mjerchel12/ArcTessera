@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
 using JetBrains.Annotations;
 using System.Linq;
+using System;
 
 [CreateAssetMenu(fileName = "Repo", menuName = "ScriptableObjects/Repo")]
 public class Repository : ScriptableObject{
@@ -46,6 +47,9 @@ public class Repository : ScriptableObject{
     public List<Weapon> weapons = new List<Weapon>()
     {
     };
+    public List<Focus> focuses = new List<Focus>()
+    {
+    };
     public List<Spell> spells = new List<Spell>()
     {
     };
@@ -53,99 +57,171 @@ public class Repository : ScriptableObject{
     {
     };
 
-    public List<List<Item>> Decode(string code)
+    public List<List<List<Item>>> Decode(string code)
     {
+        Debug.Log("Decoding: " + code);
         string[] things = code.Split('/');
-        var l = new List<List<Item>>();
+        var l = new List<List<List<Item>>>();
         foreach (string s in things)
         {
-            byte quant=1;
-            byte numbInd;
-            bool isGroup = false;
-            string clean;
-            if (char.IsDigit(s[0]))
+            Debug.Log("Decoding thing: " + s);
+            List<List<Item>> l2 = new List<List<Item>>();
+            string[] things2 = s.Split('&');
+            foreach (string s2 in things2)
             {
-                quant = (byte)s[0];
-                numbInd = quant;
-            }
-            if (s[4] == '#')
-            {
-                isGroup = true;
-            }
-            if (s[2] == 'w')
-            {
-                if (isGroup) {
-                    clean = s.Substring(5);
-                    List<Weapon> theseWeapons = weapons.Where(item => item.types.Contains(clean)).ToList();
-                    List<Item> theseItems = new List<Item>();
-                    foreach (Weapon weapon in theseWeapons)
+                Debug.Log("Decoding subthing: " + s2);
+                byte quant = 1;
+                bool isGroup = false;
+                string clean;
+                try
+                {
+                    if (char.IsDigit(s2[0]))
                     {
-                        theseItems.Add(weapon);
+                        Debug.Log("Numbero");
+                        quant = Convert.ToByte(s2[0].ToString());
                     }
-                    l.Add(theseItems);
                 }
-                else
+                catch { Debug.Log("No number"); }
+
+                try
                 {
-                    clean = s.Substring(4);
-                    Item decoded = weapons.First(item => item.itemName == clean);
-                    l.Add(new List<Item> { decoded });
-                }
-            }
-            if (s[2] == 'a')
-            {
-                if (isGroup)
-                {
-                    clean = s.Substring(5);
-                    List<Armor> theseArmors = armors.Where(item => item.types.Contains(clean)).ToList();
-                    List<Item> theseItems = new List<Item>();
-                    foreach (Armor armor in theseArmors)
+                    if (s2[2] == '#')
                     {
-                        theseItems.Add(armor);
+                        Debug.Log("Grupero");
+                        isGroup = true;
                     }
-                    l.Add(theseItems);
                 }
-                else
+                catch { Debug.Log("No hashtag"); }
+
+                try
                 {
-                    clean = s.Substring(4);
-                    Item decoded = armors.First(item => item.itemName == clean);
-                    l.Add(new List<Item> { decoded });
-                }
-            }
-            if (s[2] == 'c')
-            {
-                if (isGroup)
-                {
-                    clean = s.Substring(5);
-                    List<Consumable> theseCons = consumables.Where(item => item.types.Contains(clean)).ToList();
-                    List<Item> theseItems = new List<Item>();
-                    foreach (Consumable con in theseCons)
+                    if (s2[1] == 'w')
                     {
-                        theseItems.Add(con);
+                        Debug.Log("Weapon");
+                        if (isGroup)
+                        {
+                            Debug.Log("WeaponGroup");
+                            clean = s2.Substring(3);
+                            List<Weapon> theseWeapons = weapons.Where(item => item.types.Contains(clean)).ToList();
+                            List<Item> theseItems = new List<Item>();
+                            foreach (Weapon weapon in theseWeapons)
+                            {
+                                theseItems.Add(weapon.CopyWeapon(1));
+                            }
+                            l2.Add(theseItems);
+                        }
+                        else
+                        {
+                            Debug.Log("WeaponElse");
+                            clean = s2.Substring(3);
+                            Weapon decoded = weapons.First(item => item.itemName == clean);
+                            Item decoded2 = decoded.CopyWeapon(quant);
+                            l2.Add(new List<Item> { decoded2 });
+                        }
                     }
-                    l.Add(theseItems);
+                    if (s2[1] == 'a')
+                    {
+                        Debug.Log("Armor");
+                        if (isGroup)
+                        {
+                            Debug.Log("ArmorGroup");
+                            clean = s2.Substring(3);
+                            List<Armor> theseArmors = armors.Where(item => item.types.Contains(clean)).ToList();
+                            List<Item> theseItems = new List<Item>();
+                            foreach (Armor armor in theseArmors)
+                            {
+                                theseItems.Add(armor.CopyArmor(1));
+                            }
+                            l2.Add(theseItems);
+                        }
+                        else
+                        {
+                            Debug.Log("ArmorElse");
+                            clean = s2.Substring(3);
+                            Armor decoded = armors.First(item => item.itemName == clean);
+                            Item decoded2 = decoded.CopyArmor(quant);
+                            l2.Add(new List<Item> { decoded2 });
+                        }
+                    }
+                    if (s2[1] == 'c')
+                    {
+                        Debug.Log("Cons");
+                        if (isGroup)
+                        {
+                            Debug.Log("ConsGr");
+                            clean = s2.Substring(3);
+                            List<Consumable> theseCons = consumables.Where(item => item.types.Contains(clean)).ToList();
+                            List<Item> theseItems = new List<Item>();
+                            foreach (Consumable con in theseCons)
+                            {
+                                theseItems.Add(con.CopyCons(1));
+                            }
+                            l2.Add(theseItems);
+                        }
+                        else
+                        {
+                            Debug.Log("ConsE");
+                            clean = s2.Substring(3);
+                            Consumable decoded = consumables.First(item => item.itemName == clean);
+                            Item decoded2 = decoded.CopyCons(quant);
+                            l2.Add(new List<Item> { decoded2 });
+                        }
+                    }
+                    if (s2[1] == 'f')
+                    {
+                        Debug.Log("Focus");
+                        if (isGroup)
+                        {
+                            Debug.Log("FocusGr");
+                            clean = s2.Substring(3);
+                            List<Focus> theseFocs = focuses.Where(item => item.types.Contains(clean)).ToList();
+                            List<Item> theseItems = new List<Item>();
+                            foreach (Focus con in theseFocs)
+                            {
+                                theseItems.Add(con.CopyFocus(1));
+                            }
+                            l2.Add(theseItems);
+                        }
+                        else
+                        {
+                            Debug.Log("FocusE");
+                            clean = s2.Substring(3);
+                            Focus decoded = focuses.First(item => item.itemName == clean);
+                            Item decoded2 = decoded.CopyFocus(quant);
+                            l2.Add(new List<Item> { decoded2 });
+                        }
+                    }
+                    if (s2[1] == 'i')
+                    {
+                        Debug.Log("Itemek");
+                        if (isGroup)
+                        {
+                            Debug.Log("ItemekGr");
+                            clean = s2.Substring(3);
+                            List<Item> these = items.Where(item => item.types.Contains(clean)).ToList();
+                            List<Item> theseItems = new List<Item>();
+                            foreach (Item con in these)
+                            {
+                                theseItems.Add(con.Copy(1));
+                            }
+                            l2.Add(theseItems);
+                        }
+                        else
+                        {
+                            Debug.Log("ItemekE");
+                            clean = s2.Substring(3);
+                            Debug.Log(clean);
+                            Item decoded = items.First(item => item.itemName == clean);
+                            Item decoded2 = decoded.Copy(quant);
+                            Debug.Log(decoded);
+                            l2.Add(new List<Item> { decoded2 });
+                        }
+                    }
                 }
-                else
-                {
-                    clean = s.Substring(4);
-                    Item decoded = consumables.First(item => item.itemName == clean);
-                    l.Add(new List<Item> { decoded });
-                }
+                catch(Exception e)
+                { Debug.Log("No thingo: " + e); }
             }
-            if (s[2] == 'i')
-            {
-                if (isGroup)
-                {
-                    clean = s.Substring(5);
-                    List<Item> these = items.Where(item => item.types.Contains(clean)).ToList();
-                    l.Add(these);
-                }
-                else
-                {
-                    clean = s.Substring(4);
-                    Item decoded = items.First(item => item.itemName == clean);
-                    l.Add(new List<Item> { decoded });
-                }
-            }
+            l.Add(l2);
         }
         return l;
     }

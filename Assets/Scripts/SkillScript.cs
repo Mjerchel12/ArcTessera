@@ -31,7 +31,7 @@ public class SkillScript : MonoBehaviour
     public bool CanRemove()
     {
         return ((isAtt && score > baseScore) ||
-               (expertise && score > baseScore -2) ||
+               (expertise && score > baseScore) ||
                ((!expertise && !isAtt) && score > baseScore))&&score>=0;
     }
 
@@ -113,8 +113,16 @@ public class SkillScript : MonoBehaviour
         character = characterB.character;
         score = baseScore;
         scoreText.text = score.ToString();
-        if (!expertise) { 
+    }
+    private void Update()
+    {
+        if (!expertise)
+        {
             E.SetActive(false);
+        }
+        else
+        {
+            E.SetActive(true);
         }
         if (!CanRemove())
         {
@@ -131,225 +139,227 @@ public class SkillScript : MonoBehaviour
         else if (score > baseScore) { scoreText.color = new Color(0, 255, 0); }
         else { scoreText.color = new Color(255, 255, 255); }
         scoreText.text = score.ToString();
-        if (skill == "body")
-        {
-            character.body.value = score;
-            character.body.current = score;
-        }
-        else if (skill == "athletics")
-        {
-            character.athletics.value = score;
-            character.athletics.current = score;
-        }
-        else if (skill == "strength")
-        {
-            character.strength.value = score;
-            character.strength.current = score;
-        }
-        else if (skill == "vigor")
-        {
-            character.vigor.value = score;
-            character.vigor.current = score;
-        }
-        else if (skill == "resistance")
-        {
-            character.resistance.value = score;
-            character.resistance.current = score;
-        }
-        else if (skill == "endurance")
-        {
-            character.endurance.value = score;
-            character.endurance.current = score;
-        }
-        else if (skill == "fortitude")
-        {
-            character.fortitude.value = score;
-            character.fortitude.current = score;
-        }
-        else if (skill == "melee")
-        {
-            character.melee.value = score;
-            character.melee.current = score;
-        }
-        else if (skill == "grace")
-        {
-            character.grace.value = score;
-            character.grace.current = score;
-        }
-        else if (skill == "acrobatics")
-        {
-            character.acrobatics.value = score;
-            character.acrobatics.current = score;
-        }
-        else if (skill == "accuracy")
-        {
-            character.marksmanship.value = score;
-            character.marksmanship.current = score;
-        }
-        else if (skill == "stealth")
-        {
-            character.stealth.value = score;
-            character.stealth.current = score;
-        }
-        else if (skill == "dexterity")
-        {
-            character.dexterity.value = score;
-            character.dexterity.current = score;
-        }
-        else if (skill == "martial")
-        {
-            character.martial.value = score;
-            character.martial.current = score;
-        }
-        else if (skill == "fencing")
-        {
-            character.fencing.value = score;
-            character.fencing.current = score;
-        }
-        else if (skill == "reactions")
-        {
-            character.react.value = score;
-            character.react.current = score;
-        }
-        else if (skill == "riding")
-        {
-            character.riding.value = score;
-            character.riding.current = score;
-        }
-        else if (skill == "mind")
-        {
-            character.mind.value = score;
-            character.mind.current = score;
-        }
-        else if (skill == "arcana")
-        {
-            character.arcana.value = score;
-            character.arcana.current = score;
-        }
-        else if (skill == "nature")
-        {
-            character.nature.value = score;
-            character.nature.current = score;
-        }
-        else if (skill == "religion")
-        {
-            character.religion.value = score;
-            character.religion.current = score;
-        }
-        else if (skill == "survival")
-        {
-            character.survival.value = score;
-            character.survival.current = score;
-        }
-        else if (skill == "lore")
-        {
-            character.lore.value = score;
-            character.lore.current = score;
-        }
-        else if (skill == "investigation")
-        {
-            character.investigation.value = score;
-            character.investigation.current = score;
-        }
-        else if (skill == "tactics")
-        {
-            character.tactics.value = score;
-            character.tactics.current = score;
-        }
-        else if (skill == "soul")
-        {
-            character.soul.value = score;
-            character.soul.current = score;
-        }
-        else if (skill == "willpower")
-        {
-            character.willpower.value = score;
-            character.willpower.current = score;
-        }
-        else if (skill == "intuition")
-        {
-            character.intuition.value = score;
-            character.intuition.current = score;
-        }
-        else if (skill == "alertness")
-        {
-            character.alertness.value = score;
-            character.alertness.current = score;
-        }
-        else if (skill == "spellcraft")
-        {
-            character.spellcraft.value = score;
-            character.spellcraft.current = score;
-        }
-        else if (skill == "fervor")
-        {
-            character.fervor.value = score;
-            character.fervor.current = score;
-        }
-        else if (skill == "trade")
-        {
-            character.trade.value = score;
-            character.trade.current = score;
-        }
-        else if (skill == "medicine")
-        {
-            character.medicine.value = score;
-            character.medicine.current = score;
-        }
-        else if (skill == "alchemy")
-        {
-            character.alchemy.value = score;
-            character.alchemy.current = score;
-        }
-        else if (skill == "forgery")
-        {
-            character.forgery.value = score;
-            character.forgery.current = score;
-        }
-        else if (skill == "craft")
-        {
-            character.craft.value = score;
-            character.craft.current = score;
-        }
-        else if (skill == "burglary")
-        {
-            character.burglary.value = score;
-            character.burglary.current = score;
-        }
-        else if (skill == "performances")
-        {
-            character.performance.value = score;
-            character.performance.current = score;
-        }
-        else if (skill == "personality")
-        {
-            character.personality.value = score;
-            character.personality.current = score;
-        }
-        else if (skill == "courtship")
-        {
-            character.courtship.value = score;
-            character.courtship.current = score;
-        }
-        else if (skill == "manipulation")
-        {
-            character.manipulation.value = score;
-            character.manipulation.current = score;
-        }
-        else if (skill == "persuasion")
-        {
-            character.persuasion.value = score;
-            character.persuasion.current = score;
-        }
-        else if (skill == "business")
-        {
-            character.business.value = score;
-            character.business.current = score;
-        }
-        else if (skill == "intimidation")
-        {
-            character.intimidation.value = score;
-            character.intimidation.current = score;
-        }
+        Stat stat = (Stat)FieldFinder.FindField(character, skill);
+        stat.SetValue(score);
+        //if (skill == "body")
+        //{
+        //    character.body.value = score;
+        //    character.body.current = score;
+        //}
+        //else if (skill == "athletics")
+        //{
+        //    character.athletics.value = score;
+        //    character.athletics.current = score;
+        //}
+        //else if (skill == "strength")
+        //{
+        //    character.strength.value = score;
+        //    character.strength.current = score;
+        //}
+        //else if (skill == "vigor")
+        //{
+        //    character.vigor.value = score;
+        //    character.vigor.current = score;
+        //}
+        //else if (skill == "resistance")
+        //{
+        //    character.resistance.value = score;
+        //    character.resistance.current = score;
+        //}
+        //else if (skill == "endurance")
+        //{
+        //    character.endurance.value = score;
+        //    character.endurance.current = score;
+        //}
+        //else if (skill == "fortitude")
+        //{
+        //    character.fortitude.value = score;
+        //    character.fortitude.current = score;
+        //}
+        //else if (skill == "melee")
+        //{
+        //    character.melee.value = score;
+        //    character.melee.current = score;
+        //}
+        //else if (skill == "grace")
+        //{
+        //    character.grace.value = score;
+        //    character.grace.current = score;
+        //}
+        //else if (skill == "acrobatics")
+        //{
+        //    character.acrobatics.value = score;
+        //    character.acrobatics.current = score;
+        //}
+        //else if (skill == "accuracy")
+        //{
+        //    character.marksmanship.value = score;
+        //    character.marksmanship.current = score;
+        //}
+        //else if (skill == "stealth")
+        //{
+        //    character.stealth.value = score;
+        //    character.stealth.current = score;
+        //}
+        //else if (skill == "dexterity")
+        //{
+        //    character.dexterity.value = score;
+        //    character.dexterity.current = score;
+        //}
+        //else if (skill == "martial")
+        //{
+        //    character.martial.value = score;
+        //    character.martial.current = score;
+        //}
+        //else if (skill == "fencing")
+        //{
+        //    character.fencing.value = score;
+        //    character.fencing.current = score;
+        //}
+        //else if (skill == "reactions")
+        //{
+        //    character.react.value = score;
+        //    character.react.current = score;
+        //}
+        //else if (skill == "riding")
+        //{
+        //    character.riding.value = score;
+        //    character.riding.current = score;
+        //}
+        //else if (skill == "mind")
+        //{
+        //    character.mind.value = score;
+        //    character.mind.current = score;
+        //}
+        //else if (skill == "arcana")
+        //{
+        //    character.arcana.value = score;
+        //    character.arcana.current = score;
+        //}
+        //else if (skill == "nature")
+        //{
+        //    character.nature.value = score;
+        //    character.nature.current = score;
+        //}
+        //else if (skill == "religion")
+        //{
+        //    character.religion.value = score;
+        //    character.religion.current = score;
+        //}
+        //else if (skill == "survival")
+        //{
+        //    character.survival.value = score;
+        //    character.survival.current = score;
+        //}
+        //else if (skill == "lore")
+        //{
+        //    character.lore.value = score;
+        //    character.lore.current = score;
+        //}
+        //else if (skill == "investigation")
+        //{
+        //    character.investigation.value = score;
+        //    character.investigation.current = score;
+        //}
+        //else if (skill == "tactics")
+        //{
+        //    character.tactics.value = score;
+        //    character.tactics.current = score;
+        //}
+        //else if (skill == "soul")
+        //{
+        //    character.soul.value = score;
+        //    character.soul.current = score;
+        //}
+        //else if (skill == "willpower")
+        //{
+        //    character.willpower.value = score;
+        //    character.willpower.current = score;
+        //}
+        //else if (skill == "intuition")
+        //{
+        //    character.intuition.value = score;
+        //    character.intuition.current = score;
+        //}
+        //else if (skill == "alertness")
+        //{
+        //    character.alertness.value = score;
+        //    character.alertness.current = score;
+        //}
+        //else if (skill == "spellcraft")
+        //{
+        //    character.spellcraft.value = score;
+        //    character.spellcraft.current = score;
+        //}
+        //else if (skill == "fervor")
+        //{
+        //    character.fervor.value = score;
+        //    character.fervor.current = score;
+        //}
+        //else if (skill == "trade")
+        //{
+        //    character.trade.value = score;
+        //    character.trade.current = score;
+        //}
+        //else if (skill == "medicine")
+        //{
+        //    character.medicine.value = score;
+        //    character.medicine.current = score;
+        //}
+        //else if (skill == "alchemy")
+        //{
+        //    character.alchemy.value = score;
+        //    character.alchemy.current = score;
+        //}
+        //else if (skill == "forgery")
+        //{
+        //    character.forgery.value = score;
+        //    character.forgery.current = score;
+        //}
+        //else if (skill == "craft")
+        //{
+        //    character.craft.value = score;
+        //    character.craft.current = score;
+        //}
+        //else if (skill == "burglary")
+        //{
+        //    character.burglary.value = score;
+        //    character.burglary.current = score;
+        //}
+        //else if (skill == "performances")
+        //{
+        //    character.performance.value = score;
+        //    character.performance.current = score;
+        //}
+        //else if (skill == "personality")
+        //{
+        //    character.personality.value = score;
+        //    character.personality.current = score;
+        //}
+        //else if (skill == "courtship")
+        //{
+        //    character.courtship.value = score;
+        //    character.courtship.current = score;
+        //}
+        //else if (skill == "manipulation")
+        //{
+        //    character.manipulation.value = score;
+        //    character.manipulation.current = score;
+        //}
+        //else if (skill == "persuasion")
+        //{
+        //    character.persuasion.value = score;
+        //    character.persuasion.current = score;
+        //}
+        //else if (skill == "business")
+        //{
+        //    character.business.value = score;
+        //    character.business.current = score;
+        //}
+        //else if (skill == "intimidation")
+        //{
+        //    character.intimidation.value = score;
+        //    character.intimidation.current = score;
+        //}
     }
 }

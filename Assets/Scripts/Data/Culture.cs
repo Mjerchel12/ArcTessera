@@ -14,6 +14,7 @@ public class Culture
     public byte personalityBonus;
     public SkillBonus skillBonus;
     public List<Feature> features;
+    public string equipmentDesc;
     public List<string> equipment;
     public Culture(string nm)
     {

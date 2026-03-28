@@ -9,4 +9,10 @@ public class Stat{
     public byte flaw;
     public byte max;
     public byte current;
+
+    public void SetValue(byte n)
+    {
+        value = n;
+        current = value;
+    }
 }

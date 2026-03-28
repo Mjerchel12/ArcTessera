@@ -25,22 +25,23 @@ public class MainMenu : MonoBehaviour
     public GameObject step1;
     public GameObject spec;
     public GameObject paths;
-    public GameObject features;
     public GameObject step2;
     public GameObject step3;
     public GameObject step4;
     public GameObject step5;
     public GameObject sheet;
 
+    public UnityEngine.UI.Button step2arrow;
+
     public ForgeScript forge;
 
     public Animator sheetAnimator;
-    
+
+    public CharacterBar cb;
+    public CharCreator cc;
+
     private int x = 0;
     private int y = 0;
-
-    private int xf = 0;
-    private int yf = 0;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -51,13 +52,14 @@ public class MainMenu : MonoBehaviour
         repo.attunements = FileHandler.ReadFromJson<Element>("attunements.json");
         repo.signs = FileHandler.ReadFromJson<StarSign>("starSigns.json");
         repo.backs = FileHandler.ReadFromJson<Background>("backgrounds.json");
-        repo.cultures = FileHandler.ReadFromJson<Culture>("cultures.json");
-        //repo.lineages = FileHandler.ReadFromJson<Lineage>("lineages.json");
-        repo.paths = FileHandler.ReadFromJson<Path>("paths.json");
-        repo.items = FileHandler.ReadFromJson<Item>("items.json");
+        //repo.cultures = FileHandler.ReadFromJson<Culture>("cultures.json");
+        repo.lineages = FileHandler.ReadFromJson<Lineage>("lineages.json");
+        //repo.paths = FileHandler.ReadFromJson<Path>("paths.json");
+        //repo.items = FileHandler.ReadFromJson<Item>("items.json");
         repo.armors = FileHandler.ReadFromJson<Armor>("armors.json");
         repo.consumables = FileHandler.ReadFromJson<Consumable>("consumables.json");
         repo.weapons = FileHandler.ReadFromJson<Weapon>("weapons.json");
+        repo.focuses = FileHandler.ReadFromJson<Focus>("catalysts.json");
         repo.spells = FileHandler.ReadFromJson<Spell>("spells.json");
         repo.maneuvers = FileHandler.ReadFromJson<Maneuver>("maneuvers.json");
 
@@ -88,6 +90,7 @@ public class MainMenu : MonoBehaviour
         FileHandler.SaveToJson<Armor>(repo.armors, "armors.json");
         FileHandler.SaveToJson<Consumable>(repo.consumables, "consumables.json");
         FileHandler.SaveToJson<Weapon>(repo.weapons, "weapons.json");
+        FileHandler.SaveToJson<Focus>(repo.focuses, "catalysts.json");
         FileHandler.SaveToJson<Spell>(repo.spells, "spells.json");
         FileHandler.SaveToJson<Maneuver>(repo.maneuvers, "maneuvers.json");
         Application.Quit();
@@ -103,7 +106,6 @@ public class MainMenu : MonoBehaviour
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         settings.SetActive(false);
         sheet.SetActive(false);
-        features.SetActive(false);
         step1.SetActive(false);
         creator.SetActive(false);
         menu.SetActive(true);
@@ -115,7 +117,6 @@ public class MainMenu : MonoBehaviour
         menu.SetActive(false);
         marble.SetActive(true);
         paths.SetActive(false);
-        features.SetActive(false);
         step2.SetActive(false);
         creator.SetActive(true);
         step1.SetActive(true);
@@ -126,7 +127,6 @@ public class MainMenu : MonoBehaviour
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         marble.SetActive(true);
         step1.SetActive(false);
-        features.SetActive(false);
         step3.SetActive(false);
         step2.SetActive(true);
         spec.SetActive(false);
@@ -137,7 +137,6 @@ public class MainMenu : MonoBehaviour
         marble.SetActive(false);
         step1.SetActive(false);
         paths.SetActive(true);
-        features.SetActive(false);
         step3.SetActive(false);
         step2.SetActive(false);
         spec.SetActive(false);
@@ -150,28 +149,30 @@ public class MainMenu : MonoBehaviour
         background.GetComponent<Image>().color = new Color32(0, 31, 138, 255);
         marble.SetActive(false);
         step1.SetActive(false);
-        paths.SetActive(false);
-        features.SetActive(true);
+        paths.SetActive(true);
         step3.SetActive(false);
         step2.SetActive(false);
         spec.SetActive(false);
         Debug.Log("Wesz這 w metode");
+        var cc = creator.GetComponent<CharCreator>();
+        cc.displayed = "feat";
+        forge.SpawnFeatures();
         //foreach (var feature in repo.features) 
         //{
         //    Debug.Log("Wesz這 w foreach feature");
-            //if (feature.requiredFeatures==null && feature.requiredFeatures.All(element => character.co.features.Contains(element)))
-            //{
-            //    Debug.Log("Wesz這 w if");
-            //    var guy = Instantiate(charPrefab, parentObject);
-            //    var guyChar = guy.GetComponent<Feature>();
-            //    guyChar = feature;
-            //    xf++;
-            //    if (xf == 5)
-            //    {
-            //        xf = 0;
-            //        yf++;
-            //    }
-            //}
+        //if (feature.requiredFeatures==null && feature.requiredFeatures.All(element => character.co.features.Contains(element)))
+        //{
+        //    Debug.Log("Wesz這 w if");
+        //    var guy = Instantiate(charPrefab, parentObject);
+        //    var guyChar = guy.GetComponent<Feature>();
+        //    guyChar = feature;
+        //    xf++;
+        //    if (xf == 5)
+        //    {
+        //        xf = 0;
+        //        yf++;
+        //    }
+        //}
         //}
     }
     public void Step3()
@@ -179,27 +180,28 @@ public class MainMenu : MonoBehaviour
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         marble.SetActive(true);
         step2.SetActive(false);
-        features.SetActive(false);
         step4.SetActive(false);
         step3.SetActive(true);
         spec.SetActive(false);
+        var IC = step3.GetComponent<InventoryChoosing>();
+        IC.Spawn();
     }
     public void Step4()
     {
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         marble.SetActive(true);
         step3.SetActive(false);
-        features.SetActive(false);
         step5.SetActive(false);
         step4.SetActive(true);
         spec.SetActive(false);
+        var SC = step4.GetComponent<SpellsChoice>();
+        SC.Spawn();
     }
     public void Step5()
     {
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         marble.SetActive(true);
         step4.SetActive(false);
-        features.SetActive(false);
         step5.SetActive(true);
         spec.SetActive(false);
     }
@@ -208,7 +210,6 @@ public class MainMenu : MonoBehaviour
         marble.SetActive(false);
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         menu.SetActive(false);
-        features.SetActive(false);
         step5.SetActive(false);
         creator.SetActive(false);
         sheet.SetActive(true);
@@ -232,7 +233,6 @@ public class MainMenu : MonoBehaviour
         marble.SetActive(false);
         background.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         menu.SetActive(false);
-        features.SetActive(false);
         step5.SetActive(false);
         creator.SetActive(false);
         sheet.SetActive(true);
@@ -251,5 +251,17 @@ public class MainMenu : MonoBehaviour
     {
         if (lang == "english") { }
         if (lang == "polish") { }
+    }
+    private void Update()
+    {
+        if (cb.character.lineage == null || cb.character.culture == null || cb.character.starsign == null || cb.character.element == null || cb.character.background == null ||
+            cc.specFeats.Any(item => item.isNone))
+        {
+            step2arrow.interactable = false;
+        }
+        else
+        {
+            step2arrow.interactable = true;
+        }
     }
 }

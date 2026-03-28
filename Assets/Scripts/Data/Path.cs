@@ -11,12 +11,12 @@ public class Path
     public byte reqAdv;
     public string secondRequired;
     public byte secReqAdv;
-    public List<string> expertise;
-    public List<string> equipment;
+    public List<string> expertise = new List<string>();
+    public string equipmentDesc;
+    public List<string> equipment = new List<string>();
     public Feature initFeature;
-    public List<Feature> features;
-
-    public byte howAdvanced;
+    public List<Feature> features = new List<Feature>();
+    public List<string> spellTables = new List<string>();
 
     public Path()
     {

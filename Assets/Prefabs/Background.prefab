@@ -55,6 +55,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,6 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -967,6 +970,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -988,6 +993,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -2639,7 +2645,9 @@ PrefabInstance:
       propertyPath: m_text
       value: Soldier
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2337981450364676257, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
+    - {fileID: 1037949222884358908, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3094065071229234643, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
@@ -2693,6 +2701,16 @@ MonoBehaviour:
   skills: {fileID: 2253468714834013702}
   features: {fileID: 6206494288059882190}
   items: {fileID: 8553502693366414271}
+  expertise: {fileID: 0}
+  optionsPrefab: {fileID: 0}
+  spellOptions: {fileID: 0}
+  APCost: {fileID: 0}
+  staminaCost: {fileID: 0}
+  manaCost: {fileID: 0}
+  range: {fileID: 0}
+  catalyst: {fileID: 0}
+  duration: {fileID: 0}
+  desc: {fileID: 0}
 --- !u!114 &6737258910172771570 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7936765340855793899, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 [Serializable]
@@ -14,12 +15,12 @@ public class Character{
     public byte level;
     public byte takenPerks;
     public string desc;
-    public List<Feature> features;
-    public List<Path> paths;
-    public List<Spell> spells;
-    public List<Maneuver> maneuvers;
-    public List<LegFeature> legFeatures;
-    public byte Talent;
+    public List<Feature> features = new List<Feature>();
+    public List<Path> paths = new List<Path>();
+    public List<Spell> spells = new List<Spell>();
+    public List<Maneuver> maneuvers = new List<Maneuver>();
+    public List<LegFeature> legFeatures = new List<LegFeature>();
+    public byte talent;
 
     [Header("Attributes")]
     public Stat body;
@@ -79,7 +80,7 @@ public class Character{
     public Stat mana;
     public byte wounds;
     public byte AP;
-    public byte Reactions;
+    public byte reactions;
     public byte speedBonus;
     public Stat stamina;
     public Stat sanity;
@@ -90,23 +91,24 @@ public class Character{
     public byte exhaustion;
     public byte toxin;
     public byte curse;
-    public List<string> conditions;
-    public List<string> resistances;
-    public List<string> immunities;
-    public List<string> vulnerabilities;
+    public List<string> conditions = new List<string>();
+    public List<string> resistances = new List<string>();
+    public List<string> immunities = new List<string>();
+    public List<string> vulnerabilities = new List<string>();
 
     [Header("Combat")]
     public string currentStance;
-    public List<string> knownStances;
+    public List<string> knownStances = new List<string>();
     public string leftHand;
     public string rightHand;
     public string wornArmor;
 
     [Header("Equipment")]
-    public List<string> weaponry;
-    public List<string> armory;
-    public List<string> consumables;
-    public List<string> other;
+    public List<Weapon> weaponry = new List<Weapon>();
+    public List<Armor> armory = new List<Armor>();
+    public List<Consumable> consumables = new List<Consumable>();
+    public List<Focus> focuses = new List<Focus>();
+    public List<Item> otherItems = new List<Item>();
 
     [Header("Journal")]
     public string charName;

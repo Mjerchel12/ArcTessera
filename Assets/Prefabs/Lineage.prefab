@@ -4634,7 +4634,8 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1037949222884358908, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3094065071229234643, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}
@@ -4694,6 +4695,16 @@ MonoBehaviour:
   skills: {fileID: 469421247988488133}
   features: {fileID: 7879972014597191993}
   items: {fileID: 0}
+  expertise: {fileID: 0}
+  optionsPrefab: {fileID: 0}
+  spellOptions: {fileID: 0}
+  APCost: {fileID: 0}
+  staminaCost: {fileID: 0}
+  manaCost: {fileID: 0}
+  range: {fileID: 0}
+  catalyst: {fileID: 0}
+  duration: {fileID: 0}
+  desc: {fileID: 0}
 --- !u!114 &6737258910172771570 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7936765340855793899, guid: 48c0165e5c294ed4ea76c1ab9b9058c9, type: 3}

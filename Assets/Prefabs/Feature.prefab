@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3094065071229234643}
   - component: {fileID: 6231148841951459459}
   - component: {fileID: 4277301622239429860}
-  - component: {fileID: 1861291282644494812}
+  - component: {fileID: 1037949222884358908}
   m_Layer: 0
   m_Name: Feature
   m_TagString: Untagged
@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: 1.31, y: 0.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6231148841951459459
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1861291282644494812
+--- !u!114 &1037949222884358908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,11 +87,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1565320158365831231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eefbcc6c77096554297216c2f023b407, type: 3}
+  m_Script: {fileID: 11500000, guid: f4422effe524c5a4790e3d216e23f2f4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  featName: {fileID: 7936765340855793899}
-  featDescription: {fileID: 6087501515671512951}
+  m_EditorClassIdentifier: Assembly-CSharp::CharCreatorFeature
+  nameDisplay: {fileID: 7936765340855793899}
+  sizeAndClade: {fileID: 6087501515671512951}
+  vit: {fileID: 0}
+  stam: {fileID: 0}
+  san: {fileID: 0}
+  body: {fileID: 0}
+  grace: {fileID: 0}
+  mind: {fileID: 0}
+  soul: {fileID: 0}
+  trade: {fileID: 0}
+  personality: {fileID: 0}
+  speed: {fileID: 0}
+  senses: {fileID: 0}
+  size: {fileID: 0}
+  lifespan: {fileID: 0}
+  skills: {fileID: 0}
+  features: {fileID: 0}
+  items: {fileID: 0}
+  expertise: {fileID: 0}
 --- !u!1 &1917034136566623342
 GameObject:
   m_ObjectHideFlags: 0
