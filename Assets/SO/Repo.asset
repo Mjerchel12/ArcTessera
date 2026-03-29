@@ -628,11 +628,90 @@ MonoBehaviour:
     isSub: 0
   legendaries: []
   allCharacters:
-  - lineage: Human
-    culture: Militaristic
-    background: Soldier
-    starsign: Boulder
-    element: Dry
+  - lineage:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      size: 
+      clade: 
+      vitDiceQuantity: 0
+      vitDice: 0
+      staminaBase: 0
+      sanityBase: 0
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      speed:
+        walk: 0
+        swim: 0
+        fly: 0
+        crawl: 0
+        highLeap: 0
+        farLeap: 0
+      senses: 
+      sizeSpan: 
+      lifeSpan: 
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+    culture:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+      equipmentDesc: 
+      equipment: []
+    background:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+      equipmentDesc: 
+      equipment: []
+    starsign:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+    element:
+      id: 0
+      opName: 
+      desc: 
+      features: []
     level: 1
     takenPerks: 0
     desc: 
@@ -1108,7 +1187,7 @@ MonoBehaviour:
       current: 0
     wounds: 0
     AP: 0
-    Reactions: 0
+    reactions: 0
     speedBonus: 0
     stamina:
       statName: 
@@ -1172,11 +1251,90 @@ MonoBehaviour:
     bonds: 
     goals: 
     notes: 
-  - lineage: Human
-    culture: 
-    background: 
-    starsign: 
-    element: 
+  - lineage:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      size: 
+      clade: 
+      vitDiceQuantity: 0
+      vitDice: 0
+      staminaBase: 0
+      sanityBase: 0
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      speed:
+        walk: 0
+        swim: 0
+        fly: 0
+        crawl: 0
+        highLeap: 0
+        farLeap: 0
+      senses: 
+      sizeSpan: 
+      lifeSpan: 
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+    culture:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+      equipmentDesc: 
+      equipment: []
+    background:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+      equipmentDesc: 
+      equipment: []
+    starsign:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+    element:
+      id: 0
+      opName: 
+      desc: 
+      features: []
     level: 0
     takenPerks: 0
     desc: 
@@ -1652,7 +1810,7 @@ MonoBehaviour:
       current: 0
     wounds: 0
     AP: 0
-    Reactions: 0
+    reactions: 0
     speedBonus: 0
     stamina:
       statName: 
@@ -1716,11 +1874,90 @@ MonoBehaviour:
     bonds: 
     goals: 
     notes: 
-  - lineage: Elf
-    culture: 
-    background: 
-    starsign: 
-    element: 
+  - lineage:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      size: 
+      clade: 
+      vitDiceQuantity: 0
+      vitDice: 0
+      staminaBase: 0
+      sanityBase: 0
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      speed:
+        walk: 0
+        swim: 0
+        fly: 0
+        crawl: 0
+        highLeap: 0
+        farLeap: 0
+      senses: 
+      sizeSpan: 
+      lifeSpan: 
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+    culture:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+      equipmentDesc: 
+      equipment: []
+    background:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+      skillBonus:
+        bonusName: []
+        bonusNumb: 
+        expertise: 0
+        desc: 
+      equipmentDesc: 
+      equipment: []
+    starsign:
+      id: 0
+      opName: 
+      desc: 
+      features: []
+      bodyBonus: 0
+      graceBonus: 0
+      mindBonus: 0
+      soulBonus: 0
+      tradeBonus: 0
+      personalityBonus: 0
+    element:
+      id: 0
+      opName: 
+      desc: 
+      features: []
     level: 0
     takenPerks: 0
     desc: 
@@ -2196,7 +2433,7 @@ MonoBehaviour:
       current: 0
     wounds: 0
     AP: 0
-    Reactions: 0
+    reactions: 0
     speedBonus: 0
     stamina:
       statName: 
@@ -2261,7 +2498,8 @@ MonoBehaviour:
     goals: 
     notes: 
   attunements:
-  - elName: Dry
+  - id: 0
+    opName: Dry
     desc: Common amongst those who dwell in deserts and dry environment.
     features:
     - featName: Scorching Resilience
@@ -2450,14 +2688,9 @@ MonoBehaviour:
           isSub: 0
       isSub: 0
   signs:
-  - signName: Mountain
+  - id: 0
+    opName: Mountain
     desc: Sign of those who stand the strongest.
-    bodyBonus: 1
-    graceBonus: 0
-    mindBonus: 0
-    soulBonus: 0
-    tradeBonus: 0
-    personalityBonus: 0
     features:
     - featName: Standing Strong
       desc: You have Favor on rolls against forced movement or being knocked prone.
@@ -2644,21 +2877,16 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
-  backs:
-  - backName: Soldier
-    desc: Common Background
     bodyBonus: 1
-    graceBonus: 1
+    graceBonus: 0
     mindBonus: 0
-    soulBonus: 1
+    soulBonus: 0
     tradeBonus: 0
     personalityBonus: 0
-    skillBonus:
-      bonusName:
-      - Body
-      bonusNumb: 01
-      expertise: 0
-      desc: You can add 1 additional points to any Body skill.
+  backs:
+  - id: 0
+    opName: Soldier
+    desc: Common Background
     features:
     - featName: First Strike
       desc: You have a Favor on your first attack in combat.
@@ -3035,27 +3263,27 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
+    bodyBonus: 1
+    graceBonus: 1
+    mindBonus: 0
+    soulBonus: 1
+    tradeBonus: 0
+    personalityBonus: 0
+    skillBonus:
+      bonusName:
+      - Body
+      bonusNumb: 01
+      expertise: 0
+      desc: You can add 1 additional points to any Body skill.
     equipmentDesc: 
     equipment:
     - 
     - 
     - 
   cultures:
-  - cultName: Militaristic
+  - id: 0
+    opName: Militaristic
     desc: Generic Culture
-    bodyBonus: 1
-    graceBonus: 1
-    mindBonus: 0
-    soulBonus: 0
-    tradeBonus: 0
-    personalityBonus: 0
-    skillBonus:
-      bonusName:
-      - Body
-      - Grace
-      bonusNumb: 0101
-      expertise: 0
-      desc: You can add 1 additional points to any Body and Grace skill.
     features:
     - featName: Determination
       desc: You have one more point of Determination.
@@ -3242,26 +3470,28 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
-    equipmentDesc: 
-    equipment:
-    - .i.ItemMilit&.i.ItemMilit
-    - 2i.ItemMilit2
-    - .i.ItemMilitOr/.i.ItemMilitOr2
-    - .i#MilitGroup/.i#MilitGroup&.i#MilitGroup
-  - cultName: Sect of Wilds
-    desc: Elvish Culture
-    bodyBonus: 0
-    graceBonus: 2
+    bodyBonus: 1
+    graceBonus: 1
     mindBonus: 0
     soulBonus: 0
     tradeBonus: 0
     personalityBonus: 0
     skillBonus:
       bonusName:
+      - Body
       - Grace
-      bonusNumb: 02
+      bonusNumb: 0101
       expertise: 0
-      desc: You can add 2 additional points to any Grace skill.
+      desc: You can add 1 additional points to any Body and Grace skill.
+    equipmentDesc: 
+    equipment:
+    - .i.ItemMilit&.i.ItemMilit
+    - 2i.ItemMilit2
+    - .i.ItemMilitOr/.i.ItemMilitOr2
+    - .i#MilitGroup/.i#MilitGroup&.i#MilitGroup
+  - id: 0
+    opName: Sect of Woods
+    desc: Elvish Culture
     features:
     - featName: Mask of the Wild
       desc: You can attempt to hide even when you are only lightly obscured by foliage,
@@ -3634,38 +3864,25 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
+    bodyBonus: 0
+    graceBonus: 2
+    mindBonus: 0
+    soulBonus: 0
+    tradeBonus: 0
+    personalityBonus: 0
+    skillBonus:
+      bonusName:
+      - Grace
+      bonusNumb: 02
+      expertise: 0
+      desc: You can add 2 additional points to any Grace skill.
     equipmentDesc: 
     equipment:
     - 
   lineages:
-  - lineName: Human
-    size: Medium
-    clade: Mammal
-    vitDiceQuantity: 4
-    vitDice: 10
-    staminaBase: 15
-    sanityBase: 15
-    bodyBonus: 2
-    graceBonus: 0
-    mindBonus: 3
-    soulBonus: -1
-    tradeBonus: 1
-    personalityBonus: 1
-    speed:
-      walk: 6
-      swim: 0
-      fly: 0
-      crawl: 0
-      highLeap: 0
-      farLeap: 0
-    senses: Regular senses
-    sizeSpan: 1.4 - 1.9 meters
-    lifeSpan: Adulthood - 16, Death - 70
-    skillBonus:
-      bonusName: []
-      bonusNumb: 
-      expertise: 5
-      desc: You can add 5 additional points to your Expertise skills.
+  - id: 0
+    opName: Human
+    desc: 
     features:
     - featName: Trait
       desc: You can take one free Trait of your choice.
@@ -3851,36 +4068,36 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
-  - lineName: Elf
     size: Medium
     clade: Mammal
     vitDiceQuantity: 4
     vitDice: 10
-    staminaBase: 12
-    sanityBase: 18
-    bodyBonus: 0
-    graceBonus: 2
-    mindBonus: 1
-    soulBonus: 3
-    tradeBonus: 0
-    personalityBonus: 0
+    staminaBase: 15
+    sanityBase: 15
+    bodyBonus: 2
+    graceBonus: 0
+    mindBonus: 3
+    soulBonus: -1
+    tradeBonus: 1
+    personalityBonus: 1
     speed:
-      walk: 7
+      walk: 6
       swim: 0
       fly: 0
       crawl: 0
       highLeap: 0
       farLeap: 0
-    senses: 12 meters of darkvision
-    sizeSpan: 1.5 - 2.0 meters
-    lifeSpan: Adulthood - 50, Death - 400
+    senses: Regular senses
+    sizeSpan: 1.4 - 1.9 meters
+    lifeSpan: Adulthood - 16, Death - 70
     skillBonus:
-      bonusName:
-      - Mind
-      - Soul
-      bonusNumb: 0203
-      expertise: 0
-      desc: 
+      bonusName: []
+      bonusNumb: 
+      expertise: 5
+      desc: You can add 5 additional points to your Expertise skills.
+  - id: 0
+    opName: Elf
+    desc: 
     features:
     - featName: Trance
       desc: Instead of sleeping you meditate deeply, remaining semi-conscious, for
@@ -5820,6 +6037,35 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
+    size: Medium
+    clade: Mammal
+    vitDiceQuantity: 4
+    vitDice: 10
+    staminaBase: 12
+    sanityBase: 18
+    bodyBonus: 0
+    graceBonus: 2
+    mindBonus: 1
+    soulBonus: 3
+    tradeBonus: 0
+    personalityBonus: 0
+    speed:
+      walk: 7
+      swim: 0
+      fly: 0
+      crawl: 0
+      highLeap: 0
+      farLeap: 0
+    senses: 12 meters of darkvision
+    sizeSpan: 1.5 - 2.0 meters
+    lifeSpan: Adulthood - 50, Death - 400
+    skillBonus:
+      bonusName:
+      - Mind
+      - Soul
+      bonusNumb: 0203
+      expertise: 0
+      desc: 
   paths:
   - pathName: Warrior
     desc: 'Martial basic path  '
@@ -7164,7 +7410,8 @@ MonoBehaviour:
               isSub: 0
           isSub: 0
       isSub: 0
-    spellTables: []
+    spellTables:
+    - Martial Maneuvers
   items:
   - types:
     - MilitGroup

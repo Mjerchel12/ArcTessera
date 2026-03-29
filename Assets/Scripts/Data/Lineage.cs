@@ -3,9 +3,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 [Serializable]
-public class Lineage
+public class Lineage: CharOption
 {
-    public string lineName;
     public string size;
     public string clade;
     public byte vitDiceQuantity;
@@ -23,31 +22,4 @@ public class Lineage
     public string sizeSpan;
     public string lifeSpan;
     public SkillBonus skillBonus;
-    public List<Feature> features;
-    public Lineage(string nm, string size, string clade, byte vitDiceQuantity, byte vitDice, byte staminaBase, byte sanityBase, sbyte bodyBonus, sbyte graceBonus, sbyte mindBonus, sbyte soulBonus, sbyte tradeBonus, sbyte personalityBonus, Speed speed, string senses, string sizeSpan, string lifeSpan, SkillBonus skillBonus, List<Feature> features)
-    {
-        this.lineName = nm;
-        this.size = size;
-        this.clade = clade;
-        this.vitDiceQuantity = vitDiceQuantity;
-        this.vitDice = vitDice;
-        this.staminaBase = staminaBase;
-        this.sanityBase = sanityBase;
-        this.bodyBonus = bodyBonus;
-        this.graceBonus = graceBonus;
-        this.mindBonus = mindBonus;
-        this.soulBonus = soulBonus;
-        this.tradeBonus = tradeBonus;
-        this.personalityBonus = personalityBonus;
-        this.speed = speed;
-        this.senses = senses;
-        this.sizeSpan = sizeSpan;
-        this.lifeSpan = lifeSpan;
-        this.skillBonus = skillBonus;
-        this.features = features;
-    }
-    public override string ToString()
-    {
-        return lineName;
-    }
 }

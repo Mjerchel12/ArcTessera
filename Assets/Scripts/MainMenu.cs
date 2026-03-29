@@ -254,14 +254,18 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (cb.character.lineage.lineName == null || cb.character.culture.cultName == null || cb.character.starsign.signName == null || cb.character.element.elName == null || cb.character.background.backName == null ||
+        try
+        {
+            if (cb.character.lineage.opName == null || cb.character.culture.opName == null || cb.character.starsign.opName == null || cb.character.element.opName == null || cb.character.background.opName == null ||
             cc.specFeats.Any(item => item.isNone))
-        {
-            step2arrow.interactable = false;
+            {
+                step2arrow.interactable = false;
+            }
+            else
+            {
+                step2arrow.interactable = true;
+            }
         }
-        else
-        {
-            step2arrow.interactable = true;
-        }
+        catch { step2arrow.interactable = false; }
     }
 }

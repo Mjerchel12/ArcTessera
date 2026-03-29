@@ -67,222 +67,58 @@ public class SpellsChoice : MonoBehaviour
             spellSquare.SetActive(false);
         }
     }
-    public void SpawnManeuvers()
+    public void SpawnManeuverType(string typeFilter)
     {
-        displayedList.text = "Martial Maneuvers";
-        spellCount.text = cb.character.maneuvers.Count(item => item.types.Contains("Martial Maneuver")).ToString();
+        displayedList.text = typeFilter + "s";
+        spellCount.text = cb.character.maneuvers.Count(item => item.types.Contains(typeFilter)).ToString();
         foreach (GameObject go in spawnedGuys)
-        {
             GameObject.Destroy(go);
-        }
         GameObject.Destroy(spawnedDisplay);
         foreach (GameObject go in spawnedOps)
-        {
             GameObject.Destroy(go);
-        }
+
         foreach (Maneuver m in repo.maneuvers)
         {
             Debug.Log("wesz³o w foreach");
             if (m != null && m.types.Contains("Martial Maneuver") && Check(m))
             {
-                Debug.Log("If");
-                var guy = Instantiate(spellPrefab, spellList);
-                var guyChar = guy.GetComponent<SpellBar>();
-                if (cb.character.maneuvers.Contains(m))
-                {
-                    guyChar.isTaken = true;
-                }
-                if (guyChar.isTaken||spellCount.text==talent.text)
-                {
-                    Debug.Log("Green grey");
-                    guyChar.greenButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Green else");
-                    guyChar.greenButton.interactable = true;
-                }
-                if (!guyChar.isTaken)
-                {
-                    Debug.Log("Red grey");
-                    guyChar.redButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Red else");
-                    guyChar.redButton.interactable = true;
-                }
-                guyChar.spellName.text = m.manName;
-                if (m.types.Contains("Simple"))
-                {
-                    guyChar.spellLevel.text = "I";
-                }
-                if (m.types.Contains("Greater"))
-                {
-                    guyChar.spellLevel.text = "II";
-                }
-                if (m.types.Contains("Master"))
-                {
-                    guyChar.spellLevel.text = "III";
-                }
-                if (guyChar.isTaken)
-                {
-                    guyChar.taken.GetComponent<Image>().color = new Color(0.232556f, 0.735849f, 0.247813f);
-                }
-                else
-                {
-                    guyChar.taken.GetComponent<Image>().color = new Color(1f, 1f, 1f);
-                }
-                guyChar.type.SetActive(false);
-                guyChar.man = m;
-                spawnedGuys.Add(guy);
+                SpawnManeuverUI(m);
             }
         }
     }
-    public void SpawnExploits()
+
+    private void SpawnManeuverUI(Maneuver m)
     {
-        displayedList.text = "Roguish Exploits";
-        spellCount.text = cb.character.maneuvers.Count(item => item.types.Contains("Roguish Exploit")).ToString();
-        foreach (GameObject go in spawnedGuys)
+        var guy = Instantiate(spellPrefab, spellList);
+        var guyChar = guy.GetComponent<SpellBar>();
+
+        guyChar.isTaken = cb.character.maneuvers.Contains(m);
+
+        guyChar.greenButton.interactable = !(guyChar.isTaken || spellCount.text == talent.text);
+        guyChar.redButton.interactable = guyChar.isTaken;
+
+        guyChar.spellName.text = m.manName;
+        if (m.types.Contains("Simple"))
         {
-            GameObject.Destroy(go);
+            guyChar.spellLevel.text = "I";
         }
-        GameObject.Destroy(spawnedDisplay);
-        foreach (GameObject go in spawnedOps)
+        if (m.types.Contains("Greater"))
         {
-            GameObject.Destroy(go);
+            guyChar.spellLevel.text = "II";
         }
-        foreach (Maneuver m in repo.maneuvers)
+        if (m.types.Contains("Master"))
         {
-            Debug.Log("wesz³o w foreach");
-            if (m != null && m.types.Contains("Roguish Exploit") && Check(m))
-            {
-                Debug.Log("If");
-                var guy = Instantiate(spellPrefab, spellList);
-                var guyChar = guy.GetComponent<SpellBar>();
-                if (cb.character.maneuvers.Contains(m))
-                {
-                    guyChar.isTaken = true;
-                }
-                if (guyChar.isTaken || spellCount.text == talent.text)
-                {
-                    Debug.Log("Green grey");
-                    guyChar.greenButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Green else");
-                    guyChar.greenButton.interactable = true;
-                }
-                if (!guyChar.isTaken)
-                {
-                    Debug.Log("Red grey");
-                    guyChar.redButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Red else");
-                    guyChar.redButton.interactable = true;
-                }
-                guyChar.spellName.text = m.manName;
-                if (m.types.Contains("Simple"))
-                {
-                    guyChar.spellLevel.text = "I";
-                }
-                if (m.types.Contains("Greater"))
-                {
-                    guyChar.spellLevel.text = "II";
-                }
-                if (m.types.Contains("Master"))
-                {
-                    guyChar.spellLevel.text = "III";
-                }
-                if (guyChar.isTaken)
-                {
-                    guyChar.taken.GetComponent<Image>().color = new Color(0.232556f, 0.735849f, 0.247813f);
-                }
-                else
-                {
-                    guyChar.taken.GetComponent<Image>().color = new Color(1f, 1f, 1f);
-                }
-                guyChar.type.SetActive(false);
-                guyChar.man = m;
-                spawnedGuys.Add(guy);
-            }
+            guyChar.spellLevel.text = "III";
         }
+        guyChar.taken.GetComponent<Image>().color = guyChar.isTaken ? new Color(0.232556f, 0.735849f, 0.247813f) : Color.white;
+        guyChar.type.SetActive(false);
+        guyChar.man = m;
+        spawnedGuys.Add(guy);
     }
-    public void SpawnTechnique()
-    {
-        displayedList.text = "Monastic Techniques";
-        spellCount.text = cb.character.maneuvers.Count(item => item.types.Contains("Monastic Technique")).ToString();
-        foreach (GameObject go in spawnedGuys)
-        {
-            GameObject.Destroy(go);
-        }
-        GameObject.Destroy(spawnedDisplay);
-        foreach (GameObject go in spawnedOps)
-        {
-            GameObject.Destroy(go);
-        }
-        foreach (Maneuver m in repo.maneuvers)
-        {
-            Debug.Log("wesz³o w foreach");
-            if (m != null && m.types.Contains("Monastic Technique") && Check(m))
-            {
-                Debug.Log("If");
-                var guy = Instantiate(spellPrefab, spellList);
-                var guyChar = guy.GetComponent<SpellBar>();
-                if (cb.character.maneuvers.Contains(m))
-                {
-                    guyChar.isTaken = true;
-                }
-                if (guyChar.isTaken || spellCount.text == talent.text)
-                {
-                    Debug.Log("Green grey");
-                    guyChar.greenButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Green else");
-                    guyChar.greenButton.interactable = true;
-                }
-                if (!guyChar.isTaken)
-                {
-                    Debug.Log("Red grey");
-                    guyChar.redButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Red else");
-                    guyChar.redButton.interactable = true;
-                }
-                guyChar.spellName.text = m.manName;
-                if (m.types.Contains("Simple"))
-                {
-                    guyChar.spellLevel.text = "I";
-                }
-                if (m.types.Contains("Greater"))
-                {
-                    guyChar.spellLevel.text = "II";
-                }
-                if (m.types.Contains("Master"))
-                {
-                    guyChar.spellLevel.text = "III";
-                }
-                if (guyChar.isTaken)
-                {
-                    guyChar.taken.GetComponent<Image>().color = new Color(0.232556f, 0.735849f, 0.247813f);
-                }
-                else
-                {
-                    guyChar.taken.GetComponent<Image>().color = new Color(1f, 1f, 1f);
-                }
-                guyChar.type.SetActive(false);
-                guyChar.man = m;
-                spawnedGuys.Add(guy);
-            }
-        }
-    }
+
+    public void SpawnManeuvers() => SpawnManeuverType("Martial Maneuver");
+    public void SpawnExploits() => SpawnManeuverType("Roguish Exploit");
+    public void SpawnTechnique() => SpawnManeuverType("Monastic Technique");
     public void SpawnSpells()
     {
         displayedList.text = "Spells";
@@ -304,30 +140,12 @@ public class SpellsChoice : MonoBehaviour
                 Debug.Log("If");
                 var guy = Instantiate(spellPrefab, spellList);
                 var guyChar = guy.GetComponent<SpellBar>();
-                if (cb.character.spells.Contains(m))
-                {
-                    guyChar.isTaken = true;
-                }
-                if (guyChar.isTaken || spellCount.text == talent.text)
-                {
-                    Debug.Log("Green grey");
-                    guyChar.greenButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Green else");
-                    guyChar.greenButton.interactable = true;
-                }
-                if (!guyChar.isTaken)
-                {
-                    Debug.Log("Red grey");
-                    guyChar.redButton.interactable = false;
-                }
-                else
-                {
-                    Debug.Log("Red else");
-                    guyChar.redButton.interactable = true;
-                }
+
+                guyChar.isTaken = cb.character.spells.Contains(m);
+
+                guyChar.greenButton.interactable = !(guyChar.isTaken || spellCount.text == talent.text);
+                guyChar.redButton.interactable = guyChar.isTaken;
+                
                 guyChar.spellName.text = m.manName;
                 if (m.types.Contains("Simple"))
                 {

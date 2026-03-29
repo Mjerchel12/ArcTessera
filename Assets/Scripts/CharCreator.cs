@@ -49,6 +49,30 @@ public class CharCreator : MonoBehaviour
     public ForgeScript fs;
     public List<SpecFeature> specFeats = new List<SpecFeature>();
 
+    private CharOption ManageFeatures(CharOption charOp, IEnumerable<CharOption> repoList, TMP_Dropdown drop, string display)
+    {
+        if (charOp.opName != null)
+        {
+            foreach (Feature f in charOp.features)
+            {
+                character.character.features.Remove(f);
+                foreach (Feature l in f.subOptions)
+                {
+                    foreach (Feature r in l.subOptions)
+                    {
+                        character.character.features.Remove(r);
+                    }
+                }
+            }
+        }
+        displayed = display;
+        if (dis != null)
+        {
+            Destroy(dis);
+        }
+        CharOption chosen = repoList.First(item => item.opName == drop.options[drop.value].text);
+        return chosen;
+    }
     public void StartCreating()
     {
         character.character = new Character();
@@ -111,31 +135,11 @@ public class CharCreator : MonoBehaviour
     {
         if (dropLineage.options[dropLineage.value].text != "None")
         {
-            if (character.character.lineage.lineName != null)
-            {
-                foreach (Feature f in character.character.lineage.features)
-                {
-                    character.character.features.Remove(f);
-                    foreach (Feature l in f.subOptions)
-                    {
-                        foreach (Feature r in l.subOptions)
-                        {
-                            character.character.features.Remove(r);
-                        }
-                    }
-                }
-            }
-            displayed = "lin";
-            if (dis != null)
-            {
-                Destroy(dis);
-            }
-            Lineage chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text);
-            Debug.Log(chosen);
+            Lineage chosen = (Lineage)ManageFeatures(character.character.lineage, repo.lineages, dropLineage, "lin");
             character.character.lineage = chosen;
             dis = Instantiate(displayLin, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
-            disScript.nameDisplay.text = chosen.lineName;
+            disScript.nameDisplay.text = chosen.opName;
             disScript.sizeAndClade.text = "<i>" + chosen.size + " " + chosen.clade + "</i>";
             disScript.vit.text = chosen.vitDiceQuantity + "d" + chosen.vitDice;
             disScript.stam.text = chosen.staminaBase.ToString();
@@ -207,7 +211,6 @@ public class CharCreator : MonoBehaviour
                     }
                 }
             }
-            //dropLineage.options.RemoveAt(0);
         }
         else
         {
@@ -226,30 +229,12 @@ public class CharCreator : MonoBehaviour
     {
         if (dropCulture.options[dropCulture.value].text != "None")
         {
-            if (character.character.culture.cultName != null)
-            {
-                foreach (Feature f in repo.cultures.First(item => item == character.character.culture).features)
-                {
-                    character.character.features.Remove(f);
-                    foreach (Feature l in f.subOptions)
-                    {
-                        foreach (Feature r in l.subOptions)
-                        {
-                            character.character.features.Remove(r);
-                        }
-                    }
-                }
-            }
-            displayed = "cul";
-            if (dis != null)
-            {
-                Destroy(dis);
-            }
-            Culture chosen = repo.cultures.First(item => item.cultName == dropCulture.options[dropCulture.value].text);
+
+            Culture chosen = (Culture)ManageFeatures(character.character.culture, repo.cultures, dropCulture, "cul");
             character.character.culture = chosen;
             dis = Instantiate(displayCul, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
-            disScript.nameDisplay.text = chosen.cultName;
+            disScript.nameDisplay.text = chosen.opName;
 
             disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
             disScript.body.text = chosen.bodyBonus.ToString();
@@ -321,30 +306,11 @@ public class CharCreator : MonoBehaviour
     {
         if (dropBack.options[dropBack.value].text != "None")
         {
-            if (character.character.background.backName != null)
-            {
-                foreach (Feature f in repo.backs.First(item => item == character.character.background).features)
-                {
-                    character.character.features.Remove(f);
-                    foreach (Feature l in f.subOptions)
-                    {
-                        foreach (Feature r in l.subOptions)
-                        {
-                            character.character.features.Remove(r);
-                        }
-                    }
-                }
-            }
-            displayed = "back";
-            if (dis != null)
-            {
-                Destroy(dis);
-            }
-            Background chosen = repo.backs.First(item => item.backName == dropBack.options[dropBack.value].text);
+            Background chosen = (Background)ManageFeatures(character.character.background, repo.backs, dropBack, "back");
             character.character.background = chosen;
             dis = Instantiate(displayBack, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
-            disScript.nameDisplay.text = chosen.backName;
+            disScript.nameDisplay.text = chosen.opName;
 
             disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
             disScript.body.text = chosen.bodyBonus.ToString();
@@ -416,30 +382,11 @@ public class CharCreator : MonoBehaviour
     {
         if (dropSign.options[dropSign.value].text != "None")
         {
-            if (character.character.starsign.signName != null)
-            {
-                foreach (Feature f in repo.signs.First(item => item == character.character.starsign).features)
-                {
-                    character.character.features.Remove(f);
-                    foreach (Feature l in f.subOptions)
-                    {
-                        foreach (Feature r in l.subOptions)
-                        {
-                            character.character.features.Remove(r);
-                        }
-                    }
-                }
-            }
-            displayed = "sign";
-            if (dis != null)
-            {
-                Destroy(dis);
-            }
-            StarSign chosen = repo.signs.First(item => item.signName == dropSign.options[dropSign.value].text);
+            StarSign chosen = (StarSign)ManageFeatures(character.character.starsign, repo.signs, dropSign, "sign");
             character.character.starsign = chosen;
             dis = Instantiate(displaySign, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
-            disScript.nameDisplay.text = chosen.signName;
+            disScript.nameDisplay.text = chosen.opName;
 
             disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
             disScript.body.text = chosen.bodyBonus.ToString();
@@ -503,30 +450,11 @@ public class CharCreator : MonoBehaviour
     {
         if (dropAttune.options[dropAttune.value].text != "None")
         {
-            if (character.character.element.elName != null)
-            {
-                foreach (Feature f in repo.attunements.First(item => item == character.character.element).features)
-                {
-                    character.character.features.Remove(f);
-                    foreach (Feature l in f.subOptions)
-                    {
-                        foreach (Feature r in l.subOptions)
-                        {
-                            character.character.features.Remove(r);
-                        }
-                    }
-                }
-            }
-            displayed = "attu";
-            if (dis != null)
-            {
-                Destroy(dis);
-            }
-            Element chosen = repo.attunements.First(item => item.elName == dropAttune.options[dropAttune.value].text);
+            Element chosen = (Element)ManageFeatures(character.character.element, repo.attunements, dropAttune, "attu");
             character.character.element = chosen;
             dis = Instantiate(displayAttune, new Vector2(85f, 110f), Quaternion.identity, equipPaper.transform);
             var disScript = dis.GetComponent<CharCreatorFeature>();
-            disScript.nameDisplay.text = chosen.elName;
+            disScript.nameDisplay.text = chosen.opName;
 
             disScript.sizeAndClade.text = "<i>" + chosen.desc + "</i>";
             specNote.gameObject.SetActive(false);
@@ -623,95 +551,27 @@ public class CharCreator : MonoBehaviour
         this.specDesc.text = specDesc;
         switch (displayed) {
             case "lin":
-                Debug.Log(specName);
-                Debug.Log(src);
-                Debug.Log(feat);
-                Debug.Log(repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text));
-                Debug.Log(repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text).features.First(item => item.featName == src));
-                Debug.Log(repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text).features.First(item => item.featName == src).subOptions.First(item => item.featName == feat));
-                List<Feature> options = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions;
-                foreach (var o in options)
-                {
-                    character.character.features.Remove(o);
-                }
-                Feature chosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions.First(item => item.featName == specName);
-                character.character.features.Add(chosen);
+                GetSubOptions(specName, src, feat, repo.lineages, dropLineage);
                 break;
             case "cul":
-                List<Feature> culOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions;
-                foreach (var o in culOptions)
-                {
-                    character.character.features.Remove(o);
-                }
-                Feature culChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions.First(item => item.featName == specName);
-                character.character.features.Add(culChosen);
+                GetSubOptions(specName, src, feat, repo.cultures, dropCulture);
                 break;
             case "back":
-                List<Feature> backOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions;
-                foreach (var o in backOptions)
-                {
-                    character.character.features.Remove(o);
-                }
-                Feature backChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions.First(item => item.featName == specName);
-                character.character.features.Add(backChosen);
+                GetSubOptions(specName, src, feat, repo.backs, dropBack);
                 break;
             case "sign":
-                List<Feature> signOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions;
-                foreach (var o in signOptions)
-                {
-                    character.character.features.Remove(o);
-                }
-                Feature signChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions.First(item => item.featName == specName);
-                character.character.features.Add(signChosen);
+                GetSubOptions(specName, src, feat, repo.signs, dropSign);
                 break;
             case "attu":
-                List<Feature> attuOptions = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions;
-                foreach (var o in attuOptions)
-                {
-                    character.character.features.Remove(o);
-                }
-                Feature attuChosen = repo.lineages.First(item => item.lineName == dropLineage.options[dropLineage.value].text)
-                    .features.First(item => item.featName == src)
-                    .subOptions.First(item => item.featName == feat)
-                    .subOptions.First(item => item.featName == specName);
-                character.character.features.Add(attuChosen);
+                GetSubOptions(specName, src, feat, repo.attunements, dropAttune);
                 break;
             case "path":
-                Debug.Log("pafCzóz");
                 List<Feature> pathOptions = repo.paths.First(item => item.pathName == fs.displayed.pathName)
                     .initFeature
                     .subOptions.First(item => item.featName == feat)
                     .subOptions;
                 foreach (var o in pathOptions)
                 {
-                    Debug.Log("pafCzózForicz");
                     chosenSubs.Remove(o);
                     character.character.features.Remove(o);
                 }
@@ -719,7 +579,6 @@ public class CharCreator : MonoBehaviour
                     .initFeature
                     .subOptions.First(item => item.featName == feat)
                     .subOptions.First(item => item.featName == specName);
-                Debug.Log(pathChosen);
                 chosenSubs.Add(pathChosen);
                 if (fs.pathOn)
                 {
@@ -745,5 +604,22 @@ public class CharCreator : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    private void GetSubOptions(string specName, string src, string feat, IEnumerable<CharOption> repoList, TMP_Dropdown drop)
+    {
+        List<Feature> options = repoList.First(item => item.opName == drop.options[drop.value].text)
+                            .features.First(item => item.featName == src)
+                            .subOptions.First(item => item.featName == feat)
+                            .subOptions;
+        foreach (var o in options)
+        {
+            character.character.features.Remove(o);
+        }
+        Feature chosen = repoList.First(item => item.opName == drop.options[drop.value].text)
+            .features.First(item => item.featName == src)
+            .subOptions.First(item => item.featName == feat)
+            .subOptions.First(item => item.featName == specName);
+        character.character.features.Add(chosen);
     }
 }
